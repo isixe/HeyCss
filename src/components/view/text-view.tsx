@@ -2,7 +2,7 @@ import type { StyleItem } from "@/types/style";
 import { StyleBox } from "@/components/widget/style-box";
 import { useState } from "react";
 import { EditModal } from "@/components/widget/edit-modal";
-import { copyToClipboard } from "@/utils/clipboard";
+import { copyObjectToClipboard, copyToClipboard } from "@/utils/clipboard";
 
 interface TextViewProps {
 	items: StyleItem[];
@@ -18,7 +18,7 @@ export function TextView({ items }: TextViewProps) {
 					key={index}
 					style={style}
 					category="text"
-					onCopy={() => copyToClipboard(style)}
+					onCopy={() => copyObjectToClipboard(style)}
 					onEdit={() => setEditingStyle(style)}
 				/>
 			))}
