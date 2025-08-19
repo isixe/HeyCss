@@ -1,0 +1,26 @@
+[
+	{
+		"css": "color: #111827;"
+	},
+	{
+		"css": "color: #6b7280;"
+	},
+	{
+		"css": "color: #10b981;"
+	},
+	{
+		"css": "color: #f59e0b;"
+	},
+	{
+		"css": "color: #ef4444;"
+	},
+	{
+		"css": "color: #f9fafb; background: #111827; padding: 0.5rem 0.75rem; border-radius: 0.5rem;"
+	},
+	{
+		"css": "background: linear-gradient(135deg, #10b981, #8b5cf6); -webkit-background-clip: text; background-clip: text; color: transparent;"
+	},
+	{
+		"css": "color: #111827; font-weight: 700;"
+	}
+]
