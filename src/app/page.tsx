@@ -2,6 +2,7 @@
 
 import type React from "react";
 import type { StyleItem, StylesData, StyleType } from "@/types/style";
+
 import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { EditModal } from "@/components/widget/edit-modal";
@@ -12,6 +13,7 @@ import { BoxShadowView } from "@/components/view/boxshadow-view";
 import { BorderView } from "@/components/view/border-view";
 import { GradientView } from "@/components/view/gradient-view";
 import { TextView } from "@/components/view/text-view";
+import { TABS, TAB_TRIGGER_CLASS, StyleTabs } from "@/data/enum";
 
 export default function HeyCSS() {
 	const [stylesData, setStylesData] = useState<StylesData | null>(null);
@@ -19,37 +21,11 @@ export default function HeyCSS() {
 	const [isLoading, setIsLoading] = useState(true);
 	const { toast } = useToast();
 
-	const tabs: { value: StyleType; label: string }[] = [
-		{
-			value: "boxShadow",
-			label: "Box Shadows",
-		},
-		{
-			value: "border",
-			label: "Borders",
-		},
-		{
-			value: "gradient",
-			label: "Gradients",
-		},
-		{
-			value: "text",
-			label: "Text",
-		},
-	];
-
 	const stylesMap: Record<StyleType, StyleItem[]> = {
 		boxShadow: stylesData ? stylesData.boxShadow : [],
 		border: stylesData ? stylesData.border : [],
 		gradient: stylesData ? stylesData.gradient : [],
 		text: stylesData ? stylesData.text : [],
-	};
-
-	const tabTriggerClass: Record<string, string> = {
-		boxShadow: "data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800",
-		border: "data-[state=active]:bg-green-100 data-[state=active]:text-green-800",
-		gradient: "data-[state=active]:bg-pink-100 data-[state=active]:text-pink-800",
-		text: "data-[state=active]:bg-purple-100 data-[state=active]:text-purple-800",
 	};
 
 	useEffect(() => {
@@ -134,12 +110,12 @@ export default function HeyCSS() {
 						<Tabs defaultValue="boxShadow" className="w-full">
 							<div className="flex justify-center items-center mb-6 sm:mb-8">
 								<TabsList className="bg-gray-50/80 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl p-2 flex flex-wrap justify-center gap-1 max-w-4xl mx-2">
-									{tabs.map((tab) => (
+									{TABS.map((tab) => (
 										<TabsTrigger
 											key={tab.value}
 											value={tab.value}
 											className={
-												tabTriggerClass[tab.value] +
+												TAB_TRIGGER_CLASS[tab.value] +
 												" data-[state=active]:shadow-md rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 font-medium transition-all duration-300 hover:bg-gray-100 text-xs sm:text-sm whitespace-nowrap"
 											}>
 											{tab.label}
@@ -148,12 +124,12 @@ export default function HeyCSS() {
 								</TabsList>
 							</div>
 
-							{tabs.map((tab) => (
+							{TABS.map((tab) => (
 								<TabsContent key={tab.value} value={tab.value}>
-									{tab.value === "boxShadow" && <BoxShadowView items={stylesMap.boxShadow} />}
-									{tab.value === "border" && <BorderView items={stylesMap.border} />}
-									{tab.value === "gradient" && <GradientView items={stylesMap.gradient} />}
-									{tab.value === "text" && <TextView items={stylesMap.text} />}
+									{tab.value === StyleTabs.BoxShadow && <BoxShadowView items={stylesMap.boxShadow} />}
+									{tab.value === StyleTabs.Border && <BorderView items={stylesMap.border} />}
+									{tab.value === StyleTabs.Gradient && <GradientView items={stylesMap.gradient} />}
+									{tab.value === StyleTabs.Text && <TextView items={stylesMap.text} />}
 								</TabsContent>
 							))}
 						</Tabs>
