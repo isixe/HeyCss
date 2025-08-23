@@ -1,8 +1,21 @@
 "use client";
 
 import { Heart, Github, Twitter, Mail } from "lucide-react";
+import { TABS } from "@/data/enum";
 
-export function Footer() {
+interface FooterProps {
+	setCurrentTab?: (tab: string) => void;
+	currentTab?: string;
+}
+
+export function Footer({ setCurrentTab, currentTab }: FooterProps) {
+	const tabClick = (tab: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+		if (setCurrentTab) {
+			e.preventDefault();
+			setCurrentTab(tab);
+		}
+	};
+
 	return (
 		<footer className="bg-gray-50 border-t border-gray-200 mt-16">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -26,42 +39,19 @@ export function Footer() {
 					<div>
 						<h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Quick Links</h3>
 						<ul className="space-y-2">
-							<li>
-								<a
-									href="#boxshadow"
-									onClick={(e) => {
-										e.preventDefault();
-										const element = document.querySelector('[value="boxshadow"]');
-										element?.click();
-									}}
-									className="text-gray-600 hover:text-gray-900 text-sm transition-colors cursor-pointer">
-									Box Shadows
-								</a>
-							</li>
-							<li>
-								<a
-									href="#border"
-									onClick={(e) => {
-										e.preventDefault();
-										const element = document.querySelector('[value="border"]');
-										element?.click();
-									}}
-									className="text-gray-600 hover:text-gray-900 text-sm transition-colors cursor-pointer">
-									Borders
-								</a>
-							</li>
-							<li>
-								<a
-									href="#gradient"
-									onClick={(e) => {
-										e.preventDefault();
-										const element = document.querySelector('[value="gradient"]');
-										element?.click();
-									}}
-									className="text-gray-600 hover:text-gray-900 text-sm transition-colors cursor-pointer">
-									Gradients
-								</a>
-							</li>
+							{TABS.map((tab) => (
+								<li key={tab.value}>
+									<a
+										href={`#${tab.value.toLowerCase()}`}
+										onClick={(e) => tabClick(tab.value, e)}
+										className={
+											"text-sm transition-colors cursor-pointer " +
+											(currentTab === tab.value ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-gray-900")
+										}>
+										{tab.label}
+									</a>
+								</li>
+							))}
 						</ul>
 					</div>
 

@@ -11,10 +11,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<Header />
 				<main>{children}</main>
 				<Toaster />
-				<Footer />
 			</body>
 		</html>
 	);
