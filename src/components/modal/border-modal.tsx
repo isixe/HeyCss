@@ -1,22 +1,33 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { Copy } from "lucide-react";
+import { Copy, Plus, X } from "lucide-react";
 import { copyToClipboard } from "@/utils/clipboard";
 
 type BorderSide = "top" | "right" | "bottom" | "left";
 type BorderCorner = "topLeft" | "topRight" | "bottomRight" | "bottomLeft";
+
+interface GradientStop {
+	id: string;
+	color: string;
+	position: number;
+}
+
 interface BorderModalProps {
 	style: any;
 	onClose: () => void;
 }
 
 export default function BorderModal({ style, onClose }: BorderModalProps) {
+	const defaultStyle = Object.entries(style)
+		.map(([key, value]) => `${key}: ${value};`)
+		.join("\n");
+
 	// Border state
 	const [borderValues, setBorderValues] = useState<{
 		top: { width: number; style: string; color: string };
@@ -45,19 +56,42 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		bottomLeft: 10,
 		unified: true,
 	});
-	// Gradient background
-	const [background, setBackground] = useState("");
+
+	const [gradientStops, setGradientStops] = useState<GradientStop[]>([]);
+	const [gradientDirection, setGradientDirection] = useState("135deg");
+
 	// Mask
 	const [mask, setMask] = useState("");
 	// Generated CSS
-	const [generatedCSS, setGeneratedCSS] = useState("");
+	const [generatedCSS, setGeneratedCSS] = useState(defaultStyle);
 
-	useEffect(() => {
-		const defaultStyle = Object.entries(style)
-			.map(([key, value]) => `${key}: ${value};`)
-			.join("\n");
-		setGeneratedCSS(defaultStyle);
-	});
+	const addGradientStop = () => {
+		const newStop: GradientStop = {
+			id: Date.now().toString(),
+			color: "#ff7e5f",
+			position: gradientStops.length === 0 ? 0 : 100,
+		};
+		const newStops = [...gradientStops, newStop];
+		setGradientStops(newStops);
+		generateCSS(borderValues, radiusValues, newStops, gradientDirection, mask);
+	};
+
+	const removeGradientStop = (id: string) => {
+		const newStops = gradientStops.filter((stop) => stop.id !== id);
+		setGradientStops(newStops);
+		generateCSS(borderValues, radiusValues, newStops, gradientDirection, mask);
+	};
+
+	const updateGradientStop = (id: string, property: "color" | "position", value: string | number) => {
+		const newStops = gradientStops.map((stop) => (stop.id === id ? { ...stop, [property]: value } : stop));
+		setGradientStops(newStops);
+		generateCSS(borderValues, radiusValues, newStops, gradientDirection, mask);
+	};
+
+	const updateGradientDirection = (direction: string) => {
+		setGradientDirection(direction);
+		generateCSS(borderValues, radiusValues, gradientStops, direction, mask);
+	};
 
 	// Border update
 	const updateBorder = (side: BorderSide, property: string, value: any) => {
@@ -70,7 +104,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 			newBorderValues[side] = { ...newBorderValues[side], [property]: value };
 		}
 		setBorderValues(newBorderValues);
-		generateCSS(newBorderValues, radiusValues, background, mask);
+		generateCSS(newBorderValues, radiusValues, gradientStops, gradientDirection, mask);
 	};
 
 	// Radius update
@@ -84,23 +118,22 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 			newRadiusValues[corner] = value;
 		}
 		setRadiusValues(newRadiusValues);
-		generateCSS(borderValues, newRadiusValues, background, mask);
-	};
-
-	// Background update
-	const updateBackground = (value: string) => {
-		setBackground(value);
-		generateCSS(borderValues, radiusValues, value, mask);
+		generateCSS(borderValues, newRadiusValues, gradientStops, gradientDirection, mask);
 	};
 
 	// Mask update
 	const updateMask = (value: string) => {
 		setMask(value);
-		generateCSS(borderValues, radiusValues, background, value);
+		generateCSS(borderValues, radiusValues, gradientStops, gradientDirection, value);
 	};
 
-	// Generate CSS
-	const generateCSS = (border: typeof borderValues, radius: typeof radiusValues, bg: string, maskValue: string) => {
+	const generateCSS = (
+		border: typeof borderValues,
+		radius: typeof radiusValues,
+		stops: GradientStop[],
+		direction: string,
+		maskValue: string
+	) => {
 		const cssParts: string[] = [];
 
 		// Border
@@ -123,9 +156,11 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 			);
 		}
 
-		// Background
-		if (bg) {
-			cssParts.push(`background: ${bg};`);
+		// Background - generate gradient from stops
+		if (stops.length > 0) {
+			const sortedStops = [...stops].sort((a, b) => a.position - b.position);
+			const gradientString = sortedStops.map((stop) => `${stop.color} ${stop.position}%`).join(", ");
+			cssParts.push(`background: linear-gradient(${direction}, ${gradientString});`);
 		}
 
 		// Mask
@@ -135,6 +170,13 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		}
 
 		setGeneratedCSS(cssParts.join(" "));
+	};
+
+	const getBackgroundStyle = () => {
+		if (gradientStops.length === 0) return {};
+		const sortedStops = [...gradientStops].sort((a, b) => a.position - b.position);
+		const gradientString = sortedStops.map((stop) => `${stop.color} ${stop.position}%`).join(", ");
+		return { background: `linear-gradient(${gradientDirection}, ${gradientString})` };
 	};
 
 	return (
@@ -162,7 +204,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 								borderRadius: radiusValues.unified
 									? `${radiusValues.topLeft}px`
 									: `${radiusValues.topLeft}px ${radiusValues.topRight}px ${radiusValues.bottomRight}px ${radiusValues.bottomLeft}px`,
-								background: background,
+								...getBackgroundStyle(),
 								WebkitMaskImage: mask || undefined,
 								maskImage: mask || undefined,
 							}}></div>
@@ -320,15 +362,89 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 
 						<h3 className="font-medium mb-2 mt-6">Gradient Background</h3>
 						<div className="space-y-4">
-							<div>
-								<Input
-									type="text"
-									value={background}
-									onChange={(e) => updateBackground(e.target.value)}
-									className="mt-2"
-									placeholder="e.g. linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)"
-								/>
+							<div className="flex items-center justify-between">
+								<Label>Gradient Direction</Label>
+								<select
+									value={gradientDirection}
+									onChange={(e) => updateGradientDirection(e.target.value)}
+									className="text-sm p-2 border rounded">
+									<option value="">Custom</option>
+									<option value="0deg">↑ Top</option>
+									<option value="45deg">↗ Top Right</option>
+									<option value="90deg">→ Right</option>
+									<option value="135deg">↘ Bottom Right</option>
+									<option value="180deg">↓ Bottom</option>
+									<option value="225deg">↙ Bottom Left</option>
+									<option value="270deg">← Left</option>
+									<option value="315deg">↖ Top Left</option>
+								</select>
 							</div>
+							<Slider
+								onValueChange={([value]) => updateGradientDirection(`${value}deg`)}
+								min={-360}
+								max={360}
+								step={1}
+								className="mt-1"
+							/>
+
+							<div className="flex items-center justify-between">
+								<Label>Gradient Stops ({gradientStops.length})</Label>
+								<Button
+									size="sm"
+									variant="outline"
+									onClick={addGradientStop}
+									className="flex items-center gap-2 bg-transparent">
+									<Plus className="h-4 w-4" />
+									Add Color
+								</Button>
+							</div>
+
+							{gradientStops.length === 0 ? (
+								<div className="text-sm text-gray-500 text-center py-4 border-2 border-dashed border-gray-200 rounded">
+									No gradient colors added. Click "Add Color" to start.
+								</div>
+							) : (
+								<div className="space-y-3 max-h-48 overflow-y-auto">
+									{gradientStops.map((stop, index) => (
+										<div key={stop.id} className="border p-3 rounded bg-gray-50">
+											<div className="flex items-center justify-between mb-2">
+												<Label className="text-xs font-medium">Color {index + 1}</Label>
+												<Button
+													size="sm"
+													variant="ghost"
+													onClick={() => removeGradientStop(stop.id)}
+													className="h-6 w-6 p-0 text-red-500 hover:text-red-700">
+													<X className="h-3 w-3" />
+												</Button>
+											</div>
+											<div className="grid grid-cols-2 gap-2">
+												<div>
+													<Label className="text-xs">Color</Label>
+													<Input
+														type="color"
+														value={stop.color}
+														onChange={(e) => updateGradientStop(stop.id, "color", e.target.value)}
+														className="mt-1 h-8"
+													/>
+												</div>
+												<div>
+													<Label className="text-xs">Position</Label>
+													<Slider
+														value={[stop.position]}
+														onValueChange={([value]) => updateGradientStop(stop.id, "position", value)}
+														min={0}
+														max={100}
+														step={1}
+														className="mt-2"
+													/>
+													<span className="text-xs text-gray-500">{stop.position}%</span>
+												</div>
+											</div>
+										</div>
+									))}
+								</div>
+							)}
+
 							{style.mask && (
 								<div>
 									<Label>Mask (mask-image)</Label>
