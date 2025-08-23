@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,10 +25,10 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		left: { width: number; style: string; color: string };
 		unified: boolean;
 	}>({
-		top: { width: 2, style: "solid", color: "#e5e7eb" },
-		right: { width: 2, style: "solid", color: "#e5e7eb" },
-		bottom: { width: 2, style: "solid", color: "#e5e7eb" },
-		left: { width: 2, style: "solid", color: "#e5e7eb" },
+		top: { width: 2, style: "solid", color: "#a6deba" },
+		right: { width: 2, style: "solid", color: "#a6deba" },
+		bottom: { width: 2, style: "solid", color: "#a6deba" },
+		left: { width: 2, style: "solid", color: "#a6deba" },
 		unified: true,
 	});
 	// Border radius
@@ -39,18 +39,25 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		bottomLeft: number;
 		unified: boolean;
 	}>({
-		topLeft: 0,
-		topRight: 0,
-		bottomRight: 0,
-		bottomLeft: 0,
+		topLeft: 10,
+		topRight: 10,
+		bottomRight: 10,
+		bottomLeft: 10,
 		unified: true,
 	});
 	// Gradient background
-	const [background, setBackground] = useState("linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)");
+	const [background, setBackground] = useState("");
 	// Mask
 	const [mask, setMask] = useState("");
 	// Generated CSS
 	const [generatedCSS, setGeneratedCSS] = useState("");
+
+	useEffect(() => {
+		const defaultStyle = Object.entries(style)
+			.map(([key, value]) => `${key}: ${value};`)
+			.join("\n");
+		setGeneratedCSS(defaultStyle);
+	});
 
 	// Border update
 	const updateBorder = (side: BorderSide, property: string, value: any) => {
@@ -93,29 +100,41 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 	};
 
 	// Generate CSS
-	const generateCSS = (border: any, radius: any, bg: string, maskValue: string) => {
-		let css = "";
+	const generateCSS = (border: typeof borderValues, radius: typeof radiusValues, bg: string, maskValue: string) => {
+		const cssParts: string[] = [];
+
+		// Border
 		if (border.unified) {
 			const { width, style, color } = border.top;
-			css += `border: ${width}px ${style} ${color}; `;
+			cssParts.push(`border: ${width}px ${style} ${color};`);
 		} else {
-			css += `border-top: ${border.top.width}px ${border.top.style} ${border.top.color}; `;
-			css += `border-right: ${border.right.width}px ${border.right.style} ${border.right.color}; `;
-			css += `border-bottom: ${border.bottom.width}px ${border.bottom.style} ${border.bottom.color}; `;
-			css += `border-left: ${border.left.width}px ${border.left.style} ${border.left.color}; `;
+			(["top", "right", "bottom", "left"] as BorderSide[]).forEach((side) => {
+				const { width, style, color } = border[side];
+				cssParts.push(`border-${side}: ${width}px ${style} ${color};`);
+			});
 		}
+
+		// Border radius
 		if (radius.unified) {
-			css += `border-radius: ${radius.topLeft}px; `;
+			cssParts.push(`border-radius: ${radius.topLeft}px;`);
 		} else {
-			css += `border-radius: ${radius.topLeft}px ${radius.topRight}px ${radius.bottomRight}px ${radius.bottomLeft}px; `;
+			cssParts.push(
+				`border-radius: ${radius.topLeft}px ${radius.topRight}px ${radius.bottomRight}px ${radius.bottomLeft}px;`
+			);
 		}
+
+		// Background
 		if (bg) {
-			css += `background: ${bg}; `;
+			cssParts.push(`background: ${bg};`);
 		}
+
+		// Mask
 		if (maskValue) {
-			css += `-webkit-mask-image: ${maskValue}; mask-image: ${maskValue}; `;
+			cssParts.push(`-webkit-mask-image: ${maskValue};`);
+			cssParts.push(`mask-image: ${maskValue};`);
 		}
-		setGeneratedCSS(css.trim());
+
+		setGeneratedCSS(cssParts.join(" "));
 	};
 
 	return (
@@ -146,9 +165,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 								background: background,
 								WebkitMaskImage: mask || undefined,
 								maskImage: mask || undefined,
-							}}>
-							<span className="text-sm opacity-75">Border Preview</span>
-						</div>
+							}}></div>
 					</div>
 					<div className="flex-1 space-y-6 min-w-0 sm:min-w-[320px]">
 						<h3 className="font-medium mb-2">Border</h3>
@@ -182,7 +199,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 										<select
 											value={borderValues.top.style}
 											onChange={(e) => updateBorder("top", "style", e.target.value)}
-											className="mt-2 w-full p-2 border rounded">
+											className="mt-2 text-sm w-full p-2 border rounded">
 											<option value="solid">Solid</option>
 											<option value="dashed">Dashed</option>
 											<option value="dotted">Dotted</option>
@@ -312,16 +329,18 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 									placeholder="e.g. linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)"
 								/>
 							</div>
-							<div>
-								<Label>Mask (mask-image)</Label>
-								<Input
-									type="text"
-									value={mask}
-									onChange={(e) => updateMask(e.target.value)}
-									className="mt-2"
-									placeholder="e.g. linear-gradient(black, transparent)"
-								/>
-							</div>
+							{style.mask && (
+								<div>
+									<Label>Mask (mask-image)</Label>
+									<Input
+										type="text"
+										value={mask}
+										onChange={(e) => updateMask(e.target.value)}
+										className="mt-2"
+										placeholder="e.g. linear-gradient(black, transparent)"
+									/>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
@@ -342,19 +361,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 					</div>
 				</div>
 			</DialogContent>
-			<style jsx>{`
-				[data-state="open"] {
-					animation: none !important;
-				}
-				[data-state="closed"] {
-					animation: none !important;
-				}
-				@media (max-width: 640px) {
-					[data-slot="dialog-content"] {
-						padding: 0.5rem !important;
-					}
-				}
-			`}</style>
 		</Dialog>
 	);
 }
