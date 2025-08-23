@@ -122,7 +122,7 @@ export default function HeyCSS() {
 						<Tabs value={currentTab} onValueChange={setCurrentTab} className="w-full">
 							{!isMobile && (
 								<div className="flex justify-center items-center mb-6 sm:mb-8">
-									<TabsList className="bg-gray-50/80 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl p-2 flex flex-wrap justify-center gap-1 max-w-4xl mx-2">
+									<TabsList className="bg-gray-50/80 backdrop-blur-sm border border-gray-200 shadow-lg rounded-2xl flex justify-center gap-1 max-w-4xl mx-2 items-center">
 										{TABS.map((tab) => (
 											<TabsTrigger
 												key={tab.value}
