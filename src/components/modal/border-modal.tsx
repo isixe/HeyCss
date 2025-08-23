@@ -118,184 +118,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		setGeneratedCSS(css.trim());
 	};
 
-	// Render border controls
-	const renderBorderControls = () => (
-		<div className="space-y-4">
-			<div className="flex items-center space-x-2">
-				<input
-					type="checkbox"
-					id="unified-border"
-					checked={borderValues.unified}
-					onChange={(e) => setBorderValues({ ...borderValues, unified: e.target.checked })}
-					className="rounded"
-				/>
-				<Label htmlFor="unified-border">Unified Border</Label>
-			</div>
-			{borderValues.unified ? (
-				<div className="space-y-3">
-					<div>
-						<Label>Border Width</Label>
-						<Slider
-							value={[borderValues.top.width]}
-							onValueChange={([value]) => updateBorder("top", "width", value)}
-							min={0}
-							max={20}
-							step={1}
-							className="mt-2"
-						/>
-						<span className="text-xs text-gray-500">{borderValues.top.width}px</span>
-					</div>
-					<div>
-						<Label>Border Style</Label>
-						<select
-							value={borderValues.top.style}
-							onChange={(e) => updateBorder("top", "style", e.target.value)}
-							className="mt-2 w-full p-2 border rounded">
-							<option value="solid">Solid</option>
-							<option value="dashed">Dashed</option>
-							<option value="dotted">Dotted</option>
-							<option value="double">Double</option>
-							<option value="groove">Groove</option>
-							<option value="ridge">Ridge</option>
-							<option value="inset">Inset</option>
-							<option value="outset">Outset</option>
-						</select>
-					</div>
-					<div>
-						<Label>Border Color</Label>
-						<Input
-							type="color"
-							value={borderValues.top.color}
-							onChange={(e) => updateBorder("top", "color", e.target.value)}
-							className="mt-2"
-						/>
-					</div>
-				</div>
-			) : (
-				<div className="space-y-4">
-					{(["top", "right", "bottom", "left"] as BorderSide[]).map((side) => (
-						<div key={side} className="border p-3 rounded">
-							<h4 className="font-medium mb-2 capitalize">{side} Border</h4>
-							<div className="grid grid-cols-3 gap-2">
-								<div>
-									<Label className="text-xs">Width</Label>
-									<Slider
-										value={[borderValues[side].width]}
-										onValueChange={([value]) => updateBorder(side, "width", value)}
-										min={0}
-										max={20}
-										step={1}
-										className="mt-1"
-									/>
-									<span className="text-xs text-gray-500">{borderValues[side].width}px</span>
-								</div>
-								<div>
-									<Label className="text-xs">Style</Label>
-									<select
-										value={borderValues[side].style}
-										onChange={(e) => updateBorder(side, "style", e.target.value)}
-										className="mt-1 w-full p-1 border rounded text-xs">
-										<option value="solid">Solid</option>
-										<option value="dashed">Dashed</option>
-										<option value="dotted">Dotted</option>
-										<option value="double">Double</option>
-									</select>
-								</div>
-								<div>
-									<Label className="text-xs">Color</Label>
-									<Input
-										type="color"
-										value={borderValues[side].color}
-										onChange={(e) => updateBorder(side, "color", e.target.value)}
-										className="mt-1 h-8"
-									/>
-								</div>
-							</div>
-						</div>
-					))}
-				</div>
-			)}
-		</div>
-	);
-
-	const renderRadiusControls = () => (
-		<div className="space-y-4">
-			<div className="flex items-center space-x-2">
-				<input
-					type="checkbox"
-					id="unified-radius"
-					checked={radiusValues.unified}
-					onChange={(e) => setRadiusValues({ ...radiusValues, unified: e.target.checked })}
-					className="rounded"
-				/>
-				<Label htmlFor="unified-radius">Unified Radius</Label>
-			</div>
-			{radiusValues.unified ? (
-				<div>
-					<Label>Radius</Label>
-					<Slider
-						value={[radiusValues.topLeft]}
-						onValueChange={([value]) => updateRadius("topLeft", value)}
-						min={0}
-						max={64}
-						step={1}
-						className="mt-2"
-					/>
-					<span className="text-xs text-gray-500">{radiusValues.topLeft}px</span>
-				</div>
-			) : (
-				<div className="grid grid-cols-2 gap-2">
-					{(
-						[
-							{ key: "topLeft", label: "Top Left" },
-							{ key: "topRight", label: "Top Right" },
-							{ key: "bottomRight", label: "Bottom Right" },
-							{ key: "bottomLeft", label: "Bottom Left" },
-						] as { key: BorderCorner; label: string }[]
-					).map((corner) => (
-						<div key={corner.key}>
-							<Label className="text-xs">{corner.label}</Label>
-							<Slider
-								value={[radiusValues[corner.key]]}
-								onValueChange={([value]) => updateRadius(corner.key, value)}
-								min={0}
-								max={64}
-								step={1}
-								className="mt-1"
-							/>
-							<span className="text-xs text-gray-500">{radiusValues[corner.key]}px</span>
-						</div>
-					))}
-				</div>
-			)}
-		</div>
-	);
-
-	const renderBackgroundControls = () => (
-		<div className="space-y-4">
-			<div>
-				<Label>Gradient Background</Label>
-				<Input
-					type="text"
-					value={background}
-					onChange={(e) => updateBackground(e.target.value)}
-					className="mt-2"
-					placeholder="e.g. linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)"
-				/>
-			</div>
-			<div>
-				<Label>Mask (mask-image)</Label>
-				<Input
-					type="text"
-					value={mask}
-					onChange={(e) => updateMask(e.target.value)}
-					className="mt-2"
-					placeholder="e.g. linear-gradient(black, transparent)"
-				/>
-			</div>
-		</div>
-	);
-
 	return (
 		<Dialog open={true} onOpenChange={onClose} modal>
 			<DialogContent
@@ -330,11 +152,177 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 					</div>
 					<div className="flex-1 space-y-6 min-w-0 sm:min-w-[320px]">
 						<h3 className="font-medium mb-2">Border</h3>
-						{renderBorderControls()}
+						<div className="space-y-4">
+							<div className="flex items-center space-x-2">
+								<input
+									type="checkbox"
+									id="unified-border"
+									checked={borderValues.unified}
+									onChange={(e) => setBorderValues({ ...borderValues, unified: e.target.checked })}
+									className="rounded"
+								/>
+								<Label htmlFor="unified-border">Unified Border</Label>
+							</div>
+							{borderValues.unified ? (
+								<div className="space-y-3">
+									<div>
+										<Label>Border Width</Label>
+										<Slider
+											value={[borderValues.top.width]}
+											onValueChange={([value]) => updateBorder("top", "width", value)}
+											min={0}
+											max={20}
+											step={1}
+											className="mt-2"
+										/>
+										<span className="text-xs text-gray-500">{borderValues.top.width}px</span>
+									</div>
+									<div>
+										<Label>Border Style</Label>
+										<select
+											value={borderValues.top.style}
+											onChange={(e) => updateBorder("top", "style", e.target.value)}
+											className="mt-2 w-full p-2 border rounded">
+											<option value="solid">Solid</option>
+											<option value="dashed">Dashed</option>
+											<option value="dotted">Dotted</option>
+											<option value="double">Double</option>
+											<option value="groove">Groove</option>
+											<option value="ridge">Ridge</option>
+											<option value="inset">Inset</option>
+											<option value="outset">Outset</option>
+										</select>
+									</div>
+									<div>
+										<Label>Border Color</Label>
+										<Input
+											type="color"
+											value={borderValues.top.color}
+											onChange={(e) => updateBorder("top", "color", e.target.value)}
+											className="mt-2"
+										/>
+									</div>
+								</div>
+							) : (
+								<div className="space-y-4">
+									{(["top", "right", "bottom", "left"] as BorderSide[]).map((side) => (
+										<div key={side} className="border p-3 rounded">
+											<h4 className="font-medium mb-2 capitalize">{side} Border</h4>
+											<div className="grid grid-cols-3 gap-2">
+												<div>
+													<Label className="text-xs">Width</Label>
+													<Slider
+														value={[borderValues[side].width]}
+														onValueChange={([value]) => updateBorder(side, "width", value)}
+														min={0}
+														max={20}
+														step={1}
+														className="mt-1"
+													/>
+													<span className="text-xs text-gray-500">{borderValues[side].width}px</span>
+												</div>
+												<div>
+													<Label className="text-xs">Style</Label>
+													<select
+														value={borderValues[side].style}
+														onChange={(e) => updateBorder(side, "style", e.target.value)}
+														className="mt-1 w-full p-1 border rounded text-xs">
+														<option value="solid">Solid</option>
+														<option value="dashed">Dashed</option>
+														<option value="dotted">Dotted</option>
+														<option value="double">Double</option>
+													</select>
+												</div>
+												<div>
+													<Label className="text-xs">Color</Label>
+													<Input
+														type="color"
+														value={borderValues[side].color}
+														onChange={(e) => updateBorder(side, "color", e.target.value)}
+														className="mt-1 h-8"
+													/>
+												</div>
+											</div>
+										</div>
+									))}
+								</div>
+							)}
+						</div>
+
 						<h3 className="font-medium mb-2 mt-6">Radius</h3>
-						{renderRadiusControls()}
-						<h3 className="font-medium mb-2 mt-6">Gradient/Mask</h3>
-						{renderBackgroundControls()}
+						<div className="space-y-4">
+							<div className="flex items-center space-x-2">
+								<input
+									type="checkbox"
+									id="unified-radius"
+									checked={radiusValues.unified}
+									onChange={(e) => setRadiusValues({ ...radiusValues, unified: e.target.checked })}
+									className="rounded"
+								/>
+								<Label htmlFor="unified-radius">Unified Radius</Label>
+							</div>
+							{radiusValues.unified ? (
+								<div>
+									<Label>Radius</Label>
+									<Slider
+										value={[radiusValues.topLeft]}
+										onValueChange={([value]) => updateRadius("topLeft", value)}
+										min={0}
+										max={64}
+										step={1}
+										className="mt-2"
+									/>
+									<span className="text-xs text-gray-500">{radiusValues.topLeft}px</span>
+								</div>
+							) : (
+								<div className="grid grid-cols-2 gap-2">
+									{(
+										[
+											{ key: "topLeft", label: "Top Left" },
+											{ key: "topRight", label: "Top Right" },
+											{ key: "bottomRight", label: "Bottom Right" },
+											{ key: "bottomLeft", label: "Bottom Left" },
+										] as { key: BorderCorner; label: string }[]
+									).map((corner) => (
+										<div key={corner.key}>
+											<Label className="text-xs">{corner.label}</Label>
+											<Slider
+												value={[radiusValues[corner.key]]}
+												onValueChange={([value]) => updateRadius(corner.key, value)}
+												min={0}
+												max={64}
+												step={1}
+												className="mt-1"
+											/>
+											<span className="text-xs text-gray-500">{radiusValues[corner.key]}px</span>
+										</div>
+									))}
+								</div>
+							)}
+						</div>
+
+						<h3 className="font-medium mb-2 mt-6">Gradient Background</h3>
+						<div className="space-y-4">
+							<div>
+								<Input
+									type="text"
+									value={background}
+									onChange={(e) => updateBackground(e.target.value)}
+									className="mt-2"
+									placeholder="e.g. linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%)"
+								/>
+							</div>
+							<div>
+								<Label>Mask (mask-image)</Label>
+								<Input
+									type="text"
+									value={mask}
+									onChange={(e) => updateMask(e.target.value)}
+									className="mt-2"
+									placeholder="e.g. linear-gradient(black, transparent)"
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="mt-4 sm:mt-6">

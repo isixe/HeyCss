@@ -7,14 +7,14 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
 import { Copy } from "lucide-react"
+import { copyToClipboard } from "@/utils/clipboard"
 
 interface EditModalProps {
   style: any
   onClose: () => void
-  onCopy: (css: string) => void
 }
 
-export function EditModal({ style, onClose, onCopy }: EditModalProps) {
+export function EditModal({ style, onClose }: EditModalProps) {
   const [editedStyle, setEditedStyle] = useState(style.style)
   const [generatedCSS, setGeneratedCSS] = useState(style.css)
 
@@ -392,7 +392,7 @@ export function EditModal({ style, onClose, onCopy }: EditModalProps) {
             <Button
               size="sm"
               variant="outline"
-              onClick={() => onCopy(generatedCSS)}
+              onClick={() => copyToClipboard(generatedCSS)}
               className="flex items-center gap-2"
             >
               <Copy className="h-4 w-4" />
