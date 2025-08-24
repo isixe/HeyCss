@@ -274,7 +274,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 														value={[borderValues[side].width]}
 														onValueChange={([value]) => updateBorder(side, "width", value)}
 														min={0}
-														max={20}
 														step={1}
 														className="mt-1"
 													/>
@@ -327,7 +326,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 										value={[radiusValues.topLeft]}
 										onValueChange={([value]) => updateRadius("topLeft", value)}
 										min={0}
-										max={64}
 										step={1}
 										className="mt-2"
 									/>
@@ -349,7 +347,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 												value={[radiusValues[corner.key]]}
 												onValueChange={([value]) => updateRadius(corner.key, value)}
 												min={0}
-												max={64}
 												step={1}
 												className="mt-1"
 											/>
@@ -360,6 +357,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 							)}
 						</div>
 
+						{/* TODO：default gradient direction display */}
 						<h3 className="font-medium mb-2 mt-6">Gradient Background</h3>
 						<div className="space-y-4">
 							<div className="flex items-center justify-between">
@@ -379,13 +377,33 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 									<option value="315deg">↖ Top Left</option>
 								</select>
 							</div>
-							<Slider
-								onValueChange={([value]) => updateGradientDirection(`${value}deg`)}
-								min={-360}
-								max={360}
-								step={1}
-								className="mt-1"
-							/>
+							<div className="space-y-2">
+								<Label className="text-xs">Angle Control</Label>
+								<Slider
+									value={[gradientDirection.includes("deg") ? Number.parseInt(gradientDirection) : 135]}
+									onValueChange={([value]) => updateGradientDirection(`${value}deg`)}
+									min={-360}
+									max={360}
+									step={1}
+									className="mt-1"
+								/>
+								<div className="flex gap-2">
+									<Input
+										type="text"
+										value={gradientDirection}
+										onChange={(e) => updateGradientDirection(e.target.value)}
+										className="text-xs h-8"
+										placeholder="e.g. 45deg, to right"
+									/>
+									<Input
+										type="number"
+										value={gradientDirection.includes("deg") ? Number.parseInt(gradientDirection) : ""}
+										onChange={(e) => updateGradientDirection(`${e.target.value}deg`)}
+										className="text-xs h-8 w-20"
+										placeholder="deg"
+									/>
+								</div>
+							</div>
 
 							<div className="flex items-center justify-between">
 								<Label>Gradient Stops ({gradientStops.length})</Label>
@@ -472,6 +490,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 							Copy CSS
 						</Button>
 					</div>
+					{/* TODO：gradient input and sync with configuration */}
 					<div className="bg-gray-100 p-2 sm:p-3 rounded-md font-mono text-xs sm:text-sm max-h-32 overflow-y-auto">
 						{generatedCSS}
 					</div>
