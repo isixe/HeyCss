@@ -19,8 +19,7 @@
 		"border": "4px ridge #10b981"
 	},
 	{
-		"border": "2px solid #3b82f6",
-		"borderRadius": "16px"
+		"border": "2px solid #3b82f6"
 	},
 	{
 		"borderTop": "4px solid #ef4444",

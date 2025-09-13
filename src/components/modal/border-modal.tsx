@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Copy, Plus, X } from "lucide-react";
 import { copyToClipboard } from "@/utils/clipboard";
+import Color from "color";
 
 type BorderSide = "top" | "right" | "bottom" | "left";
 type BorderCorner = "topLeft" | "topRight" | "bottomRight" | "bottomLeft";
@@ -28,7 +29,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		.map(([key, value]) => `${key}: ${value};`)
 		.join("\n");
 
-	// Border state
 	const [borderValues, setBorderValues] = useState<{
 		top: { width: number; style: string; color: string };
 		right: { width: number; style: string; color: string };
@@ -42,7 +42,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		left: { width: 2, style: "solid", color: "#a6deba" },
 		unified: true,
 	});
-	// Border radius
+
 	const [radiusValues, setRadiusValues] = useState<{
 		topLeft: number;
 		topRight: number;
@@ -60,9 +60,8 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 	const [gradientStops, setGradientStops] = useState<GradientStop[]>([]);
 	const [gradientDirection, setGradientDirection] = useState("135deg");
 
-	// Mask
 	const [mask, setMask] = useState("");
-	// Generated CSS
+
 	const [generatedCSS, setGeneratedCSS] = useState(defaultStyle);
 
 	const addGradientStop = () => {
@@ -82,6 +81,186 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		generateCSS(borderValues, radiusValues, newStops, gradientDirection, mask);
 	};
 
+	const handleBorderUnifiedChange = (checked: boolean) => {
+		if (checked) {
+			const { width, style, color } = borderValues.top;
+			setBorderValues({
+				top: { width, style, color },
+				right: { width, style, color },
+				bottom: { width, style, color },
+				left: { width, style, color },
+				unified: true,
+			});
+		} else {
+			const { width, style, color } = borderValues.top;
+			setBorderValues({
+				top: { width, style, color },
+				right: { width, style, color },
+				bottom: { width, style, color },
+				left: { width, style, color },
+				unified: false,
+			});
+		}
+		generateCSS(
+			{
+				...borderValues,
+				unified: checked,
+			},
+			radiusValues,
+			gradientStops,
+			gradientDirection,
+			mask
+		);
+	};
+
+	const handleRadiusUnifiedChange = (checked: boolean) => {
+		if (checked) {
+			const v = radiusValues.topLeft;
+			setRadiusValues({
+				topLeft: v,
+				topRight: v,
+				bottomRight: v,
+				bottomLeft: v,
+				unified: true,
+			});
+		} else {
+			const v = radiusValues.topLeft;
+			setRadiusValues({
+				topLeft: v,
+				topRight: v,
+				bottomRight: v,
+				bottomLeft: v,
+				unified: false,
+			});
+		}
+		generateCSS(
+			borderValues,
+			{
+				...radiusValues,
+				unified: checked,
+			},
+			gradientStops,
+			gradientDirection,
+			mask
+		);
+	};
+
+	const updateBorderStyle = (value: string) => {
+		setGeneratedCSS(value);
+
+		const colorReg = /#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b|rgba?\([^)]+\)|hsla?\([^)]+\)|\b[a-zA-Z]+\b/;
+
+		const borderUnified = !value.match(/border-(top|right|bottom|left):/);
+		const radiusUnified = !value.match(/border-radius:\s*\d+\s+\d+\s+\d+\s+\d+px/);
+
+		let newBorderValues = { ...borderValues };
+		let newRadiusValues = { ...radiusValues };
+
+		if (borderUnified) {
+			const borderMatch = value.match(new RegExp(`border:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
+			if (borderMatch) {
+				const width = Number(borderMatch[1]);
+				const style = borderMatch[2];
+				const color = borderMatch[3];
+				newBorderValues = {
+					top: { width, style, color },
+					right: { width, style, color },
+					bottom: { width, style, color },
+					left: { width, style, color },
+					unified: true,
+				};
+			}
+		} else {
+			const borderTopMatch = value.match(new RegExp(`border-top:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
+			const borderRightMatch = value.match(new RegExp(`border-right:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
+			const borderBottomMatch = value.match(new RegExp(`border-bottom:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
+			const borderLeftMatch = value.match(new RegExp(`border-left:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
+			if (borderTopMatch) {
+				const width = Number(borderTopMatch[1]);
+				const style = borderTopMatch[2];
+				const color = borderTopMatch[3];
+				newBorderValues.top = { width, style, color };
+			} else {
+				newBorderValues.top = { width: 0, style: "solid", color: "transparent" };
+			}
+			if (borderRightMatch) {
+				const width = Number(borderRightMatch[1]);
+				const style = borderRightMatch[2];
+				const color = borderRightMatch[3];
+				newBorderValues.right = { width, style, color };
+			} else {
+				newBorderValues.right = { width: 0, style: "solid", color: "transparent" };
+			}
+			if (borderBottomMatch) {
+				const width = Number(borderBottomMatch[1]);
+				const style = borderBottomMatch[2];
+				const color = borderBottomMatch[3];
+				newBorderValues.bottom = { width, style, color };
+			} else {
+				newBorderValues.bottom = { width: 0, style: "solid", color: "transparent" };
+			}
+			if (borderLeftMatch) {
+				const width = Number(borderLeftMatch[1]);
+				const style = borderLeftMatch[2];
+				const color = borderLeftMatch[3];
+				newBorderValues.left = { width, style, color };
+			} else {
+				newBorderValues.left = { width: 0, style: "solid", color: "transparent" };
+			}
+			newBorderValues.unified = false;
+		}
+		setBorderValues(newBorderValues);
+
+		const radiusReg = /border-radius:\s*([^;]+)/;
+		const radiusMatch = value.match(radiusReg);
+		if (radiusMatch) {
+			const radiusStr = radiusMatch[1].trim();
+			const radiusArr = radiusStr
+				.split(/\s+/)
+				.map((v) => parseInt(v.replace("px", ""), 10))
+				.filter((v) => !isNaN(v));
+
+			const mapping = [
+				[0, 0, 0, 0],
+				[0, 1, 0, 1],
+				[0, 1, 2, 1],
+				[0, 1, 2, 3],
+			];
+			const len = Math.min(radiusArr.length, 4);
+			const map = mapping[len - 1];
+			const result = {
+				topLeft: radiusArr[map[0]] ?? 0,
+				topRight: radiusArr[map[1]] ?? 0,
+				bottomRight: radiusArr[map[2]] ?? 0,
+				bottomLeft: radiusArr[map[3]] ?? 0,
+				unified: len === 1,
+			};
+			setRadiusValues(result);
+		}
+
+		const gradientMatch = value.match(/linear-gradient\(([^,]+),([^)]+)\)/);
+		if (gradientMatch) {
+			const direction = gradientMatch[1].trim();
+			const stopsArr = gradientMatch[2].split(",").map((s) => s.trim());
+
+			const newStops = stopsArr.map((stop, idx) => {
+				const colorMatch = stop.match(colorReg);
+				const color = colorMatch ? colorMatch[0] : "#000";
+				const positionMatch = stop.match(/(\d+)%/);
+				const position = positionMatch ? Number(positionMatch[1]) : 0;
+				return { id: String(idx), color, position };
+			});
+			setGradientDirection(direction);
+			setGradientStops(newStops);
+		} else {
+			setGradientStops([]);
+		}
+		const maskMatch = value.match(/mask-image:\s*([^;]+);?/);
+		if (maskMatch) {
+			setMask(maskMatch[1].trim());
+		}
+	};
+
 	const updateGradientStop = (id: string, property: "color" | "position", value: string | number) => {
 		const newStops = gradientStops.map((stop) => (stop.id === id ? { ...stop, [property]: value } : stop));
 		setGradientStops(newStops);
@@ -93,7 +272,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		generateCSS(borderValues, radiusValues, gradientStops, direction, mask);
 	};
 
-	// Border update
 	const updateBorder = (side: BorderSide, property: string, value: any) => {
 		const newBorderValues = { ...borderValues };
 		if (newBorderValues.unified) {
@@ -107,7 +285,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		generateCSS(newBorderValues, radiusValues, gradientStops, gradientDirection, mask);
 	};
 
-	// Radius update
 	const updateRadius = (corner: BorderCorner, value: number) => {
 		const newRadiusValues = { ...radiusValues };
 		if (newRadiusValues.unified) {
@@ -121,7 +298,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		generateCSS(borderValues, newRadiusValues, gradientStops, gradientDirection, mask);
 	};
 
-	// Mask update
 	const updateMask = (value: string) => {
 		setMask(value);
 		generateCSS(borderValues, radiusValues, gradientStops, gradientDirection, value);
@@ -156,7 +332,6 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 			);
 		}
 
-		// Background - generate gradient from stops
 		if (stops.length > 0) {
 			const sortedStops = [...stops].sort((a, b) => a.position - b.position);
 			const gradientString = sortedStops.map((stop) => `${stop.color} ${stop.position}%`).join(", ");
@@ -178,6 +353,10 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		const gradientString = sortedStops.map((stop) => `${stop.color} ${stop.position}%`).join(", ");
 		return { background: `linear-gradient(${gradientDirection}, ${gradientString})` };
 	};
+
+	useEffect(() => {
+		generateCSS(borderValues, radiusValues, gradientStops, gradientDirection, mask);
+	}, []);
 
 	return (
 		<Dialog open={true} onOpenChange={onClose} modal>
@@ -217,7 +396,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 									type="checkbox"
 									id="unified-border"
 									checked={borderValues.unified}
-									onChange={(e) => setBorderValues({ ...borderValues, unified: e.target.checked })}
+									onChange={(e) => handleBorderUnifiedChange(e.target.checked)}
 									className="rounded"
 								/>
 								<Label htmlFor="unified-border">Unified Border</Label>
@@ -256,7 +435,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 										<Label>Border Color</Label>
 										<Input
 											type="color"
-											value={borderValues.top.color}
+											value={toHex6(borderValues.top.color)}
 											onChange={(e) => updateBorder("top", "color", e.target.value)}
 											className="mt-2"
 										/>
@@ -295,7 +474,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 													<Label className="text-xs">Color</Label>
 													<Input
 														type="color"
-														value={borderValues[side].color}
+														value={toHex6(borderValues[side].color)}
 														onChange={(e) => updateBorder(side, "color", e.target.value)}
 														className="mt-1 h-8"
 													/>
@@ -314,7 +493,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 									type="checkbox"
 									id="unified-radius"
 									checked={radiusValues.unified}
-									onChange={(e) => setRadiusValues({ ...radiusValues, unified: e.target.checked })}
+									onChange={(e) => handleRadiusUnifiedChange(e.target.checked)}
 									className="rounded"
 								/>
 								<Label htmlFor="unified-radius">Unified Radius</Label>
@@ -440,7 +619,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 													<Label className="text-xs">Color</Label>
 													<Input
 														type="color"
-														value={stop.color}
+														value={toHex6(stop.color)}
 														onChange={(e) => updateGradientStop(stop.id, "color", e.target.value)}
 														className="mt-1 h-8"
 													/>
@@ -490,12 +669,22 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 							Copy CSS
 						</Button>
 					</div>
-					{/* TODO：gradient input and sync with configuration */}
-					<div className="bg-gray-100 p-2 sm:p-3 rounded-md font-mono text-xs sm:text-sm max-h-32 overflow-y-auto">
-						{generatedCSS}
-					</div>
+					<Input
+						type="text"
+						value={generatedCSS}
+						onChange={(e) => updateBorderStyle(e.target.value)}
+						className="bg-gray-100 p-2 sm:p-3 rounded-md font-mono text-xs sm:text-sm max-h-32 overflow-y-auto"
+					/>
 				</div>
 			</DialogContent>
 		</Dialog>
 	);
+}
+
+function toHex6(color: string) {
+	try {
+		return Color(color).hex().toLowerCase();
+	} catch {
+		return "#000000";
+	}
 }
