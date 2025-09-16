@@ -4,25 +4,24 @@
  * @param {Object} cssObj - CSS object
  * @returns {string} - CSS string
  */
-function cssObjectParser(cssObj) {
-    if (!cssObj || typeof cssObj !== 'object') {
-        return '';
-    }
+function cssObjectParser(cssObj: { [s: string]: unknown } | ArrayLike<unknown>): string {
+	if (!cssObj || typeof cssObj !== "object") {
+		return "";
+	}
 
-    let cssString = '';
-    
-    
-    for (const [key, value] of Object.entries(cssObj)) {
-        if (value === null || value === undefined || value === '') {
-            continue;
-        }
-        
-        const cssProperty = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-        
-        cssString += `${cssProperty}: ${value}; `;
-    }
-    
-    return cssString.trim();
+	let cssString = "";
+
+	for (const [key, value] of Object.entries(cssObj)) {
+		if (value === null || value === undefined || value === "") {
+			continue;
+		}
+
+		const cssProperty = key.replace(/([A-Z])/g, "-$1").toLowerCase();
+
+		cssString += `${cssProperty}: ${value}; `;
+	}
+
+	return cssString.trim();
 }
 
 /**
@@ -30,28 +29,27 @@ function cssObjectParser(cssObj) {
  * @param {string} cssString - CSS string
  * @returns {Object} - CSS object
  */
-function cssStringToObject(cssString) {
-    if (typeof cssString !== 'string' || cssString.trim() === '') {
-        return {};
-    }
+function cssStringToObject(cssString: string): object {
+	if (typeof cssString !== "string" || cssString.trim() === "") {
+		return {};
+	}
 
-    const propertyPairs = cssString.split(/\s*;\s*/);
+	const propertyPairs = cssString.split(/\s*;\s*/);
 
-    const cssObject = {};
-    for (const pair of propertyPairs) {
-        if (pair.trim() === '') continue;
+	const cssObject: Record<string, string> = {};
+	for (const pair of propertyPairs) {
+		if (pair.trim() === "") continue;
 
-        const [property, value] = pair.split(/\s*:\s*/);
-        if (!property || !value) continue;
+		const [property, value] = pair.split(/\s*:\s*/);
+		if (!property || !value) continue;
 
-        let camelCaseKey = property
-            .replace(/-([a-zA-Z0-9])/g, (_, char) => char.toUpperCase())
-            .trim();
+		let camelCaseKey = property.replace(/-([a-zA-Z0-9])/g, (_, char) => char.toUpperCase()).trim();
+		const trimmedValue = value.trim();
 
-        const trimmedValue = value.trim();
+		cssObject[camelCaseKey] = trimmedValue;
+	}
 
-        cssObject[camelCaseKey] = trimmedValue;
-    }
-
-    return cssObject;
+	return cssObject;
 }
+
+export { cssObjectParser, cssStringToObject };

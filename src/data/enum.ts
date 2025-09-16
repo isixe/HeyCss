@@ -1,3 +1,5 @@
+import { BorderSide } from "@/types/border";
+
 export enum StyleTabs {
 	BoxShadow = "boxShadow",
 	Border = "border",
@@ -17,4 +19,11 @@ export const TAB_TRIGGER_CLASS: Record<string, string> = {
 	[StyleTabs.Border]: "data-[state=active]:bg-green-100 data-[state=active]:text-green-800 hover:bg-green-200",
 	[StyleTabs.Gradient]: "data-[state=active]:bg-pink-100 data-[state=active]:text-pink-800 hover:bg-pink-200",
 	[StyleTabs.Text]: "data-[state=active]:bg-purple-100 data-[state=active]:text-purple-800 hover:bg-purple-200",
+};
+
+export const BORDER_PROP_MAP: Record<BorderSide, string> = {
+	top: "borderTop",
+	right: "borderRight",
+	bottom: "borderBottom",
+	left: "borderLeft",
 };

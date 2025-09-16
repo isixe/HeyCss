@@ -9,33 +9,17 @@ import { Slider } from "@/components/ui/slider";
 import { Copy, Plus, X } from "lucide-react";
 import { copyToClipboard } from "@/utils/clipboard";
 import Color from "color";
+import { cssObjectParser } from "@/core/parser";
 
-type BorderSide = "top" | "right" | "bottom" | "left";
-type BorderCorner = "topLeft" | "topRight" | "bottomRight" | "bottomLeft";
-
-interface GradientStop {
-	id: string;
-	color: string;
-	position: number;
-}
-
-interface BorderModalProps {
+type BorderModalProps = {
 	style: any;
 	onClose: () => void;
-}
+};
 
 export default function BorderModal({ style, onClose }: BorderModalProps) {
-	const defaultStyle = Object.entries(style)
-		.map(([key, value]) => `${key}: ${value};`)
-		.join("\n");
+	const defaultStyle = cssObjectParser(style);
 
-	const [borderValues, setBorderValues] = useState<{
-		top: { width: number; style: string; color: string };
-		right: { width: number; style: string; color: string };
-		bottom: { width: number; style: string; color: string };
-		left: { width: number; style: string; color: string };
-		unified: boolean;
-	}>({
+	const [borderValues, setBorderValues] = useState<BorderValues>({
 		top: { width: 2, style: "solid", color: "#a6deba" },
 		right: { width: 2, style: "solid", color: "#a6deba" },
 		bottom: { width: 2, style: "solid", color: "#a6deba" },
@@ -43,13 +27,7 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		unified: true,
 	});
 
-	const [radiusValues, setRadiusValues] = useState<{
-		topLeft: number;
-		topRight: number;
-		bottomRight: number;
-		bottomLeft: number;
-		unified: boolean;
-	}>({
+	const [radiusValues, setRadiusValues] = useState<RadiusValues>({
 		topLeft: 10,
 		topRight: 10,
 		bottomRight: 10,
@@ -82,67 +60,29 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 	};
 
 	const handleBorderUnifiedChange = (checked: boolean) => {
-		if (checked) {
-			const { width, style, color } = borderValues.top;
-			setBorderValues({
-				top: { width, style, color },
-				right: { width, style, color },
-				bottom: { width, style, color },
-				left: { width, style, color },
-				unified: true,
-			});
-		} else {
-			const { width, style, color } = borderValues.top;
-			setBorderValues({
-				top: { width, style, color },
-				right: { width, style, color },
-				bottom: { width, style, color },
-				left: { width, style, color },
-				unified: false,
-			});
-		}
-		generateCSS(
-			{
-				...borderValues,
-				unified: checked,
-			},
-			radiusValues,
-			gradientStops,
-			gradientDirection,
-			mask
-		);
+		const { width, style, color } = borderValues.top;
+		const newBorder = {
+			top: { width, style, color },
+			right: { width, style, color },
+			bottom: { width, style, color },
+			left: { width, style, color },
+			unified: checked,
+		};
+		setBorderValues(newBorder);
+		generateCSS(newBorder, radiusValues, gradientStops, gradientDirection, mask);
 	};
 
 	const handleRadiusUnifiedChange = (checked: boolean) => {
-		if (checked) {
-			const v = radiusValues.topLeft;
-			setRadiusValues({
-				topLeft: v,
-				topRight: v,
-				bottomRight: v,
-				bottomLeft: v,
-				unified: true,
-			});
-		} else {
-			const v = radiusValues.topLeft;
-			setRadiusValues({
-				topLeft: v,
-				topRight: v,
-				bottomRight: v,
-				bottomLeft: v,
-				unified: false,
-			});
-		}
-		generateCSS(
-			borderValues,
-			{
-				...radiusValues,
-				unified: checked,
-			},
-			gradientStops,
-			gradientDirection,
-			mask
-		);
+		const v = radiusValues.topLeft;
+		const newRadiusValues = {
+			topLeft: v,
+			topRight: v,
+			bottomRight: v,
+			bottomLeft: v,
+			unified: checked,
+		};
+		setRadiusValues(newRadiusValues);
+		generateCSS(borderValues, newRadiusValues, gradientStops, gradientDirection, mask);
 	};
 
 	const updateBorderStyle = (value: string) => {
@@ -151,10 +91,8 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 		const colorReg = /#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})\b|rgba?\([^)]+\)|hsla?\([^)]+\)|\b[a-zA-Z]+\b/;
 
 		const borderUnified = !value.match(/border-(top|right|bottom|left):/);
-		const radiusUnified = !value.match(/border-radius:\s*\d+\s+\d+\s+\d+\s+\d+px/);
 
 		let newBorderValues = { ...borderValues };
-		let newRadiusValues = { ...radiusValues };
 
 		if (borderUnified) {
 			const borderMatch = value.match(new RegExp(`border:\\s*(\\d+)px\\s+(\\w+)\\s+(${colorReg.source})`));
@@ -348,7 +286,9 @@ export default function BorderModal({ style, onClose }: BorderModalProps) {
 	};
 
 	const getBackgroundStyle = () => {
-		if (gradientStops.length === 0) return {};
+		if (gradientStops.length === 0) {
+			return {};
+		}
 		const sortedStops = [...gradientStops].sort((a, b) => a.position - b.position);
 		const gradientString = sortedStops.map((stop) => `${stop.color} ${stop.position}%`).join(", ");
 		return { background: `linear-gradient(${gradientDirection}, ${gradientString})` };
