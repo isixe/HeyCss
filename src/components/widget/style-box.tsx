@@ -10,11 +10,10 @@ import { TAB_TRIGGER_CLASS } from "@/data/enum";
 
 interface StyleBoxProps {
 	style: any;
-	onEdit: () => void;
 	tab: string;
 }
 
-export function StyleBox({ style, onEdit, tab }: StyleBoxProps) {
+export function StyleBox({ style, tab }: StyleBoxProps) {
 	const [isCopied, setIsCopied] = useState(false);
 
 	const getTabClass = (tab: string) => {
@@ -35,12 +34,6 @@ export function StyleBox({ style, onEdit, tab }: StyleBoxProps) {
 		onStyleCopy();
 	};
 
-	const onEditClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-		e.preventDefault();
-		e.stopPropagation();
-		onEdit();
-	};
-
 	return (
 		<div className="relative group flex justify-center">
 			<div
@@ -59,13 +52,6 @@ export function StyleBox({ style, onEdit, tab }: StyleBoxProps) {
 						}`}
 						onClick={onCopyClick}>
 						{isCopied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-					</Button>
-					<Button
-						size="sm"
-						variant="secondary"
-						className="h-6 w-6 p-0 bg-white/90 hover:bg-white shadow-md"
-						onClick={onEditClick}>
-						<Paintbrush className="h-3 w-3" />
 					</Button>
 				</div>
 			</div>

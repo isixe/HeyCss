@@ -17,6 +17,7 @@ import { TextView } from "@/components/view/text-view";
 import { TABS, TAB_TRIGGER_CLASS, StyleTabs } from "@/data/enum";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { StyleBox } from "@/components/widget/style-box";
 
 export default function HeyCSS() {
 	const [stylesData, setStylesData] = useState<StylesData | null>(null);
@@ -140,18 +141,15 @@ export default function HeyCSS() {
 
 							{TABS.map((tab) => (
 								<TabsContent key={tab.value} value={tab.value}>
-									{tab.value === StyleTabs.BoxShadow && <BoxShadowView items={stylesMap.boxShadow} />}
-									{tab.value === StyleTabs.Border && <BorderView items={stylesMap.border} />}
-									{tab.value === StyleTabs.Gradient && <GradientView items={stylesMap.gradient} />}
-									{tab.value === StyleTabs.Text && <TextView items={stylesMap.text} />}
+									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+										{stylesMap[tab.value].map((style, index) => (
+											<StyleBox key={index} style={style} tab={tab.value} />
+										))}
+									</div>
 								</TabsContent>
 							))}
 						</Tabs>
 					</div>
-
-					{editingStyle && (
-						<EditModal style={editingStyle} onClose={() => setEditingStyle(null)} onCopy={copyToClipboard} />
-					)}
 				</div>
 			</main>
 			<Footer setCurrentTab={setCurrentTab} />

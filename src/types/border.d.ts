@@ -1,17 +1,11 @@
 type BorderSide = "top" | "right" | "bottom" | "left";
 type BorderCorner = "topLeft" | "topRight" | "bottomRight" | "bottomLeft";
 
-type BorderValue = {
-	width: number;
-	style: string;
-	color: string;
-};
-
 type BorderValues = {
-	top: BorderValue;
-	right: BorderValue;
-	bottom: BorderValue;
-	left: BorderValue;
+	borderTop: string;
+	borderRight: string;
+	borderBottom: string;
+	borderLeft: string;
 	unified: boolean;
 };
 

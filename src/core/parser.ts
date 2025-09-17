@@ -35,8 +35,8 @@ function cssStringToObject(cssString: string): object {
 	}
 
 	const propertyPairs = cssString.split(/\s*;\s*/);
+	const cssObject: Record<string, any> = {};
 
-	const cssObject: Record<string, string> = {};
 	for (const pair of propertyPairs) {
 		if (pair.trim() === "") continue;
 
@@ -47,6 +47,16 @@ function cssStringToObject(cssString: string): object {
 		const trimmedValue = value.trim();
 
 		cssObject[camelCaseKey] = trimmedValue;
+	}
+
+	if (cssObject["border"] && typeof cssObject["border"] === "object") {
+		const borderObj = cssObject["border"] as Record<string, string>;
+		for (const dir of ["top", "right", "bottom", "left"]) {
+			if (borderObj[dir]) {
+				cssObject["border" + dir.charAt(0).toUpperCase() + dir.slice(1)] = borderObj[dir];
+			}
+		}
+		delete cssObject["border"];
 	}
 
 	return cssObject;
