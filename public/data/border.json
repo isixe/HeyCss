@@ -12,10 +12,6 @@
 		"borderRadius": "10px"
 	},
 	{
-		"border": "3px solid transparent",
-		"borderRadius": "10px"
-	},
-	{
 		"border": "4px double #8b5cf6",
 		"borderRadius": "10px"
 	},
@@ -33,5 +29,24 @@
 		"borderBottom": "4px solid #10b981",
 		"borderLeft": "2px solid #3b82f6",
 		"borderRadius": "10px"
+	},
+	{
+		"background": "#ffffff",
+		"&": {
+			":before": {
+				"content": "",
+				"position": "absolute",
+				"top": 0,
+				"bottom": 0,
+				"left": 0,
+				"right": 0,
+				"borderRadius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(45deg, #f43f5e, #3b82f6, #10b981, #f59e0b)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
 	}
 ]

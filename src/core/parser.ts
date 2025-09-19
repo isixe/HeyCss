@@ -4,24 +4,39 @@
  * @param {Object} cssObj - CSS object
  * @returns {string} - CSS string
  */
-function cssObjectParser(cssObj: { [s: string]: unknown } | ArrayLike<unknown>): string {
-	if (!cssObj || typeof cssObj !== "object") {
-		return "";
-	}
+function cssObjectParser(cssObj: Record<string, any>): string {
+	console.log(cssObj);
+	if (!cssObj || typeof cssObj !== "object") return "";
 
-	let cssString = "";
+	const generateProperty = (key: string, value: any) => {
+		if (value === null || value === undefined || value === "") return "";
+		const cssKey = key
+			.replace(/([A-Z])/g, "-$1")
+			.toLowerCase()
+			.replace(/(webkit)-(.+)/, "-$1-$2");
+		return `  ${cssKey}: ${value};\n`;
+	};
 
-	for (const [key, value] of Object.entries(cssObj)) {
-		if (value === null || value === undefined || value === "") {
-			continue;
+	const parseObject = (obj: Record<string, any>, selector?: string): string => {
+		let css = "";
+		for (const [key, value] of Object.entries(obj)) {
+			if (key.startsWith("&")) {
+				const nestedSelector = `${selector || ""}${key.slice(1)}`;
+				let nestedCss = "\n";
+				for (const [nestedKey, nestedValue] of Object.entries(value)) {
+					nestedCss += generateProperty(nestedKey, nestedValue) + " ";
+				}
+				nestedCss += "\n";
+				css += nestedSelector + nestedCss;
+			} else {
+				const property = generateProperty(key, value);
+				if (property) css += property + " ";
+			}
 		}
+		return css.trim();
+	};
 
-		const cssProperty = key.replace(/([A-Z])/g, "-$1").toLowerCase();
-
-		cssString += `${cssProperty}: ${value}; `;
-	}
-
-	return cssString.trim();
+	return `{\n   ${parseObject(cssObj)}\n}`;
 }
 
 export { cssObjectParser };

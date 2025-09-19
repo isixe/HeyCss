@@ -1,12 +1,11 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Copy, Paintbrush, Check } from "lucide-react";
+import { Copy, Check } from "lucide-react";
 import { copyObjectToClipboard } from "@/utils/clipboard";
 import { TAB_TRIGGER_CLASS } from "@/data/enum";
+import { cssObjectParser } from "@/core/parser";
 
 interface StyleBoxProps {
 	style: any;
@@ -15,10 +14,7 @@ interface StyleBoxProps {
 
 export function StyleBox({ style, tab }: StyleBoxProps) {
 	const [isCopied, setIsCopied] = useState(false);
-
-	const getTabClass = (tab: string) => {
-		return TAB_TRIGGER_CLASS[tab];
-	};
+	const [uniqueClassName] = useState(`style-${Math.random().toString(36).substr(2, 9)}`);
 
 	const onStyleCopy = async () => {
 		setIsCopied(true);
@@ -34,11 +30,26 @@ export function StyleBox({ style, tab }: StyleBoxProps) {
 		onStyleCopy();
 	};
 
+	useEffect(() => {
+		const cssRules = cssObjectParser(style);
+		console.log(cssRules);
+		const styleTag = document.createElement("style");
+		styleTag.textContent = `.${uniqueClassName} ${cssRules} `;
+		document.head.appendChild(styleTag);
+
+		return () => {
+			document.head.removeChild(styleTag);
+		};
+	}, [style]);
+
+	const getTabClass = (tab: string) => {
+		return TAB_TRIGGER_CLASS[tab];
+	};
+
 	return (
 		<div className="relative group flex justify-center">
 			<div
-				className="w-4/5 aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 border border-gray-100 relative cursor-pointer"
-				style={style}
+				className={`${uniqueClassName} w-4/5 aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 border border-gray-100 relative cursor-pointer`}
 				onClick={onStyleCopy}>
 				<span className="text-xs font-normal text-gray-400">{style.name}</span>
 

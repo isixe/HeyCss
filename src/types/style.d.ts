@@ -1,13 +1,13 @@
-type StyleType = "boxShadow" | "border" | "gradient" | "text";
+export type StyleType = "boxShadow" | "border" | "gradient" | "text";
 
-type StyleItem = {
+export type StyleItem = {
 	id: number;
 	name: string;
 	style: React.CSSProperties;
 	css: string;
 };
 
-type StylesData = {
+export type StylesData = {
 	boxShadow: StyleItem[];
 	border: StyleItem[];
 	gradient: StyleItem[];

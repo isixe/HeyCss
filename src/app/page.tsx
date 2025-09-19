@@ -6,22 +6,15 @@ import type { StyleItem, StylesData, StyleType } from "@/types/style";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { EditModal } from "@/components/modal/edit-modal";
 import { useToast } from "@/hooks/use-toast";
-import { copyToClipboard } from "@/utils/clipboard";
 import Loading from "@/components/widget/loading";
-import { BoxShadowView } from "@/components/view/boxshadow-view";
-import { BorderView } from "@/components/view/border-view";
-import { GradientView } from "@/components/view/gradient-view";
-import { TextView } from "@/components/view/text-view";
-import { TABS, TAB_TRIGGER_CLASS, StyleTabs } from "@/data/enum";
+import { TABS, TAB_TRIGGER_CLASS } from "@/data/enum";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { StyleBox } from "@/components/widget/style-box";
 
 export default function HeyCSS() {
 	const [stylesData, setStylesData] = useState<StylesData | null>(null);
-	const [editingStyle, setEditingStyle] = useState<any>(null);
 	const [isLoading, setIsLoading] = useState(true);
 	const [currentTab, setCurrentTab] = useState<string>("boxShadow"); // 新增
 	const { toast } = useToast();
