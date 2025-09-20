@@ -64,7 +64,7 @@ export default function HeyCSS() {
 		return (
 			<>
 				<Header />
-				<div className="min-h-screen bg-white">
+				<div className="min-h-screen bg-black/5">
 					<div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
 						<div className="text-center">
 							<p className="text-red-600 mb-4">Failed to load styles data</p>
@@ -82,7 +82,7 @@ export default function HeyCSS() {
 	}
 
 	return (
-		<div className="min-h-screen bg-white">
+		<div className="min-h-screen  bg-black/4">
 			<Header setCurrentTab={setCurrentTab} />
 			<main className="px-[10%] py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto">
@@ -134,7 +134,7 @@ export default function HeyCSS() {
 
 							{TABS.map((tab) => (
 								<TabsContent key={tab.value} value={tab.value}>
-									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
 										{stylesMap[tab.value].map((style, index) => (
 											<StyleBox key={index} style={style} tab={tab.value} />
 										))}

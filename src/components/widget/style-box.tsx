@@ -48,24 +48,22 @@ export function StyleBox({ style, tab }: StyleBoxProps) {
 	};
 
 	return (
-		<div className="relative group flex justify-center">
-			<div
-				className={`${uniqueClassName} w-4/5 aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 border border-gray-100 relative cursor-pointer`}
-				onClick={onStyleCopy}>
-				<span className="text-xs font-normal text-gray-400">{style.name}</span>
+		<div
+			className={`${uniqueClassName} aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 border border-gray-100 relative cursor-pointer`}
+			onClick={onStyleCopy}>
+			<span className="text-xs font-normal text-gray-400">{style.name}</span>
 
-				<div className="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-					<Button
-						size="sm"
-						variant="secondary"
-						data-state={isCopied ? "active" : undefined}
-						className={`h-6 w-6 p-0 shadow-md transition-all duration-150 ${getTabClass(tab)} ${
-							isCopied ? "bg-white/90 hover:bg-white" : "bg-white/90 hover:bg-white"
-						}`}
-						onClick={onCopyClick}>
-						{isCopied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
-					</Button>
-				</div>
+			<div className="absolute top-2 right-2 flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+				<Button
+					size="sm"
+					variant="secondary"
+					data-state={isCopied ? "active" : undefined}
+					className={`h-6 w-6 p-0 shadow-md transition-all duration-150 ${getTabClass(tab)} ${
+						isCopied ? "bg-white/90 hover:bg-white" : "bg-white/90 hover:bg-white"
+					}`}
+					onClick={onCopyClick}>
+					{isCopied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
+				</Button>
 			</div>
 		</div>
 	);
