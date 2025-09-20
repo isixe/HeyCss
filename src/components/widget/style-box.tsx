@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
-import { copyObjectToClipboard } from "@/utils/clipboard";
+import { copyObjectToClipboard, copyToClipboard } from "@/utils/clipboard";
 import { TAB_TRIGGER_CLASS } from "@/data/enum";
 import { cssObjectParser } from "@/core/parser";
 
@@ -18,7 +18,8 @@ export function StyleBox({ style, tab }: StyleBoxProps) {
 
 	const onStyleCopy = async () => {
 		setIsCopied(true);
-		await copyObjectToClipboard(style);
+		const cssRules = cssObjectParser(style);
+		await copyToClipboard(cssRules);
 		setTimeout(() => {
 			setIsCopied(false);
 		}, 1500);
@@ -40,7 +41,7 @@ export function StyleBox({ style, tab }: StyleBoxProps) {
 		return () => {
 			document.head.removeChild(styleTag);
 		};
-	}, [style]);
+	}, []);
 
 	const getTabClass = (tab: string) => {
 		return TAB_TRIGGER_CLASS[tab];

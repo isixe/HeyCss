@@ -31,18 +31,20 @@
 		"borderRadius": "10px"
 	},
 	{
-		"background": "#ffffff",
+		"background": "transparent",
 		"&": {
 			":before": {
-				"content": "",
+				"content": "''",
 				"position": "absolute",
 				"top": 0,
 				"bottom": 0,
 				"left": 0,
 				"right": 0,
+				"inset": 0,
 				"borderRadius": "inherit",
 				"padding": "2px",
 				"background": "linear-gradient(45deg, #f43f5e, #3b82f6, #10b981, #f59e0b)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
 				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
 				"-webkit-mask-composite": "destination-out",
 				"mask-composite": "exclude"
