@@ -103,11 +103,9 @@ export default function HeyCSS() {
 								<div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent flex-1 max-w-20"></div>
 							</div>
 							<p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
-								Beautiful predefined CSS styles ready to copy and customize
+								Beautiful predefined CSS styles ready to copy
 							</p>
-							<p className="text-sm text-gray-500 mt-2 px-4">
-								Click any style to copy • Click the brush icon to customize
-							</p>
+							<p className="text-sm text-gray-500 mt-2 px-4">Click any style to copy the CSS code</p>
 						</div>
 					</div>
 
