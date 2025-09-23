@@ -134,7 +134,7 @@ export default function HeyCSS() {
 								<TabsContent key={tab.value} value={tab.value}>
 									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
 										{stylesMap[tab.value].map((style, index) => (
-											<StyleBox key={index} style={style} tab={tab.value} />
+											<StyleBox key={index} index={index} style={style} tab={tab.value} />
 										))}
 									</div>
 								</TabsContent>
