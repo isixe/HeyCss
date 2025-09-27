@@ -13,6 +13,7 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 		if (setCurrentTab) {
 			e.preventDefault();
 			setCurrentTab(tab);
+			window.scrollTo({ top: 0, behavior: "smooth" });
 		}
 	};
 
@@ -25,8 +26,8 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 							<h2 className="text-2xl font-bold ">HeyCSS</h2>
 						</div>
 						<p className="text-gray-600 text-sm mb-4 max-w-md">
-							Beautiful predefined CSS styles ready to copy and customize. Save time and create stunning designs with
-							our curated collection of CSS effects.
+							Beautiful predefined CSS styles ready to copy. Save time and create stunning designs with our curated
+							collection of CSS effects.
 						</p>
 						<div className="flex items-center text-sm text-gray-500">
 							<span>Made with</span>
@@ -61,28 +62,25 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 						<ul className="space-y-2">
 							<li>
 								<a
-									href="mailto:contact@heycss.com"
+									href="mailto:isixe@outlook.com"
 									className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-									Contact Us
+									Contact
 								</a>
 							</li>
 							<li>
 								<a
-									href="mailto:feedback@heycss.com"
-									className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
+									href="https://github.com/isixe/HeyCss"
+									className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
+									target="_blank">
 									Feedback
 								</a>
 							</li>
 							<li>
 								<a
-									href="mailto:support@heycss.com"
-									className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-									Support
-								</a>
-							</li>
-							<li>
-								<a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-									About Us
+									href="https://itea.dev"
+									className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
+									target="_blank">
+									About Lab
 								</a>
 							</li>
 						</ul>
@@ -95,20 +93,20 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 						<div className="text-sm text-gray-500 mb-4 md:mb-0">© 2024 HeyCSS. All rights reserved.</div>
 						<div className="flex space-x-4">
 							<a
-								href="https://github.com"
+								href="https://github.com/isixe/HeyCss"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-400 hover:text-gray-600 transition-colors">
 								<Github className="h-5 w-5" />
 							</a>
 							<a
-								href="https://twitter.com"
+								href="https://twitter.com/isixe_e"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-gray-400 hover:text-gray-600 transition-colors">
 								<Twitter className="h-5 w-5" />
 							</a>
-							<a href="mailto:contact@heycss.com" className="text-gray-400 hover:text-gray-600 transition-colors">
+							<a href="mailto:isixe@outlook.com" className="text-gray-400 hover:text-gray-600 transition-colors">
 								<Mail className="h-5 w-5" />
 							</a>
 						</div>
