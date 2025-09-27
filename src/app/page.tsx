@@ -22,7 +22,6 @@ export default function HeyCSS() {
 	const stylesMap: Record<StyleType, StyleItem[]> = {
 		boxShadow: stylesData ? stylesData.boxShadow : [],
 		border: stylesData ? stylesData.border : [],
-		gradient: stylesData ? stylesData.gradient : [],
 		text: stylesData ? stylesData.text : [],
 	};
 	const isMobile = useIsMobile();
@@ -30,13 +29,12 @@ export default function HeyCSS() {
 	useEffect(() => {
 		const loadStyles = async () => {
 			try {
-				const [boxShadow, border, gradient, text] = await Promise.all([
+				const [boxShadow, border, text] = await Promise.all([
 					fetch("/data/boxShadow.json").then((res) => res.json()),
 					fetch("/data/border.json").then((res) => res.json()),
-					fetch("/data/gradient.json").then((res) => res.json()),
 					fetch("/data/text.json").then((res) => res.json()),
 				]);
-				setStylesData({ boxShadow, border, gradient, text });
+				setStylesData({ boxShadow, border, text });
 				console.log("Styles loaded from split JSON files successfully");
 			} catch (error) {
 				toast({
@@ -132,7 +130,7 @@ export default function HeyCSS() {
 
 							{TABS.map((tab) => (
 								<TabsContent key={tab.value} value={tab.value}>
-									<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
+									<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
 										{stylesMap[tab.value].map((style, index) => (
 											<StyleBox key={index} index={index} style={style} tab={tab.value} />
 										))}

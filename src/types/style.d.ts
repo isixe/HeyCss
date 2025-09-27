@@ -1,4 +1,4 @@
-export type StyleType = "boxShadow" | "border" | "gradient" | "text";
+export type StyleType = "boxShadow" | "border" | "text";
 
 export type StyleItem = {
 	id: number;
@@ -10,6 +10,5 @@ export type StyleItem = {
 export type StylesData = {
 	boxShadow: StyleItem[];
 	border: StyleItem[];
-	gradient: StyleItem[];
 	text: StyleItem[];
 };
