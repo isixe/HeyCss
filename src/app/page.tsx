@@ -12,6 +12,7 @@ import { TABS, TAB_TRIGGER_CLASS } from "@/data/enum";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { StyleBox } from "@/components/widget/style-box";
+import { StyleText } from "@/components/widget/style-text";
 
 export default function HeyCSS() {
 	const [stylesData, setStylesData] = useState<StylesData | null>(null);
@@ -131,9 +132,15 @@ export default function HeyCSS() {
 							{TABS.map((tab) => (
 								<TabsContent key={tab.value} value={tab.value}>
 									<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
-										{stylesMap[tab.value].map((style, index) => (
-											<StyleBox key={index} index={index} style={style} tab={tab.value} />
-										))}
+										{stylesMap[tab.value].map((style, index) => {
+											if (["boxShadow", "border"].includes(tab.value)) {
+												return <StyleBox key={index} index={index} style={style} tab={tab.value} />;
+											}
+											if (["text"].includes(tab.value)) {
+												return <StyleText key={index} index={index} style={style} tab={tab.value} />;
+											}
+											return null;
+										})}
 									</div>
 								</TabsContent>
 							))}
