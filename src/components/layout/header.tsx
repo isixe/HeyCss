@@ -25,7 +25,8 @@ export function Header({ setCurrentTab }: HeaderProps) {
 				<div className="flex justify-between items-center h-16">
 					{/* Left */}
 					<div className="flex items-center">
-						<div className="flex-shrink-0">
+						<div className="flex flex-row space-x-2">
+							<img src="/favicon.ico" alt="Logo" className="h-9 w-9" />
 							<h1 className="text-2xl font-bold text-gray-900">HeyCSS</h1>
 						</div>
 					</div>

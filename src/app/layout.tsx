@@ -1,5 +1,3 @@
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
 import "@/styles/globals.css";
 import { Toaster } from "sonner";
 
@@ -10,6 +8,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<link rel="icon" href="/favicon.ico" />
+			</head>
 			<body>
 				<main>{children}</main>
 				<Toaster />
