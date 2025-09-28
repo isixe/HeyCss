@@ -34,7 +34,7 @@ export function Header({ setCurrentTab }: HeaderProps) {
 					{/* Right */}
 					<div className="flex items-center">
 						<a
-							href="https://github.com"
+							href="https://github.com/isixe/HeyCss"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-gray-600 hover:text-gray-900 transition-colors">
