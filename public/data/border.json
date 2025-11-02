@@ -34,6 +34,7 @@
 	},
 	{
 		"background": "transparent",
+		"position": "relative",
 		"&": {
 			":before": {
 				"content": "''",
@@ -55,6 +56,7 @@
 	},
 	{
 		"background": "transparent",
+		"position": "relative",
 		"&": {
 			":before": {
 				"content": "''",
@@ -76,6 +78,7 @@
 	},
 	{
 		"background": "transparent",
+		"position": "relative",
 		"&": {
 			":before": {
 				"content": "''",
@@ -98,6 +101,7 @@
 	{
 		"background": "transparent",
 		"border-radius": "10px",
+		"position": "relative",
 		"&": {
 			":before": {
 				"content": "''",
@@ -120,6 +124,7 @@
 	{
 		"background": "transparent",
 		"border-radius": "10px",
+		"position": "relative",
 		"&": {
 			":before": {
 				"content": "''",
