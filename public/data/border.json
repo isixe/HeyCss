@@ -143,5 +143,28 @@
 				"mask-composite": "exclude"
 			}
 		}
+	},
+	{
+		"background": "transparent",
+		"border-radius": "10px",
+		"position": "relative",
+		"&": {
+			":before": {
+				"content": "''",
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"inset": 0,
+				"border-radius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(110deg, #36d0ac 1%, #84ec5f 103%)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
 	}
 ]
