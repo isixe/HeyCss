@@ -19,7 +19,6 @@
 		"border": "3px ridge #10b981",
 		"border-radius": "10px"
 	},
-
 	{
 		"border-top": "4px solid #ef4444",
 		"border-right": "2px solid #f59e0b",
@@ -160,6 +159,98 @@
 				"border-radius": "inherit",
 				"padding": "2px",
 				"background": "linear-gradient(110deg, #36d0ac 1%, #84ec5f 103%)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
+	},
+	{
+		"background": "transparent",
+		"border-radius": "10px",
+		"position": "relative",
+		"&": {
+			":before": {
+				"content": "''",
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"inset": 0,
+				"border-radius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(90deg, transparent, #f59e0b, transparent)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
+	},
+	{
+		"background": "transparent",
+		"border-radius": "10px",
+		"position": "relative",
+		"&": {
+			":before": {
+				"content": "''",
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"inset": 0,
+				"border-radius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(45deg, transparent, #84ec5f, transparent)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
+	},
+	{
+		"background": "transparent",
+		"border-radius": "10px",
+		"position": "relative",
+		"&": {
+			":before": {
+				"content": "''",
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"inset": 0,
+				"border-radius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(135deg, transparent, #f43f5e, transparent)",
+				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+				"-webkit-mask-composite": "destination-out",
+				"mask-composite": "exclude"
+			}
+		}
+	},
+	{
+		"background": "transparent",
+		"border-radius": "10px",
+		"position": "relative",
+		"&": {
+			":before": {
+				"content": "''",
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"right": 0,
+				"bottom": 0,
+				"inset": 0,
+				"border-radius": "inherit",
+				"padding": "2px",
+				"background": "linear-gradient(180deg, transparent, #f43f5e, transparent)",
 				"mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
 				"-webkit-mask": "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
 				"-webkit-mask-composite": "destination-out",
