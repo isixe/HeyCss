@@ -1,7 +1,8 @@
 "use client";
 
-import { Github, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Github, Menu, X, Palette } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import Color from "color";
 import { TABS } from "@/data/enum";
 
 interface HeaderProps {
@@ -10,7 +11,59 @@ interface HeaderProps {
 
 export function Header({ setCurrentTab }: HeaderProps) {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+	const [isColorOpen, setIsColorOpen] = useState(false);
+	const [color, setColor] = useState<string>("#ffffff");
+	const originalBg = useRef<string | null>(null);
+
+	useEffect(() => {
+		if (typeof window !== "undefined") {
+			originalBg.current = document.body.style.backgroundColor || getComputedStyle(document.body).backgroundColor;
+			const computed = originalBg.current;
+			// try to convert named colors like 'transparent' to hex fallback white
+			if (!computed || computed === "transparent") {
+				setColor("#ffffff");
+			} else {
+				// no reliable builtin conversion to hex — keep initial color as white in picker
+				setColor("#ffffff");
+			}
+		}
+	}, []);
 	const toggleSidebar = () => setIsSidebarOpen((v) => !v);
+	const toggleColor = () => setIsColorOpen((v) => !v);
+
+	const parseToHex = (v: string): string | null => {
+		try {
+			const c = Color(v);
+			return c.hex().toLowerCase();
+		} catch (e) {
+			return null;
+		}
+	};
+
+	const handleColorChange = (value: string) => {
+		const hex = parseToHex(value) ?? value.toLowerCase();
+		setColor(hex);
+		document.body.style.backgroundColor = hex;
+	};
+
+	const handleTextChange = (value: string) => {
+		let v = value.trim();
+		if (!v.startsWith("#") && !/^rgb|hsl/i.test(v)) v = `#${v}`;
+		const hex = parseToHex(v);
+		if (hex) {
+			setColor(hex);
+			document.body.style.backgroundColor = hex;
+		} else {
+			setColor(value);
+		}
+	};
+
+	const handleReset = () => {
+		if (originalBg.current !== null) {
+			document.body.style.backgroundColor = originalBg.current as string;
+		}
+		setIsColorOpen(false);
+	};
 
 	const tabClick = (tabValue: string) => {
 		if (setCurrentTab) {
@@ -40,6 +93,49 @@ export function Header({ setCurrentTab }: HeaderProps) {
 							className="text-gray-600 hover:text-gray-900 transition-colors">
 							<Github className="h-5 w-5" />
 						</a>
+
+						{/* Color picker button */}
+						<div className="relative ml-3">
+							<button
+								onClick={toggleColor}
+								className="text-gray-600 hover:text-gray-900 transition-colors p-2 flex items-center"
+								aria-label="Toggle color picker">
+								<Palette className="h-5 w-5" />
+							</button>
+
+							{isColorOpen && (
+								<div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded p-3 z-50">
+									<div className="flex flex-col space-y-2">
+										<label className="text-sm text-gray-700">Background Color</label>
+										<input
+											type="color"
+											value={parseToHex(color) ?? "#ffffff"}
+											onChange={(e) => handleColorChange(e.target.value)}
+											className="w-full h-10 p-0 border-none"
+										/>
+										<input
+											type="text"
+											value={color}
+											onChange={(e) => handleTextChange(e.target.value)}
+											placeholder="#RRGGBB"
+											className={`w-full h-9 p-2 border ${
+												parseToHex(color) ? "border-gray-200" : "border-red-500"
+											} rounded`}
+										/>
+										<div className="flex justify-end space-x-2">
+											<button onClick={handleReset} className="text-sm px-2 py-1 bg-gray-100 rounded hover:bg-gray-200">
+												Reset
+											</button>
+											<button
+												onClick={() => setIsColorOpen(false)}
+												className="text-sm px-2 py-1 bg-gray-100 rounded hover:bg-gray-200">
+												Close
+											</button>
+										</div>
+									</div>
+								</div>
+							)}
+						</div>
 
 						{/* Menu (Mobile) */}
 						<div className="md:hidden">
