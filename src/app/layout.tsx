@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Toaster } from "sonner";
+// Toast 已移除（不再渲染任何全局 Toaster）
 
 export default function RootLayout({
 	children,
@@ -13,7 +13,6 @@ export default function RootLayout({
 			</head>
 			<body>
 				<main>{children}</main>
-				<Toaster />
 			</body>
 		</html>
 	);

@@ -24,18 +24,23 @@ export default function HeyCSS() {
 		boxShadow: stylesData ? stylesData.boxShadow : [],
 		border: stylesData ? stylesData.border : [],
 		text: stylesData ? stylesData.text : [],
+		shape: stylesData ? stylesData.shape : [],
 	};
 	const isMobile = useIsMobile();
 
 	useEffect(() => {
 		const loadStyles = async () => {
 			try {
-				const [boxShadow, border, text] = await Promise.all([
+				const [boxShadow, border, text, shape] = await Promise.all([
 					fetch("/data/boxShadow.json").then((res) => res.json()),
 					fetch("/data/border.json").then((res) => res.json()),
 					fetch("/data/text.json").then((res) => res.json()),
+					fetch("/data/shape.json").then((res) => res.json()),
 				]);
-				setStylesData({ boxShadow, border, text });
+				// Ensure each style group is an array. Some data files (like shape.json)
+				// may export a single object instead of an array.
+				const normalizedShape = Array.isArray(shape) ? shape : [shape];
+				setStylesData({ boxShadow, border, text, shape: normalizedShape });
 				console.log("Styles loaded from split JSON files successfully");
 			} catch (error) {
 				toast({
@@ -133,7 +138,7 @@ export default function HeyCSS() {
 								<TabsContent key={tab.value} value={tab.value}>
 									<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 sm:gap-15 lg:gap-20">
 										{stylesMap[tab.value].map((style, index) => {
-											if (["boxShadow", "border"].includes(tab.value)) {
+											if (["boxShadow", "border", "shape"].includes(tab.value)) {
 												return <StyleBox key={index} index={index} style={style} tab={tab.value} />;
 											}
 											if (["text"].includes(tab.value)) {
