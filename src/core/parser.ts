@@ -15,30 +15,33 @@ function cssObjectParser(cssObj: Record<string, any>): string {
 
 	const parseObject = (obj: Record<string, any>): string => {
 		let css = "";
+
 		for (const [key, value] of Object.entries(obj)) {
 			if (key.startsWith("&")) {
-				const objKey = Object.keys(value)[0];
-				const objValue = value[objKey];
-				console.log(objValue);
-				let nestedCss = `\n   &${objKey} {\n`;
+				if (!value || typeof value !== "object") continue;
 
-				const nestedEntries = Object.entries(objValue);
-				nestedEntries.forEach(([nestedKey, nestedValue], index) => {
-					nestedCss += `    ` + generateProperty(nestedKey, nestedValue);
+				Object.entries(value).forEach(([selector, styles]) => {
+					if (!styles || typeof styles !== "object") return;
 
-					if (index < nestedEntries.length - 1) {
-						nestedCss += "\n";
-					}
+					let nestedCss = `\n   &${selector} {\n`;
+
+					const nestedEntries = Object.entries(styles);
+					nestedEntries.forEach(([nestedKey, nestedValue], index) => {
+						nestedCss += `    ${generateProperty(nestedKey, nestedValue)}`;
+						if (index < nestedEntries.length - 1) {
+							nestedCss += "\n";
+						}
+					});
+
+					nestedCss += "\n   }";
+					css += nestedCss;
 				});
-
-				nestedCss += "\n   }";
-
-				css += nestedCss;
 			} else {
-				const property = generateProperty(key, value) + "\n";
-				if (property) css += property + " ";
+				const property = generateProperty(key, value);
+				if (property) css += property + "\n";
 			}
 		}
+
 		return css.trim();
 	};
 
