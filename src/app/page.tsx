@@ -86,7 +86,7 @@ export default function HeyCSS() {
 	}
 
 	return (
-		<div className="min-h-screen  bg-black/4">
+		<div className="min-h-screen">
 			<Header setCurrentTab={setCurrentTab} />
 			<main className="px-[10%] py-8 sm:py-12">
 				<div className="max-w-7xl mx-auto">
