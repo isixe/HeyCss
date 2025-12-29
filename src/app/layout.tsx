@@ -23,6 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 				"Discover and copy CSS styles including box-shadows, borders, text styles, and shapes for your web projects.",
 			url,
 			siteName: "HeyCSS",
+			type: "website",
 			locale: "en",
 			images: `${url}/preview.png`,
 		},
