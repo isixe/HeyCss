@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 			url,
 			siteName: "HeyCSS",
 			locale: "en",
-			images: `${url}/preview.jpg`,
+			images: `${url}/preview.png`,
 		},
 	};
 }
