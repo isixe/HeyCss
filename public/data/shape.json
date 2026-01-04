@@ -2,6 +2,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -21,6 +23,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -40,6 +44,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -59,6 +65,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -78,6 +86,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -96,6 +106,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -114,6 +126,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -132,6 +146,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -150,6 +166,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "overflow": "hidden",
         "&": {
@@ -178,6 +196,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "overflow": "hidden",
         "&": {
@@ -206,6 +226,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "overflow": "hidden",
         "&": {
@@ -224,6 +246,8 @@
     {
         "width": "100px",
         "height": "40px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "overflow": "hidden",
         "&": {
@@ -242,6 +266,8 @@
     {
         "width": "100px",
         "height": "100px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "overflow": "hidden",
         "&": {
             "::before": {
@@ -262,6 +288,8 @@
     {
         "width": "100px",
         "height": "100px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "&": {
             "::after": {
                 "content": "''",
@@ -278,6 +306,8 @@
     {
         "width": "100px",
         "height": "100px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "position": "relative",
         "&": {
             "::after": {
@@ -302,6 +332,8 @@
     {
         "width": "100px",
         "height": "100px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "overflow": "hidden",
         "&": {
             "::before": {
@@ -320,6 +352,8 @@
     {
         "width": "100px",
         "height": "100px",
+        "border": "1px solid rgba(0, 0, 0, 0.04)",
+        "borderRadius": "10px",
         "&": {
             "::after": {
                 "content": "'NEW'",
@@ -331,6 +365,53 @@
                 "color": "#fff",
                 "font-size": "8px",
                 "border-radius": "6px"
+            }
+        }
+    },
+    {
+        "width": "100px",
+        "height": "100px",
+        "position": "relative",
+        "&": {
+            "::before": {
+                "content": "''",
+                "position": "absolute",
+                "inset": "0",
+                "--o": "calc(50% * tan(-22.5deg))",
+                "clipPath": "polygon( var(--o) 50%, 50% var(--o),calc(100% - var(--o)) 50%,50% calc(100% - var(--o)) )",
+                "background": "#beeaff"
+            }
+        }
+    },
+    {
+        "width": "100px",
+        "height": "100px",
+        "position": "relative",
+        "&": {
+            "::before": {
+                "content": "''",
+                "position": "absolute",
+                "inset": "0",
+                "left": "-25px",
+                "--p": "20px",
+                "height": "100px",
+                "aspectRatio": "3/2",
+                "clipPath": "polygon(var(--p) 0,100% 0,calc(100% - var(--p)) 100%,0 100%)",
+                "background": "#ff9295"
+            }
+        }
+    },
+    {
+        "width": "100px",
+        "height": "100px",
+        "position": "relative",
+        "&": {
+            "::before": {
+                "content": "''",
+                "position": "absolute",
+                "inset": "0",
+                "background": "#ff9295",
+                "mask": "radial-gradient(20px at 20px 20px,#0000 98%,#000) -20px -20px"
             }
         }
     }

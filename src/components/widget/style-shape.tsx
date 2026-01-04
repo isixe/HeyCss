@@ -13,7 +13,7 @@ interface StyleBoxProps {
 	tab: string;
 }
 
-export function StyleBox({ index, style, tab }: StyleBoxProps) {
+export function StyleShape({ index, style, tab }: StyleBoxProps) {
 	const [isCopied, setIsCopied] = useState(false);
 	const [uniqueClassName] = useState(`style-${tab}-${index}`);
 
@@ -49,7 +49,7 @@ export function StyleBox({ index, style, tab }: StyleBoxProps) {
 
 	return (
 		<div
-			className={`${uniqueClassName} group aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 border border-gray-100 relative cursor-pointer`}
+			className={`${uniqueClassName} group aspect-square rounded-lg bg-white flex items-center justify-center text-gray-600 font-medium transition-transform duration-200 hover:scale-105 relative cursor-pointer`}
 			onClick={onStyleCopy}>
 			<span className="z-10 text-[16px] font-normal text-gray-400">#{index}</span>
 
