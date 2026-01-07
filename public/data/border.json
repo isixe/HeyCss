@@ -333,5 +333,22 @@
 				"background": "linear-gradient(#00d62b,#00d62b) left 6px top / 14px 2px no-repeat, linear-gradient(#00d62b,#00d62b) left top 6px / 2px 14px no-repeat, linear-gradient(#00d62b,#00d62b) right 6px top / 14px 2px no-repeat, linear-gradient(#00d62b,#00d62b) right top 6px / 2px 14px no-repeat, linear-gradient(#00d62b,#00d62b) left 6px bottom / 14px 2px no-repeat, linear-gradient(#00d62b,#00d62b) left bottom 6px / 2px 14px no-repeat, linear-gradient(#00d62b,#00d62b) right 6px bottom / 14px 2px no-repeat, linear-gradient(#00d62b,#00d62b) right bottom 6px / 2px 14px no-repeat"
 			}
 		}
+	},
+	{
+		"position": "relative",
+		"background": "transparent",
+		"border": "none",
+		"&": {
+			"::after": {
+				"content": "''",
+				"position": "absolute",
+				"inset": "0",
+				"width": "200px",
+				"background": "linear-gradient(60deg, #ED303C, #FF9C5B)",
+				"aspect-ratio": "1",
+				"--g": "/calc(37.019% + 2.548px) calc(37.019% + 2.548px) radial-gradient(#0000 calc(70% - 5px),#000 calc(71% - 5px) 70%,#0000 71%) no-repeat",
+				"mask": "radial-gradient(100% 100%,#0000 calc((37.019% + 2.548px)/1.454 - 3.441px),#000 calc((37.019% + 2.548px)/1.454 - 3.441px + 1px)) intersect,100% 50% var(--g),65.451% 97.553% var(--g),9.549% 79.389% var(--g),9.549% 20.611% var(--g),65.451% 2.447% var(--g)"
+			}
+		}
 	}
 ]
