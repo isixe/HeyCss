@@ -992,7 +992,7 @@
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
-        "background": "#a7237b",
+        "background": "#ff7dd4",
         "mask": "radial-gradient(calc(var(--c)*1%) 100% at 50% calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000)",
         "clip-path": "ellipse(calc(var(--c)*1%) 100% at top)"
     },
@@ -1000,7 +1000,7 @@
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
-        "background": "#a7237b",
+        "background": "#ff7dd4",
         "mask": "radial-gradient(calc(var(--c)*1%) 100% at 50% calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000)",
         "clip-path": "ellipse(calc(var(--c)*1%) 100% at bottom)"
     },
@@ -1008,7 +1008,7 @@
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
-        "background": "#a7237b",
+        "background": "#ff7dd4",
         "mask": "radial-gradient(100% calc(var(--c)*1%) at calc(-100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000)",
         "clip-path": "ellipse(100% calc(var(--c)*1%) at left)"
     },
@@ -1016,7 +1016,7 @@
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
-        "background": "#a7237b",
+        "background": "#ff7dd4",
         "mask": "radial-gradient(100% calc(var(--c)*1%) at calc(100% + 100%*cos(asin(50/var(--c)))),#0000 calc(100% - 1px),#000)",
         "clip-path": "ellipse(100% calc(var(--c)*1%) at right)"
     },
@@ -1049,7 +1049,7 @@
         "--h": "20px",
         "height": "90px",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
         "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
@@ -1058,7 +1058,7 @@
         "--h": "20px",
         "height": "90px",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
         "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,0 100%)"
     },
@@ -1067,7 +1067,7 @@
         "--h": "20px",
         "height": "90px",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
         "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,0 100%,calc(50% - var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% + var(--b)/2) 100%,100% 100%,100% 0)"
     },
@@ -1076,7 +1076,7 @@
         "--h": "20px",
         "height": "90px",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
         "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,calc(50% - var(--b)/2) 0,50% var(--h),calc(50% + var(--b)/2) 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,calc(50% + var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% - var(--b)/2) 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
@@ -1085,26 +1085,350 @@
         "--h": "20px",
         "height": "90px",
         "border-radius": "10px",
+        "background": "#ff9f00",
         "aspect-ratio": "1.2",
-        "background": "#F0A830",
         "clip-path": "polygon(0 0,0 100%,calc(50% - var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% + var(--b)/2) 100%,100% 100%,100% 0,calc(50% + var(--b)/2) 0,50% var(--h),calc(50% - var(--b)/2) 0)"
     },
     {
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
-        "aspect-ratio": "1.2",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
+        "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,100% 0,100% 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
     {
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
-        "aspect-ratio": "1.2",
         "border-radius": "10px",
-        "background": "#F0A830",
+        "background": "#ff9f00",
+        "aspect-ratio": "1.2",
         "clip-path": "polygon(0 0,0 100%,100% 100%,100% 0,calc(50% + var(--b)/2) 0,50% var(--h),calc(50% - var(--b)/2) 0)"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at 50% var(--r),#0000 calc(100% - 1px),#000) 0 calc(-1*var(--r))"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at top,#0000 calc(100% - 1px),#000)"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at left,#0000 calc(100% - 1px),#000)"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at 50% var(--r),#0000 calc(100% - 1px),#000) 0 calc(-1*var(--r)) intersect, radial-gradient(var(--r) at var(--r) 50%,#0000 calc(100% - 1px),#000) calc(-1*var(--r))"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at var(--r),#0000 calc(100% - 1px),#000) calc(-1*var(--r))"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at bottom,#0000 calc(100% - 1px),#000)"
+    },
+    {
+        "--r": "20px",
+        "height": "100px",
+        "border-radius": "10px",
+        "background": "#F07818",
+        "aspect-ratio": "1.2",
+        "mask": "radial-gradient(var(--r) at right,#0000 calc(100% - 1px),#000)"
+    },
+    {
+        "--s": "10px",
+        "--w": "100px",
+        "width": "round(var(--w), 4*var(--s))",
+        "aspect-ratio": "1",
+        "padding": "var(--s)",
+        "border": "var(--s) solid #0000",
+        "box-sizing": "border-box",
+        "background": "#CD8C52",
+        "border-radius": "calc(3.5*var(--s))",
+        "mask": "radial-gradient(calc(sqrt(2)*var(--s)), #000 calc(100% - 1px), #0000), conic-gradient(#000 0 0) content-box, radial-gradient(calc(sqrt(2)*var(--s)), #0000 100%, #000 calc(100% + 1px)) var(--s) var(--s) padding-box",
+        "mask-size": "calc(var(--s)*4) calc(var(--s)*4)"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--k": "29.289%",
+        "clip-path": "polygon(var(--k) 0, calc(100% - var(--k)) 0, 100% var(--k), 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, var(--k) 100%, 0 calc(100% - var(--k)), 0 var(--k))"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1/cos(30deg)",
+        "clip-path": "polygon(50% 0,100% 100%,0 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1/cos(30deg)",
+        "clip-path": "polygon(50% 100%,100% 0,0 0)",
+        "background": "#FA6900"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "cos(30deg)",
+        "clip-path": "polygon(0 0,100% 50%,0 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "cos(30deg)",
+        "clip-path": "polygon(100% 0,0 50%,100% 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1/cos(30deg)",
+        "--_g": "calc(tan(60deg)*var(--r)) bottom var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from -30deg at 50% calc(200% - 3*var(--r)/2),#000 60deg,#0000 0) 0 100%/100% calc(100% - 3*var(--r)/2) no-repeat, radial-gradient(var(--r) at 50% calc(2*var(--r)),#000 98%,#0000 101%), radial-gradient(var(--r) at left var(--_g)), radial-gradient(var(--r) at right var(--_g))",
+        "clip-path": "polygon(50% 0,100% 100%,0 100%)",
+        "background": "#ffbb81"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1/cos(30deg)",
+        "--_g": "calc(tan(60deg)*var(--r)) top var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 150deg at 50% calc(3*var(--r)/2 - 100%),#000 60deg,#0000 0) 0 0/100% calc(100% - 3*var(--r)/2) no-repeat, radial-gradient(var(--r) at 50% calc(100% - 2*var(--r)),#000 98%,#0000 101%), radial-gradient(var(--r) at left var(--_g)), radial-gradient(var(--r) at right var(--_g))",
+        "clip-path": "polygon(50% 100%,100% 0,0 0)",
+        "background": "#ffbb81"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "cos(30deg)",
+        "--_g": "calc(tan(60deg)*var(--r)) left var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 60deg at calc(3*var(--r)/2 - 100%),#000 60deg,#0000 0) 0 0/calc(100% - 3*var(--r)/2) 100% no-repeat, radial-gradient(var(--r) at calc(100% - 2*var(--r)) 50%,#000 98%,#0000 101%), radial-gradient(var(--r) at top var(--_g)), radial-gradient(var(--r) at bottom var(--_g))",
+        "clip-path": "polygon(100% 50%,0 100%,0 0)",
+        "background": "#ffbb81"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "cos(30deg)",
+        "--_g": "calc(tan(60deg)*var(--r)) right var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 240deg at calc(200% - 3*var(--r)/2),#000 60deg,#0000 0) 100% 0/calc(100% - 3*var(--r)/2) 100% no-repeat, radial-gradient(var(--r) at calc(2*var(--r)) 50%,#000 98%,#0000 101%), radial-gradient(var(--r) at top var(--_g)), radial-gradient(var(--r) at bottom var(--_g))",
+        "clip-path": "polygon(0 50%,100% 100%,100% 0)",
+        "background": "#ffbb81"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "clip-path": "polygon(0 0,100% 0,0 100%)",
+        "background": "#c496ff"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "clip-path": "polygon(0 0,100% 0,100% 100%)",
+        "background": "#c496ff"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "clip-path": "polygon(0 100%,100% 0,100% 100%)",
+        "background": "#c496ff"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "clip-path": "polygon(0 100%,0 0,100% 100%)",
+        "background": "#c496ff"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-top-left-radius": "var(--r)",
+        "clip-path": "polygon(0 100%,100% 0,0 0)",
+        "--_g": "calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4))",
+        "--_r": "calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%",
+        "-webkit-mask": "radial-gradient(var(--r) at top  var(--r) right  var(--_r)), radial-gradient(var(--r) at left var(--r) bottom var(--_r)), conic-gradient(from -67.5deg at var(--_g) var(--_g),#000 45deg,#0000 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-top-right-radius": "var(--r)",
+        "clip-path": "polygon(100% 100%,0 0,100% 0)",
+        "--_g": "calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4))",
+        "--_r": "calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%",
+        "-webkit-mask": "radial-gradient(var(--r) at top   var(--r) left   var(--_r)), radial-gradient(var(--r) at right var(--r) bottom var(--_r)), conic-gradient(from 22.5deg at calc(100% - var(--_g)) var(--_g),#000 45deg,#0000 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-bottom-right-radius": "var(--r)",
+        "clip-path": "polygon(100% 0,0 100%,100% 100%)",
+        "--_g": "calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4))",
+        "--_r": "calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%",
+        "-webkit-mask": "radial-gradient(var(--r) at bottom var(--r) left var(--_r)), radial-gradient(var(--r) at right  var(--r) top  var(--_r)), conic-gradient(from 112.5deg at calc(100% - var(--_g)) calc(100% - var(--_g)),#000 45deg,#0000 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "10px",
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-bottom-left-radius": "var(--r)",
+        "clip-path": "polygon(0 0,100% 100%,0 100%)",
+        "--_g": "calc(50%*(1 + 1/tan(22.5deg)) - var(--r)/(3*sqrt(2) - 4))",
+        "--_r": "calc(var(--r)/tan(22.5deg)),#000 98%,#0000 101%",
+        "-webkit-mask": "radial-gradient(var(--r) at bottom var(--r) right var(--_r)), radial-gradient(var(--r) at left   var(--r) top   var(--_r)), conic-gradient(from 202.5deg at var(--_g) calc(100% - var(--_g)),#000 45deg,#0000 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-top-left-radius": "25px",
+        "clip-path": "polygon(0 100%,100% 0,0 0)",
+        "background": "#ffa241"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-top-right-radius": "25px",
+        "clip-path": "polygon(100% 100%,0 0,100% 0)",
+        "background": "#ffa241"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-bottom-right-radius": "25px",
+        "clip-path": "polygon(100% 0,0 100%,100% 100%)",
+        "background": "#ffa241"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "border-bottom-left-radius": "25px",
+        "clip-path": "polygon(0 0,100% 100%,0 100%)",
+        "background": "#ffa241"
+    },
+    {
+        "height": "80px",
+        "aspect-ratio": "2",
+        "clip-path": "polygon(50% 0,100% 100%,0 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "height": "80px",
+        "aspect-ratio": "2",
+        "clip-path": "polygon(50% 100%,100% 0,0 0)",
+        "background": "#FA6900"
+    },
+    {
+        "width": "80px",
+        "aspect-ratio": "1/2",
+        "clip-path": "polygon(0 0,100% 50%,0 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "width": "80px",
+        "aspect-ratio": "1/2",
+        "clip-path": "polygon(100% 0,0 50%,100% 100%)",
+        "background": "#FA6900"
+    },
+    {
+        "--r": "18px",
+        "height": "100px",
+        "aspect-ratio": "2",
+        "--_g": "calc(var(--r)/tan(22.5deg)) bottom var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from -22.5deg at 50% calc(100% + 100%/tan(22.5deg) - var(--r)/(3*sqrt(2) - 4)),#000 45deg,#0000 0) 0 100%/100% calc(100% - var(--r)/sqrt(2)) no-repeat, radial-gradient(var(--r) at 50% calc(var(--r)*sqrt(2)),#000 98%,#0000 101%), radial-gradient(var(--r) at left var(--_g)), radial-gradient(var(--r) at right var(--_g))",
+        "clip-path": "polygon(50% 0,100% 100%,0 100%)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "18px",
+        "height": "100px",
+        "aspect-ratio": "2",
+        "--_g": "calc(var(--r)/tan(22.5deg)) top var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 157.5deg at 50% calc(var(--r)/(3*sqrt(2) - 4) - 100%/tan(22.5deg)),#000 45deg,#0000 0) 0 0/100% calc(100% - var(--r)/sqrt(2)) no-repeat, radial-gradient(var(--r) at 50% calc(100% - var(--r)*sqrt(2)),#000 98%,#0000 101%), radial-gradient(var(--r) at left var(--_g)), radial-gradient(var(--r) at right var(--_g))",
+        "clip-path": "polygon(50% 100%,100% 0,0 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "18px",
+        "width": "100px",
+        "aspect-ratio": "1/2",
+        "--_g": "calc(var(--r)/tan(22.5deg)) left var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 67.5deg at calc(var(--r)/(3*sqrt(2) - 4) - 100%/tan(22.5deg)) 50%,#000 45deg,#0000 0) 0 0/calc(100% - var(--r)/sqrt(2)) no-repeat, radial-gradient(var(--r) at calc(100% - var(--r)*sqrt(2)) 50%,#000 98%,#0000 101%), radial-gradient(var(--r) at top var(--_g)), radial-gradient(var(--r) at bottom var(--_g))",
+        "clip-path": "polygon(100% 50%,0 100%,0 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "18px",
+        "width": "100px",
+        "aspect-ratio": "1/2",
+        "--_g": "calc(var(--r)/tan(22.5deg)) right var(--r),#000 98%,#0000 101%",
+        "-webkit-mask": "conic-gradient(from 247.5deg at calc(100% + 100%/tan(22.5deg) - var(--r)/(3*sqrt(2) - 4)) 50%,#000 45deg,#0000 0) 100% 0/calc(100% - var(--r)/sqrt(2)) no-repeat, radial-gradient(var(--r) at calc(var(--r)*sqrt(2)) 50%,#000 98%,#0000 101%), radial-gradient(var(--r) at top var(--_g)), radial-gradient(var(--r) at bottom var(--_g))",
+        "clip-path": "polygon(0 50%,100% 100%,100% 0)",
+        "background": "linear-gradient(45deg,#FA6900,#C02942)"
+    },
+    {
+        "--r": "25px",
+        "height": "100px",
+        "aspect-ratio": "2",
+        "-webkit-mask": "linear-gradient(#0000 calc(var(--r)/sqrt(2)),#000 0), radial-gradient(var(--r) at 50% calc(var(--r)*sqrt(2)),#000 98%,#0000 101%)",
+        "clip-path": "polygon(50% 0,100% 100%,0 100%)",
+        "background": "#f0dabe"
+    },
+    {
+        "--r": "25px",
+        "height": "100px",
+        "aspect-ratio": "2",
+        "-webkit-mask": "linear-gradient(0deg,#0000 calc(var(--r)/sqrt(2)),#000 0), radial-gradient(var(--r) at 50% calc(100% - var(--r)*sqrt(2)),#000 98%,#0000 101%)",
+        "clip-path": "polygon(50% 100%,100% 0,0 0)",
+        "background": "#f0dabe"
+    },
+    {
+        "--r": "25px",
+        "width": "100px",
+        "aspect-ratio": "1/2",
+        "-webkit-mask": "linear-gradient(-90deg,#0000 calc(var(--r)/sqrt(2)),#000 0), radial-gradient(var(--r) at calc(100% - var(--r)*sqrt(2)) 50%,#000 98%,#0000 101%)",
+        "clip-path": "polygon(100% 50%,0 100%,0 0)",
+        "background": "#f0dabe"
+    },
+    {
+        "--r": "25px",
+        "width": "100px",
+        "aspect-ratio": "1/2",
+        "-webkit-mask": "linear-gradient(90deg,#0000 calc(var(--r)/sqrt(2)),#000 0), radial-gradient(var(--r) at calc(var(--r)*sqrt(2)) 50%,#000 98%,#0000 101%)",
+        "clip-path": "polygon(0 50%,100% 100%,100% 0)",
+        "background": "#f0dabe"
     }
 ]
