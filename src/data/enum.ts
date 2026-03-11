@@ -6,10 +6,10 @@ export enum StyleTabs {
 }
 
 export const TABS = [
-	{ value: StyleTabs.BoxShadow, label: "Box Shadows", colorClass: "blue" },
-	{ value: StyleTabs.Border, label: "Borders", colorClass: "green" },
-	{ value: StyleTabs.Text, label: "Text", colorClass: "purple" },
-	{ value: StyleTabs.Shape, label: "Shapes", colorClass: "pink" },
+	{ value: StyleTabs.BoxShadow, label: "Box Shadows" },
+	{ value: StyleTabs.Border, label: "Borders" },
+	{ value: StyleTabs.Text, label: "Text" },
+	{ value: StyleTabs.Shape, label: "Shapes" },
 ];
 
 export const TAB_TRIGGER_CLASS: Record<string, string> = {

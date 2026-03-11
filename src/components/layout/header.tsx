@@ -122,9 +122,9 @@ export function Header({ setCurrentTab }: HeaderProps) {
 					</div>
 				</div>
 				<header
-			className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
-				isHeaderVisible ? "translate-y-0" : "-translate-y-[calc(100%+40px)]"
-			}`}>
+					className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
+						isHeaderVisible ? "translate-y-0" : "-translate-y-[calc(100%+40px)]"
+					}`}>
 					<div className="max-w-7xl mx-auto">
 						<div className="h-14 bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg" />
 					</div>
@@ -157,9 +157,9 @@ export function Header({ setCurrentTab }: HeaderProps) {
 				</div>
 			</div>
 			<header
-			className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
-				isHeaderVisible ? "translate-y-0" : "-translate-y-[calc(100%+40px)]"
-			}`}>
+				className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
+					isHeaderVisible ? "translate-y-0" : "-translate-y-[calc(100%+40px)]"
+				}`}>
 				<div className="max-w-7xl mx-auto">
 					<div className="h-14 bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg">
 						<div className="h-full px-4 flex items-center justify-between">
@@ -201,33 +201,29 @@ export function Header({ setCurrentTab }: HeaderProps) {
 										className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer flex items-center gap-2"
 										aria-label="Toggle color picker">
 										<Palette className="w-5 h-5" />
-										<div
-											className="w-4 h-4 rounded-md border border-gray-300"
-											style={{ backgroundColor: parseToHex(color) ?? color }}
-										/>
 									</button>
 
 									{isColorOpen && (
 										<div className="absolute right-0 top-full mt-2 w-64 bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-4 z-50 animate-in fade-in zoom-in-95 duration-200">
 											<div className="flex flex-col gap-3">
 												<label className="text-sm text-gray-700 font-medium">Background Color</label>
-												<div className="flex items-center gap-3">
+												<div className="flex items-center gap-3 min-w-0 overflow-hidden">
 													<input
 														type="color"
 														value={parseToHex(color) ?? "#ffffff"}
 														onChange={(e) => handleColorChange(e.target.value)}
-														className="w-12 h-12 rounded-xl cursor-pointer border-2 border-gray-200 p-0.5"
+														className="w-12 h-12 rounded-xl cursor-pointer p-0.5 shrink-0"
 													/>
 													<input
 														type="text"
 														value={color}
 														onChange={(e) => handleTextChange(e.target.value)}
 														placeholder="#RRGGBB"
-														className={`flex-1 h-12 px-4 rounded-xl border ${
+														className={`flex-1 box-border h-12 px-4 rounded-xm border min-w-0 ${
 															parseToHex(color)
 																? "border-gray-200 bg-gray-50 text-gray-700"
 																: "border-red-500/50 bg-red-500/10 text-red-500"
-														} placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all`}
+														} placeholder:text-gray-400 focus:outline-none  focus:ring-emerald-500/50 transition-all`}
 													/>
 												</div>
 												<div className="flex gap-2 pt-1">
@@ -260,20 +256,20 @@ export function Header({ setCurrentTab }: HeaderProps) {
 			</header>
 
 			<footer className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/80 backdrop-blur-xl border-t border-gray-200">
-			<nav className="flex items-center justify-around h-14">
-				{TABS.map((tab) => (
-					<button
-						key={tab.value}
-						onClick={() => tabClick(tab.value)}
-						className={`flex flex-col items-center justify-center flex-1 h-full transition-colors cursor-pointer ${
-							activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
-						}`}>
-						{TAB_ICONS[tab.value]}
-						<span className="text-[10px] mt-0.5">{tab.label}</span>
-					</button>
-				))}
-			</nav>
-		</footer>
+				<nav className="flex items-center justify-around h-14">
+					{TABS.map((tab) => (
+						<button
+							key={tab.value}
+							onClick={() => tabClick(tab.value)}
+							className={`flex flex-col items-center justify-center flex-1 h-full transition-colors cursor-pointer ${
+								activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
+							}`}>
+							{TAB_ICONS[tab.value]}
+							<span className="text-[10px] mt-0.5">{tab.label}</span>
+						</button>
+					))}
+				</nav>
+			</footer>
 
 			{isSidebarOpen && (
 				<div
