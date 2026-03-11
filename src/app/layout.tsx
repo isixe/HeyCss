@@ -44,7 +44,7 @@ export default function RootLayout({
 				{analyticsScript ? <Script src={analyticsScript} id="analytics" data-website-id="heycss" defer /> : null}
 				<link rel="icon" href="/favicon.ico" />
 			</head>
-			<body>
+			<body className="overflow-x-hidden">
 				<main>{children}</main>
 			</body>
 		</html>
