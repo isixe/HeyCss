@@ -3,6 +3,13 @@
 import { Heart, Github, Twitter, Mail } from "lucide-react";
 import { TABS } from "@/data/enum";
 
+const TAB_COLOR_MAP: Record<string, { text: string }> = {
+	blue: { text: "text-blue-600" },
+	green: { text: "text-green-600" },
+	purple: { text: "text-purple-600" },
+	pink: { text: "text-pink-600" },
+};
+
 interface FooterProps {
 	setCurrentTab?: (tab: string) => void;
 	currentTab?: string;
@@ -47,7 +54,9 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 										onClick={(e) => tabClick(tab.value, e)}
 										className={
 											"text-sm transition-colors cursor-pointer " +
-											(currentTab === tab.value ? "text-blue-600 font-semibold" : "text-gray-600 hover:text-gray-900")
+											(currentTab === tab.value
+												? `${TAB_COLOR_MAP[tab.colorClass]?.text} font-semibold`
+												: "text-gray-600 hover:text-gray-900")
 										}>
 										{tab.label}
 									</a>
