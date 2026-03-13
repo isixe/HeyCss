@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
 import { copyToClipboard } from "@/utils/clipboard";
@@ -15,7 +15,7 @@ interface StyleBoxProps {
 
 export function StyleShape({ index, style, tab }: StyleBoxProps) {
 	const [isCopied, setIsCopied] = useState(false);
-	const [uniqueClassName] = useState(`style-${tab}-${index}`);
+	const uniqueClassName = useMemo(() => `style-${tab}-${index}`, [tab, index]);
 
 	const onStyleCopy = async () => {
 		setIsCopied(true);
@@ -41,7 +41,7 @@ export function StyleShape({ index, style, tab }: StyleBoxProps) {
 		return () => {
 			document.head.removeChild(styleTag);
 		};
-	}, []);
+	}, [style, uniqueClassName]);
 
 	const getTabClass = (tab: string) => {
 		return TAB_TRIGGER_CLASS[tab];
