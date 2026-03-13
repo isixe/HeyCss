@@ -69,5 +69,11 @@
 	{
 		"color": "#aaddff",
 		"text-shadow": "1px 1px 1px #FF6B95, 2px 2px 1px #FF8E53, 3px 3px 1px #FF6B95, 0 0 10px rgba(170, 221, 255, 0.7)"
+	},
+	{
+		"background": "linear-gradient(180deg, #fff 15%, #fedf78 100%)",
+		"-webkit-background-clip": "text",
+		"-webkit-text-fill-color": "#ffffff",
+		"filter": "drop-shadow(0 4px 5px #ff3429)"
 	}
 ]
