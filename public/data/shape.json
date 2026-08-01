@@ -1439,5 +1439,12 @@
         "-webkit-mask": "linear-gradient(90deg,#0000 calc(var(--r)/sqrt(2)),#000 0), radial-gradient(var(--r) at calc(var(--r)*sqrt(2)) 50%,#000 98%,#0000 101%)",
         "clip-path": "polygon(0 50%,100% 100%,100% 0)",
         "background": "#f0dabe"
+    },
+    {
+        "width": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--k": "20px",
+        "clip-path": "polygon(var(--k) 0, calc(100% - var(--k)) 0, 100% var(--k), 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, var(--k) 100%, 0 calc(100% - var(--k)), 0 var(--k))"
     }
 ]
