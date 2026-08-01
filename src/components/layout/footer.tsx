@@ -1,6 +1,8 @@
 "use client";
 
 import { Heart, Github, Twitter, Mail } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { TABS } from "@/data/enum";
 
 const TAB_COLOR_MAP: Record<string, { text: string }> = {
@@ -10,19 +12,9 @@ const TAB_COLOR_MAP: Record<string, { text: string }> = {
 	pink: { text: "text-pink-600" },
 };
 
-interface FooterProps {
-	setCurrentTab?: (tab: string) => void;
-	currentTab?: string;
-}
-
-export function Footer({ setCurrentTab, currentTab }: FooterProps) {
-	const tabClick = (tab: string, e: React.MouseEvent<HTMLAnchorElement>) => {
-		if (setCurrentTab) {
-			e.preventDefault();
-			setCurrentTab(tab);
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		}
-	};
+export function Footer() {
+	const pathname = usePathname();
+	const currentTab = pathname.split("/")[1] || "boxShadow";
 
 	return (
 		<footer className="bg-gray-50 border-t border-gray-200 mt-16">
@@ -49,9 +41,9 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 						<ul className="space-y-2">
 							{TABS.map((tab) => (
 								<li key={tab.value}>
-									<a
-										href={`#${tab.value.toLowerCase()}`}
-										onClick={(e) => tabClick(tab.value, e)}
+									<Link
+										href={`/${tab.value}`}
+										onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 										className={
 											"text-sm transition-colors cursor-pointer " +
 											(currentTab === tab.value
@@ -59,7 +51,7 @@ export function Footer({ setCurrentTab, currentTab }: FooterProps) {
 												: "text-gray-600 hover:text-gray-900")
 										}>
 										{tab.label}
-									</a>
+									</Link>
 								</li>
 							))}
 						</ul>

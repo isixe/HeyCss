@@ -2,12 +2,10 @@
 
 import { Github, Menu, X, Palette, Box, Type, Square, Hexagon } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Color from "color";
 import { TABS } from "@/data/enum";
-
-interface HeaderProps {
-	setCurrentTab?: (tab: string) => void;
-}
 
 const TAB_COLOR_MAP: Record<string, { bg: string; text: string }> = {
 	blue: { bg: "bg-blue-500/20", text: "text-blue-600" },
@@ -23,15 +21,17 @@ const TAB_ICONS: Record<string, React.ReactNode> = {
 	shape: <Hexagon className="w-5 h-5" />,
 };
 
-export function Header({ setCurrentTab }: HeaderProps) {
+export function Header() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isColorOpen, setIsColorOpen] = useState(false);
-	const [activeTab, setActiveTab] = useState<string>("boxShadow");
 	const [color, setColor] = useState<string>("#ffffff");
 	const [mounted, setMounted] = useState(false);
 	const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 	const lastScrollY = useRef(0);
 	const colorPickerRef = useRef<HTMLDivElement>(null);
+
+	const pathname = usePathname();
+	const activeTab = pathname.split("/")[1] || "boxShadow";
 
 	useEffect(() => {
 		setMounted(true);
@@ -105,10 +105,6 @@ export function Header({ setCurrentTab }: HeaderProps) {
 	};
 
 	const tabClick = (tabValue: string) => {
-		setActiveTab(tabValue);
-		if (setCurrentTab) {
-			setCurrentTab(tabValue);
-		}
 		setIsSidebarOpen(false);
 	};
 
@@ -132,15 +128,16 @@ export function Header({ setCurrentTab }: HeaderProps) {
 				<footer className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/80 backdrop-blur-xl border-t border-gray-200">
 					<nav className="flex items-center justify-around h-14">
 						{TABS.map((tab) => (
-							<button
+							<Link
 								key={tab.value}
+								href={`/${tab.value}`}
 								onClick={() => tabClick(tab.value)}
 								className={`flex flex-col items-center justify-center flex-1 h-full transition-colors cursor-pointer ${
 									activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
 								}`}>
 								{TAB_ICONS[tab.value]}
 								<span className="text-[10px] mt-0.5">{tab.label}</span>
-							</button>
+							</Link>
 						))}
 					</nav>
 				</footer>
@@ -171,8 +168,9 @@ export function Header({ setCurrentTab }: HeaderProps) {
 
 								<nav className="hidden md:flex items-center gap-1 ml-6">
 									{TABS.map((tab) => (
-										<button
+										<Link
 											key={tab.value}
+											href={`/${tab.value}`}
 											onClick={() => tabClick(tab.value)}
 											className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
 												activeTab === tab.value
@@ -181,7 +179,7 @@ export function Header({ setCurrentTab }: HeaderProps) {
 											}`}>
 											{TAB_ICONS[tab.value]}
 											<span>{tab.label}</span>
-										</button>
+										</Link>
 									))}
 								</nav>
 							</div>
@@ -258,15 +256,16 @@ export function Header({ setCurrentTab }: HeaderProps) {
 			<footer className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/80 backdrop-blur-xl border-t border-gray-200">
 				<nav className="flex items-center justify-around h-14">
 					{TABS.map((tab) => (
-						<button
+						<Link
 							key={tab.value}
+							href={`/${tab.value}`}
 							onClick={() => tabClick(tab.value)}
 							className={`flex flex-col items-center justify-center flex-1 h-full transition-colors cursor-pointer ${
 								activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
 							}`}>
 							{TAB_ICONS[tab.value]}
 							<span className="text-[10px] mt-0.5">{tab.label}</span>
-						</button>
+						</Link>
 					))}
 				</nav>
 			</footer>
@@ -295,8 +294,9 @@ export function Header({ setCurrentTab }: HeaderProps) {
 				<nav className="p-4">
 					<div className="space-y-2">
 						{TABS.map((tab) => (
-							<button
+							<Link
 								key={tab.value}
+								href={`/${tab.value}`}
 								onClick={() => tabClick(tab.value)}
 								className={`flex items-center gap-3 px-4 py-3 rounded-xl w-full text-left transition-all duration-200 cursor-pointer ${
 									activeTab === tab.value
@@ -305,7 +305,7 @@ export function Header({ setCurrentTab }: HeaderProps) {
 								}`}>
 								{TAB_ICONS[tab.value]}
 								<span className="font-medium">{tab.label}</span>
-							</button>
+							</Link>
 						))}
 					</div>
 				</nav>
