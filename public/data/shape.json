@@ -1277,8 +1277,8 @@
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
-        "--k": "29.289%",
-        "clip-path": "polygon(var(--k) 0, 100% 0, 100% 100%, 0 100%, 0 var(--k))"
+        "--k": "20px",
+        "clip-path": "polygon(var(--k) 0, calc(100% - var(--k)) 0, 100% var(--k), 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, var(--k) 100%, 0 calc(100% - var(--k)), 0 var(--k))"
     },
     {
         "id": 88,
@@ -1286,7 +1286,7 @@
         "aspect-ratio": "1",
         "background": "#a9f0bf",
         "--k": "29.289%",
-        "clip-path": "polygon(0 0, calc(100% - var(--k)) 0, 100% var(--k), 100% 100%, 0 100%)"
+        "clip-path": "polygon(var(--k) 0, 100% 0, 100% 100%, 0 100%, 0 var(--k))"
     },
     {
         "id": 89,
@@ -1294,7 +1294,7 @@
         "aspect-ratio": "1",
         "background": "#a9f0bf",
         "--k": "29.289%",
-        "clip-path": "polygon(0 0, 100% 0, 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, 0 100%)"
+        "clip-path": "polygon(0 0, calc(100% - var(--k)) 0, 100% var(--k), 100% 100%, 0 100%)"
     },
     {
         "id": 90,
@@ -1302,38 +1302,46 @@
         "aspect-ratio": "1",
         "background": "#a9f0bf",
         "--k": "29.289%",
-        "clip-path": "polygon(0 0, 100% 0, 100% 100%, var(--k) 100%, 0 calc(100% - var(--k)))"
+        "clip-path": "polygon(0 0, 100% 0, 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, 0 100%)"
     },
     {
         "id": 91,
+        "width": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--k": "29.289%",
+        "clip-path": "polygon(0 0, 100% 0, 100% 100%, var(--k) 100%, 0 calc(100% - var(--k)))"
+    },
+    {
+        "id": 92,
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 92,
+        "id": 93,
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
         "background": "#FA6900"
     },
     {
-        "id": 93,
+        "id": 94,
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 94,
+        "id": 95,
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 95,
+        "id": 96,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1343,7 +1351,7 @@
         "background": "#ffbb81"
     },
     {
-        "id": 96,
+        "id": 97,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1353,7 +1361,7 @@
         "background": "#ffbb81"
     },
     {
-        "id": 97,
+        "id": 98,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1363,7 +1371,7 @@
         "background": "#ffbb81"
     },
     {
-        "id": 98,
+        "id": 99,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1373,35 +1381,35 @@
         "background": "#ffbb81"
     },
     {
-        "id": 99,
+        "id": 100,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,0 100%)",
         "background": "#c496ff"
     },
     {
-        "id": 100,
+        "id": 101,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,100% 100%)",
         "background": "#c496ff"
     },
     {
-        "id": 101,
+        "id": 102,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,100% 0,100% 100%)",
         "background": "#c496ff"
     },
     {
-        "id": 102,
+        "id": 103,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,0 0,100% 100%)",
         "background": "#c496ff"
     },
     {
-        "id": 103,
+        "id": 104,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1413,7 +1421,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 104,
+        "id": 105,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1425,7 +1433,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 105,
+        "id": 106,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1437,7 +1445,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 106,
+        "id": 107,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1449,7 +1457,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 107,
+        "id": 108,
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-left-radius": "25px",
@@ -1457,7 +1465,7 @@
         "background": "#ffa241"
     },
     {
-        "id": 108,
+        "id": 109,
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-right-radius": "25px",
@@ -1465,7 +1473,7 @@
         "background": "#ffa241"
     },
     {
-        "id": 109,
+        "id": 110,
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-right-radius": "25px",
@@ -1473,7 +1481,7 @@
         "background": "#ffa241"
     },
     {
-        "id": 110,
+        "id": 111,
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-left-radius": "25px",
@@ -1481,35 +1489,35 @@
         "background": "#ffa241"
     },
     {
-        "id": 111,
+        "id": 112,
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 112,
+        "id": 113,
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
         "background": "#FA6900"
     },
     {
-        "id": 113,
+        "id": 114,
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 114,
+        "id": 115,
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
         "background": "#FA6900"
     },
     {
-        "id": 115,
+        "id": 116,
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1519,7 +1527,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 116,
+        "id": 117,
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1529,7 +1537,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 117,
+        "id": 118,
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1539,7 +1547,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 118,
+        "id": 119,
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1549,7 +1557,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
-        "id": 119,
+        "id": 120,
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1558,7 +1566,7 @@
         "background": "#f0dabe"
     },
     {
-        "id": 120,
+        "id": 121,
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1567,7 +1575,7 @@
         "background": "#f0dabe"
     },
     {
-        "id": 121,
+        "id": 122,
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1576,7 +1584,7 @@
         "background": "#f0dabe"
     },
     {
-        "id": 122,
+        "id": 123,
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1585,22 +1593,12 @@
         "background": "#f0dabe"
     },
     {
-        "id": 123,
+        "id": 124,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
         "--k": "20px",
         "clip-path": "polygon(var(--k) 0, calc(100% - var(--k)) 0, 100% var(--k), 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, var(--k) 100%, 0 calc(100% - var(--k)), 0 var(--k))"
-    },
-    {
-        "id": 124,
-        "width": "150px",
-        "height": "100px",
-        "aspect-ratio": "1",
-        "background": "#a9f0bf",
-        "--s": "15px",
-        "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
         "id": 125,
@@ -1610,7 +1608,7 @@
         "background": "#a9f0bf",
         "--s": "15px",
         "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
         "id": 126,
@@ -1620,7 +1618,7 @@
         "background": "#a9f0bf",
         "--s": "15px",
         "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 32%, calc(100% - var(--n)) 36%, calc(100% - var(--n)) 64%, 100% 68%, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
         "id": 127,
@@ -1630,7 +1628,7 @@
         "background": "#a9f0bf",
         "--s": "15px",
         "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 32%, calc(100% - var(--n)) 36%, calc(100% - var(--n)) 64%, 100% 68%, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
         "id": 128,
@@ -1640,10 +1638,20 @@
         "background": "#a9f0bf",
         "--s": "15px",
         "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 68%, var(--n) 64%, var(--n) 36%, 0 32%)"
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
         "id": 129,
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 68%, var(--n) 64%, var(--n) 36%, 0 32%)"
+    },
+    {
+        "id": 130,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
