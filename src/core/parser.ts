@@ -9,6 +9,7 @@ function cssObjectParser(cssObj: Record<string, any>): string {
 
 	const generateProperty = (key: string, value: any) => {
 		if (value === null || value === undefined || value === "") return "";
+		if (key === "id") return "";
 		const cssKey = key.replace(/([A-Z])/g, "-$1").toLowerCase();
 		return `  ${cssKey}: ${value};`;
 	};
