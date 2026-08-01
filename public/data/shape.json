@@ -1656,8 +1656,34 @@
         "height": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
-        "--s": "15px",
         "--n": "15px",
-        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+        "clip-path": "polygon(0 0, 64% 0, 68% var(--n), 100% var(--n), 100% 0, 100% 100%, 0 100%)"
+    },
+    {
+        "id": 131,
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--n": "15px",
+        "clip-path": "polygon(100% 0, 36% 0, 32% var(--n), 0 var(--n), 0 0, 0 100%, 100% 100%)"
+    },
+    {
+        "id": 132,
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--n": "15px",
+        "clip-path": "polygon(0 100%, 64% 100%, 68% calc(100% - var(--n)), 100% calc(100% - var(--n)), 100% 100%, 100% 0, 0 0)"
+    },
+    {
+        "id": 133,
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--n": "15px",
+        "clip-path": "polygon(100% 100%, 36% 100%, 32% calc(100% - var(--n)), 0 calc(100% - var(--n)), 0 100%, 0 0, 100% 0)"
     }
 ]
