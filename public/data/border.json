@@ -1,25 +1,31 @@
 [
 	{
+		"id": 0,
 		"border": "2px solid #e5e7eb",
 		"border-radius": "10px"
 	},
 	{
+		"id": 1,
 		"border": "2px dashed #6366f1",
 		"border-radius": "10px"
 	},
 	{
+		"id": 2,
 		"border": "3px dotted #f59e0b",
 		"border-radius": "10px"
 	},
 	{
+		"id": 3,
 		"border": "4px double #8b5cf6",
 		"border-radius": "10px"
 	},
 	{
+		"id": 4,
 		"border": "3px ridge #10b981",
 		"border-radius": "10px"
 	},
 	{
+		"id": 5,
 		"border-top": "4px solid #ef4444",
 		"border-right": "2px solid #f59e0b",
 		"border-bottom": "4px solid #10b981",
@@ -27,11 +33,13 @@
 		"border-radius": "10px"
 	},
 	{
+		"id": 6,
 		"border-image": "linear-gradient(45deg, #f43f5e, #3b82f6) 1",
 		"border-width": "2px",
 		"border-radius": "10px"
 	},
 	{
+		"id": 7,
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -54,6 +62,7 @@
 		}
 	},
 	{
+		"id": 8,
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -76,6 +85,7 @@
 		}
 	},
 	{
+		"id": 9,
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -98,6 +108,7 @@
 		}
 	},
 	{
+		"id": 10,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -121,6 +132,7 @@
 		}
 	},
 	{
+		"id": 11,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -144,6 +156,7 @@
 		}
 	},
 	{
+		"id": 12,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -167,6 +180,7 @@
 		}
 	},
 	{
+		"id": 13,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -190,6 +204,7 @@
 		}
 	},
 	{
+		"id": 14,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -213,6 +228,7 @@
 		}
 	},
 	{
+		"id": 15,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -236,6 +252,7 @@
 		}
 	},
 	{
+		"id": 16,
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -259,6 +276,7 @@
 		}
 	},
 	{
+		"id": 17,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -272,6 +290,7 @@
 		}
 	},
 	{
+		"id": 18,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -285,6 +304,7 @@
 		}
 	},
 	{
+		"id": 19,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -298,6 +318,7 @@
 		}
 	},
 	{
+		"id": 20,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -310,6 +331,7 @@
 		}
 	},
 	{
+		"id": 21,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -322,6 +344,7 @@
 		}
 	},
 	{
+		"id": 22,
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -335,6 +358,7 @@
 		}
 	},
 	{
+		"id": 23,
 		"position": "relative",
 		"background": "transparent",
 		"border": "none",

@@ -1,5 +1,6 @@
 [
     {
+        "id": 0,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -22,6 +23,7 @@
         }
     },
     {
+        "id": 1,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -44,6 +46,7 @@
         }
     },
     {
+        "id": 2,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -66,6 +69,7 @@
         }
     },
     {
+        "id": 3,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -88,6 +92,7 @@
         }
     },
     {
+        "id": 4,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -109,6 +114,7 @@
         }
     },
     {
+        "id": 5,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -130,6 +136,7 @@
         }
     },
     {
+        "id": 6,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -151,6 +158,7 @@
         }
     },
     {
+        "id": 7,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -172,6 +180,7 @@
         }
     },
     {
+        "id": 8,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -203,6 +212,7 @@
         }
     },
     {
+        "id": 9,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -234,6 +244,7 @@
         }
     },
     {
+        "id": 10,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -255,6 +266,7 @@
         }
     },
     {
+        "id": 11,
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -276,6 +288,7 @@
         }
     },
     {
+        "id": 12,
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -299,6 +312,7 @@
         }
     },
     {
+        "id": 13,
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -318,6 +332,7 @@
         }
     },
     {
+        "id": 14,
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -345,6 +360,7 @@
         }
     },
     {
+        "id": 15,
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -366,6 +382,7 @@
         }
     },
     {
+        "id": 16,
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -386,6 +403,7 @@
         }
     },
     {
+        "id": 17,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -402,6 +420,7 @@
         }
     },
     {
+        "id": 18,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -420,6 +439,7 @@
         }
     },
     {
+        "id": 19,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -438,6 +458,7 @@
         }
     },
     {
+        "id": 20,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -456,6 +477,7 @@
         }
     },
     {
+        "id": 21,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -474,6 +496,7 @@
         }
     },
     {
+        "id": 22,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -492,6 +515,7 @@
         }
     },
     {
+        "id": 23,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -510,6 +534,7 @@
         }
     },
     {
+        "id": 24,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -528,6 +553,7 @@
         }
     },
     {
+        "id": 25,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -546,6 +572,7 @@
         }
     },
     {
+        "id": 26,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -561,6 +588,7 @@
         }
     },
     {
+        "id": 27,
         "width": "200px",
         "height": "200px",
         "background": "#fe7496",
@@ -569,6 +597,7 @@
         "mask": "radial-gradient(100% 100%,#000 calc(20.711% - 1px),#0000 20.711%) subtract,100% 50% var(--g),50% 100% var(--g),0% 50% var(--g),50% 0% var(--g);"
     },
     {
+        "id": 28,
         "width": "200px",
         "height": "200px",
         "background": "#f7694c",
@@ -577,6 +606,7 @@
         "mask": "radial-gradient(100% 100%,#000 calc(25.476% - 1px),#0000 25.476%) subtract,100% 50% var(--g),65.451% 97.553% var(--g),9.549% 79.389% var(--g),9.549% 20.611% var(--g),65.451% 2.447% var(--g);"
     },
     {
+        "id": 29,
         "width": "200px",
         "height": "200px",
         "background": "#f25145",
@@ -585,6 +615,7 @@
         "mask": "100% 50% var(--g),65.451% 97.553% var(--g),9.549% 79.389% var(--g),9.549% 20.611% var(--g),65.451% 2.447% var(--g),radial-gradient(100% 100%,#000 25.476%,#0000 calc(25.476% + 1px));"
     },
     {
+        "id": 30,
         "width": "100px",
         "aspect-ratio": "1",
         "border-radius": "50%",
@@ -592,6 +623,7 @@
         "background": "#8458ff"
     },
     {
+        "id": 31,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -606,6 +638,7 @@
         }
     },
     {
+        "id": 32,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -624,6 +657,7 @@
         }
     },
     {
+        "id": 33,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -642,6 +676,7 @@
         }
     },
     {
+        "id": 34,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -660,6 +695,7 @@
         }
     },
     {
+        "id": 35,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -678,6 +714,7 @@
         }
     },
     {
+        "id": 36,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -696,6 +733,7 @@
         }
     },
     {
+        "id": 37,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -714,6 +752,7 @@
         }
     },
     {
+        "id": 38,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -732,6 +771,7 @@
         }
     },
     {
+        "id": 39,
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -750,6 +790,7 @@
         }
     },
     {
+        "id": 40,
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -758,6 +799,7 @@
         "background": "#ff6b35"
     },
     {
+        "id": 41,
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -766,6 +808,7 @@
         "background": "#ff6b35"
     },
     {
+        "id": 42,
         "width": "100px",
         "height": "150px",
         "--c": "70px;",
@@ -774,6 +817,7 @@
         "background": "#ff6b35"
     },
     {
+        "id": 43,
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -782,6 +826,7 @@
         "background": "#ff6b35"
     },
     {
+        "id": 44,
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -790,6 +835,7 @@
         "background": "#ff6b35"
     },
     {
+        "id": 45,
         "width": "150px",
         "height": "100px",
         "--c": "70px;",
@@ -798,42 +844,49 @@
         "background": "#ff6b35"
     },
     {
+        "id": 46,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 100% at 50% 0%)",
         "background": "#fe7496"
     },
     {
+        "id": 47,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(100% 85% at 0 50%)",
         "background": "#fe7496"
     },
     {
+        "id": 48,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 50% at 50% 50%)",
         "background": "#fe7496"
     },
     {
+        "id": 49,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 100% at 50% 100%)",
         "background": "#fe7496"
     },
     {
+        "id": 50,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(100% 85% at 100% 50%)",
         "background": "#fe7496"
     },
     {
+        "id": 51,
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(50% 85% at 50% 50%)",
         "background": "#fe7496"
     },
     {
+        "id": 52,
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -849,6 +902,7 @@
         "mask-repeat": "no-repeat"
     },
     {
+        "id": 53,
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -864,6 +918,7 @@
         "mask-repeat": "no-repeat"
     },
     {
+        "id": 54,
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -879,6 +934,7 @@
         "mask-repeat": "no-repeat"
     },
     {
+        "id": 55,
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -894,6 +950,7 @@
         "mask-repeat": "no-repeat"
     },
     {
+        "id": 56,
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -907,6 +964,7 @@
         "mask": "radial-gradient(var(--r) at calc(var(--p) + var(--_d)) var(--_m)),radial-gradient(var(--r) at calc(var(--p) - var(--_d)) var(--_m)),radial-gradient(var(--s) at var(--p) calc(-1*sin(var(--a))*var(--s)),#0000 100%,#000 calc(100% + 1px)) 0 calc(var(--r)*(1 - sin(var(--a)))) no-repeat,linear-gradient(90deg,#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0)"
     },
     {
+        "id": 57,
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -920,6 +978,7 @@
         "mask": "radial-gradient(var(--r) at calc(var(--p) + var(--_d)) var(--_m)),radial-gradient(var(--r) at calc(var(--p) - var(--_d)) var(--_m)),radial-gradient(var(--s) at var(--p) calc(100% + sin(var(--a))*var(--s)),#0000 100%,#000 calc(100% + 1px)) 0 calc(var(--r)*(sin(var(--a)) - 1)) no-repeat,linear-gradient(90deg,#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0)"
     },
     {
+        "id": 58,
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -933,6 +992,7 @@
         "mask": "radial-gradient(var(--r) at var(--r) calc(var(--p) + var(--_d)) var(--_m)),radial-gradient(var(--r) at var(--r) calc(var(--p) - var(--_d)) var(--_m)),radial-gradient(var(--s) at calc(-1*sin(var(--a))*var(--s)) var(--p),#0000 100%,#000 calc(100% + 1px)) calc(var(--r)*(1 - sin(var(--a)))) 0 no-repeat,linear-gradient(#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0)"
     },
     {
+        "id": 59,
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -947,12 +1007,14 @@
         "mask": "radial-gradient(var(--_r) calc(var(--p) + var(--_d)) var(--_m)),radial-gradient(var(--_r) calc(var(--p) - var(--_d)) var(--_m)),radial-gradient(var(--s) at calc(100% + sin(var(--a))*var(--s)) var(--p),#0000 100%,#000 calc(100% + 1px)) calc(var(--r)*(sin(var(--a)) - 1)) 0 no-repeat,linear-gradient(#000 calc(var(--p) - var(--_d)),#0000 0 calc(var(--p) + var(--_d)),#000 0)"
     },
     {
+        "id": 60,
         "height": "150px",
         "width": "100px",
         "background": "#ffe600",
         "mask": "radial-gradient(#0000 71%, #000 72%) 10000% 10000%/99.5% 99.5%"
     },
     {
+        "id": 61,
         "--s": "30px",
         "border": "8px solid #B38184",
         "padding": "50px",
@@ -962,6 +1024,7 @@
         "mask": "conic-gradient(#000 0 0) content-box, conic-gradient(at var(--s) var(--s),#0000 75%,#000 0) 0 0/calc(100% - var(--s)) calc(100% - var(--s))"
     },
     {
+        "id": 62,
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -971,6 +1034,7 @@
         "clip-path": "polygon(0 0,calc(100% - var(--s)) 0,100% 50%,calc(100% - var(--s)) 100%,0 100%)"
     },
     {
+        "id": 63,
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -980,6 +1044,7 @@
         "clip-path": "polygon(0 0,calc(100% - var(--s)) 0,100% 50%,calc(100% - var(--s)) 100%,0 100%,var(--s) 50%)"
     },
     {
+        "id": 64,
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -989,6 +1054,7 @@
         "clip-path": "polygon(0 0,100% 0,100% 100%,0 100%,var(--s) 50%)"
     },
     {
+        "id": 65,
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -998,6 +1064,7 @@
         "clip-path": "polygon(0 0,100% 0,calc(100% - var(--s)) 50%, 100% 100%, 0 100%, var(--s) 50%)"
     },
     {
+        "id": 66,
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
@@ -1006,6 +1073,7 @@
         "clip-path": "ellipse(calc(var(--c)*1%) 100% at top)"
     },
     {
+        "id": 67,
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
@@ -1014,6 +1082,7 @@
         "clip-path": "ellipse(calc(var(--c)*1%) 100% at bottom)"
     },
     {
+        "id": 68,
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
@@ -1022,6 +1091,7 @@
         "clip-path": "ellipse(100% calc(var(--c)*1%) at left)"
     },
     {
+        "id": 69,
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
@@ -1030,6 +1100,7 @@
         "clip-path": "ellipse(100% calc(var(--c)*1%) at right)"
     },
     {
+        "id": 70,
         "--s": "5px",
         "--w": "100px",
         "width": "round(var(--w),4*var(--s))",
@@ -1041,6 +1112,7 @@
         "mask": "conic-gradient(#000 0 0) no-repeat 50%/calc(100% - 6*var(--s)) calc(100% - 6*var(--s)), radial-gradient(var(--s),#000 100%,#0000 calc(100% + 1px)) 0 0/calc(4*var(--s)) calc(4*var(--s)), radial-gradient(var(--s),#0000 calc(100% - 1px),#000) var(--s) var(--s)/calc(2*var(--s)) calc(2*var(--s)) padding-box"
     },
     {
+        "id": 71,
         "--s": "5px",
         "--w": "100px",
         "--_g": "radial-gradient(var(--s),#000 calc(100% - 1px),#0000)",
@@ -1054,6 +1126,7 @@
         "mask-size": "calc(4*var(--s)) calc(4*var(--s))"
     },
     {
+        "id": 72,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1063,6 +1136,7 @@
         "clip-path": "polygon(0 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
     {
+        "id": 73,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1072,6 +1146,7 @@
         "clip-path": "polygon(0 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,0 100%)"
     },
     {
+        "id": 74,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1081,6 +1156,7 @@
         "clip-path": "polygon(0 0,0 100%,calc(50% - var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% + var(--b)/2) 100%,100% 100%,100% 0)"
     },
     {
+        "id": 75,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1090,6 +1166,7 @@
         "clip-path": "polygon(0 0,calc(50% - var(--b)/2) 0,50% var(--h),calc(50% + var(--b)/2) 0,100% 0,100% calc(50% - var(--b)/2),calc(100% - var(--h)) 50%,100% calc(50% + var(--b)/2),100% 100%,calc(50% + var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% - var(--b)/2) 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
     {
+        "id": 76,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1099,6 +1176,7 @@
         "clip-path": "polygon(0 0,0 100%,calc(50% - var(--b)/2) 100%,50% calc(100% - var(--h)),calc(50% + var(--b)/2) 100%,100% 100%,100% 0,calc(50% + var(--b)/2) 0,50% var(--h),calc(50% - var(--b)/2) 0)"
     },
     {
+        "id": 77,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1108,6 +1186,7 @@
         "clip-path": "polygon(0 0,100% 0,100% 100%,0 100%,0 calc(50% + var(--b)/2),var(--h) 50%,0 calc(50% - var(--b)/2))"
     },
     {
+        "id": 78,
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1117,6 +1196,7 @@
         "clip-path": "polygon(0 0,0 100%,100% 100%,100% 0,calc(50% + var(--b)/2) 0,50% var(--h),calc(50% - var(--b)/2) 0)"
     },
     {
+        "id": 79,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1125,6 +1205,7 @@
         "mask": "radial-gradient(var(--r) at 50% var(--r),#0000 calc(100% - 1px),#000) 0 calc(-1*var(--r))"
     },
     {
+        "id": 80,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1133,6 +1214,7 @@
         "mask": "radial-gradient(var(--r) at top,#0000 calc(100% - 1px),#000)"
     },
     {
+        "id": 81,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1141,6 +1223,7 @@
         "mask": "radial-gradient(var(--r) at left,#0000 calc(100% - 1px),#000)"
     },
     {
+        "id": 82,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1149,6 +1232,7 @@
         "mask": "radial-gradient(var(--r) at 50% var(--r),#0000 calc(100% - 1px),#000) 0 calc(-1*var(--r)) intersect, radial-gradient(var(--r) at var(--r) 50%,#0000 calc(100% - 1px),#000) calc(-1*var(--r))"
     },
     {
+        "id": 83,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1157,6 +1241,7 @@
         "mask": "radial-gradient(var(--r) at var(--r),#0000 calc(100% - 1px),#000) calc(-1*var(--r))"
     },
     {
+        "id": 84,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1165,6 +1250,7 @@
         "mask": "radial-gradient(var(--r) at bottom,#0000 calc(100% - 1px),#000)"
     },
     {
+        "id": 85,
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1173,6 +1259,7 @@
         "mask": "radial-gradient(var(--r) at right,#0000 calc(100% - 1px),#000)"
     },
     {
+        "id": 86,
         "--s": "10px",
         "--w": "100px",
         "width": "round(var(--w), 4*var(--s))",
@@ -1186,6 +1273,7 @@
         "mask-size": "calc(var(--s)*4) calc(var(--s)*4)"
     },
     {
+        "id": 87,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1193,6 +1281,7 @@
         "clip-path": "polygon(var(--k) 0, 100% 0, 100% 100%, 0 100%, 0 var(--k))"
     },
     {
+        "id": 88,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1200,6 +1289,7 @@
         "clip-path": "polygon(0 0, calc(100% - var(--k)) 0, 100% var(--k), 100% 100%, 0 100%)"
     },
     {
+        "id": 89,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1207,6 +1297,7 @@
         "clip-path": "polygon(0 0, 100% 0, 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, 0 100%)"
     },
     {
+        "id": 90,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1214,30 +1305,35 @@
         "clip-path": "polygon(0 0, 100% 0, 100% 100%, var(--k) 100%, 0 calc(100% - var(--k)))"
     },
     {
+        "id": 91,
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 92,
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
         "background": "#FA6900"
     },
     {
+        "id": 93,
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 94,
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 95,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1247,6 +1343,7 @@
         "background": "#ffbb81"
     },
     {
+        "id": 96,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1256,6 +1353,7 @@
         "background": "#ffbb81"
     },
     {
+        "id": 97,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1265,6 +1363,7 @@
         "background": "#ffbb81"
     },
     {
+        "id": 98,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1274,30 +1373,35 @@
         "background": "#ffbb81"
     },
     {
+        "id": 99,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,0 100%)",
         "background": "#c496ff"
     },
     {
+        "id": 100,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,100% 100%)",
         "background": "#c496ff"
     },
     {
+        "id": 101,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,100% 0,100% 100%)",
         "background": "#c496ff"
     },
     {
+        "id": 102,
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,0 0,100% 100%)",
         "background": "#c496ff"
     },
     {
+        "id": 103,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1309,6 +1413,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 104,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1320,6 +1425,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 105,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1331,6 +1437,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 106,
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1342,6 +1449,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 107,
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-left-radius": "25px",
@@ -1349,6 +1457,7 @@
         "background": "#ffa241"
     },
     {
+        "id": 108,
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-right-radius": "25px",
@@ -1356,6 +1465,7 @@
         "background": "#ffa241"
     },
     {
+        "id": 109,
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-right-radius": "25px",
@@ -1363,6 +1473,7 @@
         "background": "#ffa241"
     },
     {
+        "id": 110,
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-left-radius": "25px",
@@ -1370,30 +1481,35 @@
         "background": "#ffa241"
     },
     {
+        "id": 111,
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 112,
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
         "background": "#FA6900"
     },
     {
+        "id": 113,
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 114,
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
         "background": "#FA6900"
     },
     {
+        "id": 115,
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1403,6 +1519,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 116,
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1412,6 +1529,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 117,
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1421,6 +1539,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 118,
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1430,6 +1549,7 @@
         "background": "linear-gradient(45deg,#FA6900,#C02942)"
     },
     {
+        "id": 119,
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1438,6 +1558,7 @@
         "background": "#f0dabe"
     },
     {
+        "id": 120,
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1446,6 +1567,7 @@
         "background": "#f0dabe"
     },
     {
+        "id": 121,
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1454,6 +1576,7 @@
         "background": "#f0dabe"
     },
     {
+        "id": 122,
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1462,6 +1585,7 @@
         "background": "#f0dabe"
     },
     {
+        "id": 123,
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1469,6 +1593,7 @@
         "clip-path": "polygon(var(--k) 0, calc(100% - var(--k)) 0, 100% var(--k), 100% calc(100% - var(--k)), calc(100% - var(--k)) 100%, var(--k) 100%, 0 calc(100% - var(--k)), 0 var(--k))"
     },
     {
+        "id": 124,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1478,6 +1603,7 @@
         "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
+        "id": 125,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1487,6 +1613,7 @@
         "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
+        "id": 126,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1496,6 +1623,7 @@
         "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 32%, calc(100% - var(--n)) 36%, calc(100% - var(--n)) 64%, 100% 68%, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
+        "id": 127,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1505,6 +1633,7 @@
         "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     },
     {
+        "id": 128,
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1512,5 +1641,15 @@
         "--s": "15px",
         "--n": "15px",
         "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 68%, var(--n) 64%, var(--n) 36%, 0 32%)"
+    },
+    {
+        "id": 129,
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
     }
 ]
