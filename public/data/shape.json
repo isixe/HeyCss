@@ -1455,5 +1455,41 @@
         "--s": "15px",
         "--n": "15px",
         "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+    },
+    {
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, 32% 0, 36% var(--n), 64% var(--n), 68% 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+    },
+    {
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% 32%, calc(100% - var(--n)) 36%, calc(100% - var(--n)) 64%, 100% 68%, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+    },
+    {
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 68% 100%, 64% calc(100% - var(--n)), 36% calc(100% - var(--n)), 32% 100%, var(--s) 100%, 0 calc(100% - var(--s)))"
+    },
+    {
+        "width": "150px",
+        "height": "100px",
+        "aspect-ratio": "1",
+        "background": "#a9f0bf",
+        "--s": "15px",
+        "--n": "15px",
+        "clip-path": "polygon(0 var(--s), var(--s) 0, calc(100% - var(--s)) 0, 100% var(--s), 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, var(--s) 100%, 0 calc(100% - var(--s)), 0 68%, var(--n) 64%, var(--n) 36%, 0 32%)"
     }
 ]
