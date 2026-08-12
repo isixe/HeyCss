@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Menu, X, Palette, Box, Type, Square, Hexagon } from "lucide-react";
+import { Github, Menu, X, Palette, Box, Type, Square, Hexagon, Search } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -147,11 +147,17 @@ export function Header() {
 
 	return (
 		<>
-			<div className="md:hidden bg-white border-b border-gray-200 h-14 flex items-center px-4">
+			<div className="md:hidden bg-white border-b border-gray-200 h-14 flex items-center justify-between px-4">
 				<div className="flex items-center gap-2">
 					<img src="/favicon.ico" alt="HeyCSS" className="w-7 h-7" />
 					<span className="text-base font-bold text-gray-900">HeyCSS</span>
 				</div>
+				<Link
+					href="/search"
+					className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+					aria-label="Search styles">
+					<Search className="w-5 h-5" />
+				</Link>
 			</div>
 			<header
 				className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
@@ -185,6 +191,13 @@ export function Header() {
 							</div>
 
 							<div className="flex items-center gap-2">
+								<Link
+									href="/search"
+									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+									aria-label="Search styles">
+									<Search className="w-5 h-5" />
+								</Link>
+
 								<a
 									href="https://github.com/isixe/HeyCss"
 									target="_blank"

@@ -1,6 +1,20 @@
 [
     {
         "id": 0,
+        "name": "Bubble Arrow (Bottom)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "bottom"
+        ],
+        "description": "White rounded bubble with a centered arrow pointing down.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -24,6 +38,20 @@
     },
     {
         "id": 1,
+        "name": "Bubble Arrow (Top)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "top"
+        ],
+        "description": "White rounded bubble with a centered arrow pointing up.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -47,6 +75,20 @@
     },
     {
         "id": 2,
+        "name": "Bubble Arrow (Left)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "left"
+        ],
+        "description": "White rounded bubble with a centered arrow pointing left.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -70,6 +112,20 @@
     },
     {
         "id": 3,
+        "name": "Bubble Arrow (Right)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "right"
+        ],
+        "description": "White rounded bubble with a centered arrow pointing right.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -93,6 +149,21 @@
     },
     {
         "id": 4,
+        "name": "Bubble Arrow (Top-Left)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "top",
+            "left"
+        ],
+        "description": "White rounded bubble with an arrow at the top-left.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -115,6 +186,21 @@
     },
     {
         "id": 5,
+        "name": "Bubble Arrow (Top-Right)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "top",
+            "right"
+        ],
+        "description": "White rounded bubble with an arrow at the top-right.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -137,6 +223,21 @@
     },
     {
         "id": 6,
+        "name": "Bubble Arrow (Bottom-Left)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "bottom",
+            "left"
+        ],
+        "description": "White rounded bubble with an arrow at the bottom-left.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -159,6 +260,21 @@
     },
     {
         "id": 7,
+        "name": "Bubble Arrow (Bottom-Right)",
+        "tags": [
+            "shape",
+            "bubble",
+            "气泡",
+            "tooltip",
+            "提示框",
+            "speech",
+            "arrow",
+            "箭头",
+            "white",
+            "bottom",
+            "right"
+        ],
+        "description": "White rounded bubble with an arrow at the bottom-right.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -181,6 +297,18 @@
     },
     {
         "id": 8,
+        "name": "Check Badge (Top-Right)",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "角标",
+            "check",
+            "对勾",
+            "orange",
+            "橙色"
+        ],
+        "description": "Orange corner badge with a white check mark at the top-right.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -213,6 +341,18 @@
     },
     {
         "id": 9,
+        "name": "Check Badge (Bottom-Right)",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "角标",
+            "check",
+            "对勾",
+            "orange",
+            "橙色"
+        ],
+        "description": "Orange corner badge with a white check mark at the bottom-right.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -245,6 +385,17 @@
     },
     {
         "id": 10,
+        "name": "Corner Badge (Top-Left)",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "角标",
+            "orange",
+            "橙色",
+            "triangle"
+        ],
+        "description": "Plain orange triangle badge at the top-left corner.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -267,6 +418,17 @@
     },
     {
         "id": 11,
+        "name": "Corner Badge (Bottom-Left)",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "角标",
+            "orange",
+            "橙色",
+            "triangle"
+        ],
+        "description": "Plain orange triangle badge at the bottom-left corner.",
         "width": "100px",
         "height": "40px",
         "background": "#ffffff",
@@ -289,6 +451,18 @@
     },
     {
         "id": 12,
+        "name": "HOT Ribbon Badge",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "ribbon",
+            "丝带",
+            "hot",
+            "red",
+            "红色"
+        ],
+        "description": "Red ribbon badge labeled HOT rotated at the corner.",
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -313,6 +487,19 @@
     },
     {
         "id": 13,
+        "name": "Status Dot Badge",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "status",
+            "状态",
+            "dot",
+            "圆点",
+            "green",
+            "绿色"
+        ],
+        "description": "Small green status dot at the top-right corner.",
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -333,6 +520,18 @@
     },
     {
         "id": 14,
+        "name": "Count Badge 99",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "count",
+            "数字",
+            "99",
+            "blue",
+            "蓝色"
+        ],
+        "description": "Round blue badge labeled 99 for notification counts.",
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -361,6 +560,18 @@
     },
     {
         "id": 15,
+        "name": "Waiting Label Badge",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "label",
+            "标签",
+            "waiting",
+            "gray",
+            "灰色"
+        ],
+        "description": "Gray label badge labeled waiting at the top-right corner.",
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -383,6 +594,18 @@
     },
     {
         "id": 16,
+        "name": "NEW Badge",
+        "tags": [
+            "shape",
+            "badge",
+            "徽章",
+            "label",
+            "标签",
+            "new",
+            "green",
+            "绿色"
+        ],
+        "description": "Green rounded badge labeled NEW.",
         "width": "100px",
         "height": "100px",
         "background": "#ffffff",
@@ -404,6 +627,17 @@
     },
     {
         "id": 17,
+        "name": "Diamond Cut Shape",
+        "tags": [
+            "shape",
+            "clip-path",
+            "diamond",
+            "菱形",
+            "斜切",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Square with diamond-cut corners via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -421,6 +655,18 @@
     },
     {
         "id": 18,
+        "name": "Slanted Trapezoid (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "slanted",
+            "斜切",
+            "trapezoid",
+            "梯形",
+            "pink",
+            "粉红"
+        ],
+        "description": "Trapezoid with a slanted edge on the left via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -440,6 +686,18 @@
     },
     {
         "id": 19,
+        "name": "Slanted Trapezoid Variant 2",
+        "tags": [
+            "shape",
+            "clip-path",
+            "slanted",
+            "斜切",
+            "trapezoid",
+            "梯形",
+            "pink",
+            "粉红"
+        ],
+        "description": "Trapezoid variant with a slanted edge via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -459,6 +717,18 @@
     },
     {
         "id": 20,
+        "name": "Slanted Trapezoid Variant 3",
+        "tags": [
+            "shape",
+            "clip-path",
+            "slanted",
+            "斜切",
+            "trapezoid",
+            "梯形",
+            "pink",
+            "粉红"
+        ],
+        "description": "Trapezoid variant with a slanted edge via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -478,6 +748,18 @@
     },
     {
         "id": 21,
+        "name": "Slanted Trapezoid Variant 4",
+        "tags": [
+            "shape",
+            "clip-path",
+            "slanted",
+            "斜切",
+            "trapezoid",
+            "梯形",
+            "pink",
+            "粉红"
+        ],
+        "description": "Trapezoid variant with a slanted edge via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -497,6 +779,16 @@
     },
     {
         "id": 22,
+        "name": "Diagonal Cut Shape 5",
+        "tags": [
+            "shape",
+            "clip-path",
+            "diagonal",
+            "斜切",
+            "pink",
+            "粉红"
+        ],
+        "description": "Shape with a large diagonal cut via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -516,6 +808,16 @@
     },
     {
         "id": 23,
+        "name": "Diagonal Cut Shape 6",
+        "tags": [
+            "shape",
+            "clip-path",
+            "diagonal",
+            "斜切",
+            "pink",
+            "粉红"
+        ],
+        "description": "Shape with a large diagonal cut via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -535,6 +837,16 @@
     },
     {
         "id": 24,
+        "name": "Diagonal Cut Shape 7",
+        "tags": [
+            "shape",
+            "clip-path",
+            "diagonal",
+            "斜切",
+            "pink",
+            "粉红"
+        ],
+        "description": "Shape with a large diagonal cut via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -554,6 +866,16 @@
     },
     {
         "id": 25,
+        "name": "Diagonal Cut Shape 8",
+        "tags": [
+            "shape",
+            "clip-path",
+            "diagonal",
+            "斜切",
+            "pink",
+            "粉红"
+        ],
+        "description": "Shape with a large diagonal cut via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -573,6 +895,18 @@
     },
     {
         "id": 26,
+        "name": "Clover Leaf",
+        "tags": [
+            "shape",
+            "mask",
+            "clover",
+            "四叶草",
+            "leaf",
+            "叶子",
+            "beige",
+            "米色"
+        ],
+        "description": "Four-lobed clover leaf created with radial-gradient masks.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -589,6 +923,18 @@
     },
     {
         "id": 27,
+        "name": "Four-Leaf Clover",
+        "tags": [
+            "shape",
+            "mask",
+            "clover",
+            "四叶草",
+            "leaf",
+            "叶子",
+            "pink",
+            "粉红"
+        ],
+        "description": "Four-leaf clover created with radial-gradient masks.",
         "width": "200px",
         "height": "200px",
         "background": "#fe7496",
@@ -598,6 +944,17 @@
     },
     {
         "id": 28,
+        "name": "Five-Petal Flower",
+        "tags": [
+            "shape",
+            "mask",
+            "flower",
+            "花朵",
+            "花瓣",
+            "orange",
+            "橙红"
+        ],
+        "description": "Five-petal flower created with radial-gradient masks.",
         "width": "200px",
         "height": "200px",
         "background": "#f7694c",
@@ -607,6 +964,18 @@
     },
     {
         "id": 29,
+        "name": "Star Flower Ring",
+        "tags": [
+            "shape",
+            "mask",
+            "flower",
+            "花朵",
+            "star",
+            "星形",
+            "red",
+            "红色"
+        ],
+        "description": "Five-point star flower created with radial-gradient masks.",
         "width": "200px",
         "height": "200px",
         "background": "#f25145",
@@ -616,6 +985,16 @@
     },
     {
         "id": 30,
+        "name": "Squircle",
+        "tags": [
+            "shape",
+            "squircle",
+            "圆角方",
+            "superellipse",
+            "purple",
+            "紫色"
+        ],
+        "description": "Squircle shape using corner-shape: squircle with a 50% border-radius.",
         "width": "100px",
         "aspect-ratio": "1",
         "border-radius": "50%",
@@ -624,6 +1003,18 @@
     },
     {
         "id": 31,
+        "name": "Rounded Square",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "square",
+            "方形",
+            "cyan",
+            "青蓝"
+        ],
+        "description": "Rounded square created with a conic-gradient mask.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -639,6 +1030,18 @@
     },
     {
         "id": 32,
+        "name": "Notched Rectangle (Top-Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with a notched top-left corner via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -658,6 +1061,18 @@
     },
     {
         "id": 33,
+        "name": "Notched Rectangle (Top-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with a notched top-right corner via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -677,6 +1092,18 @@
     },
     {
         "id": 34,
+        "name": "Notched Rectangle (Bottom-Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with a notched bottom-left corner via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -696,6 +1123,18 @@
     },
     {
         "id": 35,
+        "name": "Notched Rectangle (Bottom-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with a notched bottom-right corner via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -715,6 +1154,18 @@
     },
     {
         "id": 36,
+        "name": "Notched Rectangle (Top & Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with notched top and bottom corners via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -734,6 +1185,18 @@
     },
     {
         "id": 37,
+        "name": "Notched Rectangle Variant 6",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with multiple notched corners via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -753,6 +1216,18 @@
     },
     {
         "id": 38,
+        "name": "Notched Rectangle Variant 7",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with multiple notched corners via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -772,6 +1247,18 @@
     },
     {
         "id": 39,
+        "name": "Notched Rectangle Variant 8",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notched",
+            "切角",
+            "rectangle",
+            "矩形",
+            "blue",
+            "浅蓝"
+        ],
+        "description": "Rectangle with multiple notched corners via clip-path.",
         "width": "100px",
         "height": "100px",
         "position": "relative",
@@ -791,6 +1278,17 @@
     },
     {
         "id": 40,
+        "name": "Semicircle (Bottom Arc)",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle with the arc at the bottom, created with a radial-gradient mask.",
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -800,6 +1298,17 @@
     },
     {
         "id": 41,
+        "name": "Semicircle (Right Arc)",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle with the arc at the right, created with a radial-gradient mask.",
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -809,6 +1318,17 @@
     },
     {
         "id": 42,
+        "name": "Semicircle Variant 3",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle variant created with a radial-gradient mask.",
         "width": "100px",
         "height": "150px",
         "--c": "70px;",
@@ -818,6 +1338,17 @@
     },
     {
         "id": 43,
+        "name": "Semicircle (Top Arc)",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle with the arc at the top, created with a radial-gradient mask.",
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -827,6 +1358,17 @@
     },
     {
         "id": 44,
+        "name": "Semicircle (Left Arc)",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle with the arc at the left, created with a radial-gradient mask.",
         "width": "100px",
         "height": "100px",
         "--c": "70px;",
@@ -836,6 +1378,17 @@
     },
     {
         "id": 45,
+        "name": "Semicircle Variant 6",
+        "tags": [
+            "shape",
+            "mask",
+            "semicircle",
+            "半圆",
+            "half-circle",
+            "orange",
+            "橙色"
+        ],
+        "description": "Semicircle variant created with a radial-gradient mask.",
         "width": "150px",
         "height": "100px",
         "--c": "70px;",
@@ -845,6 +1398,18 @@
     },
     {
         "id": 46,
+        "name": "Half Ellipse (Top)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "half",
+            "半",
+            "pink",
+            "粉色"
+        ],
+        "description": "Half ellipse cut via clip-path, arc at the top.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 100% at 50% 0%)",
@@ -852,6 +1417,18 @@
     },
     {
         "id": 47,
+        "name": "Half Ellipse (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "half",
+            "半",
+            "pink",
+            "粉色"
+        ],
+        "description": "Half ellipse cut via clip-path, arc at the right.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(100% 85% at 0 50%)",
@@ -859,6 +1436,17 @@
     },
     {
         "id": 48,
+        "name": "Flat Ellipse",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "pill",
+            "pink",
+            "粉色"
+        ],
+        "description": "Wide flat ellipse cut via clip-path.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 50% at 50% 50%)",
@@ -866,6 +1454,18 @@
     },
     {
         "id": 49,
+        "name": "Half Ellipse (Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "half",
+            "半",
+            "pink",
+            "粉色"
+        ],
+        "description": "Half ellipse cut via clip-path, arc at the bottom.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(85% 100% at 50% 100%)",
@@ -873,6 +1473,18 @@
     },
     {
         "id": 50,
+        "name": "Half Ellipse (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "half",
+            "半",
+            "pink",
+            "粉色"
+        ],
+        "description": "Half ellipse cut via clip-path, arc at the left.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(100% 85% at 100% 50%)",
@@ -880,6 +1492,18 @@
     },
     {
         "id": 51,
+        "name": "Narrow Ellipse",
+        "tags": [
+            "shape",
+            "clip-path",
+            "ellipse",
+            "椭圆",
+            "narrow",
+            "细",
+            "pink",
+            "粉色"
+        ],
+        "description": "Narrow tall ellipse cut via clip-path.",
         "height": "100px",
         "aspect-ratio": "3/2",
         "clip-path": "ellipse(50% 85% at 50% 50%)",
@@ -887,6 +1511,19 @@
     },
     {
         "id": 52,
+        "name": "Rounded Ticket",
+        "tags": [
+            "shape",
+            "mask",
+            "ticket",
+            "票据",
+            "信封",
+            "coupon",
+            "优惠券",
+            "cyan",
+            "青色"
+        ],
+        "description": "Rounded ticket/coupon shape with corner notches via mask.",
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -903,6 +1540,19 @@
     },
     {
         "id": 53,
+        "name": "Rounded Ticket Variant 2",
+        "tags": [
+            "shape",
+            "mask",
+            "ticket",
+            "票据",
+            "信封",
+            "coupon",
+            "优惠券",
+            "cyan",
+            "青色"
+        ],
+        "description": "Rounded ticket/coupon variant with corner notches via mask.",
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -919,6 +1569,19 @@
     },
     {
         "id": 54,
+        "name": "Rounded Ticket Variant 3",
+        "tags": [
+            "shape",
+            "mask",
+            "ticket",
+            "票据",
+            "信封",
+            "coupon",
+            "优惠券",
+            "cyan",
+            "青色"
+        ],
+        "description": "Rounded ticket/coupon variant with corner notches via mask.",
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -935,6 +1598,19 @@
     },
     {
         "id": 55,
+        "name": "Rounded Ticket Variant 4",
+        "tags": [
+            "shape",
+            "mask",
+            "ticket",
+            "票据",
+            "信封",
+            "coupon",
+            "优惠券",
+            "cyan",
+            "青色"
+        ],
+        "description": "Rounded ticket/coupon variant with corner notches via mask.",
         "--r": "20px",
         "--s": "20px",
         "--x": "10px",
@@ -951,6 +1627,19 @@
     },
     {
         "id": 56,
+        "name": "Arrow Pill (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "pill",
+            "胶囊",
+            "capsule",
+            "arrow",
+            "箭头",
+            "red",
+            "红色"
+        ],
+        "description": "Pill/capsule shape with an arrow cut on the right via mask.",
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -965,6 +1654,19 @@
     },
     {
         "id": 57,
+        "name": "Arrow Pill (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "pill",
+            "胶囊",
+            "capsule",
+            "arrow",
+            "箭头",
+            "red",
+            "红色"
+        ],
+        "description": "Pill/capsule shape with an arrow cut on the left via mask.",
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -979,6 +1681,19 @@
     },
     {
         "id": 58,
+        "name": "Arrow Pill Variant 3",
+        "tags": [
+            "shape",
+            "mask",
+            "pill",
+            "胶囊",
+            "capsule",
+            "arrow",
+            "箭头",
+            "red",
+            "红色"
+        ],
+        "description": "Pill/capsule variant with an arrow cut via mask.",
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -993,6 +1708,19 @@
     },
     {
         "id": 59,
+        "name": "Arrow Pill Variant 4",
+        "tags": [
+            "shape",
+            "mask",
+            "pill",
+            "胶囊",
+            "capsule",
+            "arrow",
+            "箭头",
+            "red",
+            "红色"
+        ],
+        "description": "Pill/capsule variant with an arrow cut via mask.",
         "--r": "20px",
         "--s": "20px",
         "--a": "20deg",
@@ -1008,6 +1736,18 @@
     },
     {
         "id": 60,
+        "name": "Ring (Donut)",
+        "tags": [
+            "shape",
+            "mask",
+            "ring",
+            "圆环",
+            "donut",
+            "甜甜圈",
+            "yellow",
+            "黄色"
+        ],
+        "description": "Circular ring/donut shape via a radial-gradient mask.",
         "height": "150px",
         "width": "100px",
         "background": "#ffe600",
@@ -1015,6 +1755,18 @@
     },
     {
         "id": 61,
+        "name": "Square Ring",
+        "tags": [
+            "shape",
+            "mask",
+            "ring",
+            "圆环",
+            "square",
+            "方形",
+            "beige",
+            "米色"
+        ],
+        "description": "Square ring outline via a conic-gradient content-box mask.",
         "--s": "30px",
         "border": "8px solid #B38184",
         "padding": "50px",
@@ -1025,6 +1777,19 @@
     },
     {
         "id": 62,
+        "name": "Arrow Button (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "arrow",
+            "箭头",
+            "button",
+            "按钮",
+            "next",
+            "blue",
+            "蓝色"
+        ],
+        "description": "Button-shaped arrow pointing right via clip-path.",
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -1035,6 +1800,18 @@
     },
     {
         "id": 63,
+        "name": "Arrow Button (Both)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "arrow",
+            "箭头",
+            "button",
+            "按钮",
+            "blue",
+            "蓝色"
+        ],
+        "description": "Button-shaped double arrow (both sides) via clip-path.",
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -1045,6 +1822,19 @@
     },
     {
         "id": 64,
+        "name": "Arrow Button (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "arrow",
+            "箭头",
+            "button",
+            "按钮",
+            "back",
+            "blue",
+            "蓝色"
+        ],
+        "description": "Button-shaped arrow pointing left via clip-path.",
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -1055,6 +1845,18 @@
     },
     {
         "id": 65,
+        "name": "Arrow Button Double",
+        "tags": [
+            "shape",
+            "clip-path",
+            "arrow",
+            "箭头",
+            "button",
+            "按钮",
+            "blue",
+            "蓝色"
+        ],
+        "description": "Button-shaped double arrow via clip-path.",
         "width": "130px",
         "height": "50px",
         "--s": "20px",
@@ -1065,6 +1867,18 @@
     },
     {
         "id": 66,
+        "name": "Arch (Top)",
+        "tags": [
+            "shape",
+            "mask",
+            "arch",
+            "拱形",
+            "semicircle",
+            "半圆",
+            "pink",
+            "粉色"
+        ],
+        "description": "Arch shape with a curved top via mask and clip-path.",
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
@@ -1074,6 +1888,18 @@
     },
     {
         "id": 67,
+        "name": "Arch (Bottom)",
+        "tags": [
+            "shape",
+            "mask",
+            "arch",
+            "拱形",
+            "semicircle",
+            "半圆",
+            "pink",
+            "粉色"
+        ],
+        "description": "Arch shape with a curved bottom via mask and clip-path.",
         "--c": "85",
         "width": "100px",
         "aspect-ratio": "3/2",
@@ -1083,6 +1909,18 @@
     },
     {
         "id": 68,
+        "name": "Arch (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "arch",
+            "拱形",
+            "semicircle",
+            "半圆",
+            "pink",
+            "粉色"
+        ],
+        "description": "Arch shape with a curved left side via mask and clip-path.",
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
@@ -1092,6 +1930,18 @@
     },
     {
         "id": 69,
+        "name": "Arch (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "arch",
+            "拱形",
+            "semicircle",
+            "半圆",
+            "pink",
+            "粉色"
+        ],
+        "description": "Arch shape with a curved right side via mask and clip-path.",
         "--c": "85",
         "height": "100px",
         "aspect-ratio": "2/3",
@@ -1101,6 +1951,18 @@
     },
     {
         "id": 70,
+        "name": "Dotted Border Square",
+        "tags": [
+            "shape",
+            "mask",
+            "dotted",
+            "点状",
+            "border",
+            "边框",
+            "teal",
+            "青绿"
+        ],
+        "description": "Square with a dotted border pattern via mask.",
         "--s": "5px",
         "--w": "100px",
         "width": "round(var(--w),4*var(--s))",
@@ -1113,6 +1975,18 @@
     },
     {
         "id": 71,
+        "name": "Dotted Border Square Variant",
+        "tags": [
+            "shape",
+            "mask",
+            "dotted",
+            "点状",
+            "border",
+            "边框",
+            "teal",
+            "青绿"
+        ],
+        "description": "Square with a dotted border variant via mask.",
         "--s": "5px",
         "--w": "100px",
         "--_g": "radial-gradient(var(--s),#000 calc(100% - 1px),#0000)",
@@ -1127,6 +2001,18 @@
     },
     {
         "id": 72,
+        "name": "Gear Shape (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on the right via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1137,6 +2023,18 @@
     },
     {
         "id": 73,
+        "name": "Gear Shape (Left Half)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Half gear/cog shape with teeth on the left via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1147,6 +2045,18 @@
     },
     {
         "id": 74,
+        "name": "Gear Shape (Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on the bottom via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1157,6 +2067,18 @@
     },
     {
         "id": 75,
+        "name": "Gear Shape (All Sides)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on all sides via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1167,6 +2089,18 @@
     },
     {
         "id": 76,
+        "name": "Gear Shape (Top & Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on top and bottom via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1177,6 +2111,18 @@
     },
     {
         "id": 77,
+        "name": "Gear Shape (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on the left via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1187,6 +2133,18 @@
     },
     {
         "id": 78,
+        "name": "Gear Shape (Top)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "gear",
+            "齿轮",
+            "cog",
+            "锯齿",
+            "orange",
+            "橙色"
+        ],
+        "description": "Gear/cog shape with teeth on the top via clip-path.",
         "--b": "30px",
         "--h": "20px",
         "height": "90px",
@@ -1197,6 +2155,20 @@
     },
     {
         "id": 79,
+        "name": "Rounded Rect Notch (Top)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a semicircular notch at the top via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1206,6 +2178,20 @@
     },
     {
         "id": 80,
+        "name": "Rounded Rect Notch (Top-Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a notch at the top-left via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1215,6 +2201,20 @@
     },
     {
         "id": 81,
+        "name": "Rounded Rect Notch (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a semicircular notch at the left via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1224,6 +2224,20 @@
     },
     {
         "id": 82,
+        "name": "Rounded Rect Notch (Top & Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with notches at the top and left via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1233,6 +2247,20 @@
     },
     {
         "id": 83,
+        "name": "Rounded Rect Notch (Top-Left Corner)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a corner notch at the top-left via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1242,6 +2270,20 @@
     },
     {
         "id": 84,
+        "name": "Rounded Rect Notch (Bottom)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a semicircular notch at the bottom via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1251,6 +2293,20 @@
     },
     {
         "id": 85,
+        "name": "Rounded Rect Notch (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "rounded",
+            "圆角",
+            "rectangle",
+            "矩形",
+            "notch",
+            "缺口",
+            "orange",
+            "橙色"
+        ],
+        "description": "Rounded rectangle with a semicircular notch at the right via mask.",
         "--r": "20px",
         "height": "100px",
         "border-radius": "10px",
@@ -1260,6 +2316,20 @@
     },
     {
         "id": 86,
+        "name": "Dotted Border Rounded Square",
+        "tags": [
+            "shape",
+            "mask",
+            "dotted",
+            "点状",
+            "border",
+            "边框",
+            "rounded",
+            "圆角",
+            "brown",
+            "棕色"
+        ],
+        "description": "Rounded square with a dotted border pattern via mask.",
         "--s": "10px",
         "--w": "100px",
         "width": "round(var(--w), 4*var(--s))",
@@ -1274,6 +2344,17 @@
     },
     {
         "id": 87,
+        "name": "Octagon",
+        "tags": [
+            "shape",
+            "clip-path",
+            "octagon",
+            "八角形",
+            "polygon",
+            "green",
+            "浅绿"
+        ],
+        "description": "Octagon shape with cut corners via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1282,6 +2363,18 @@
     },
     {
         "id": 88,
+        "name": "Chamfered Rectangle (Bottom-Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "chamfered",
+            "切角",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a 45-degree chamfered bottom-left corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1290,6 +2383,18 @@
     },
     {
         "id": 89,
+        "name": "Chamfered Rectangle (Top-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "chamfered",
+            "切角",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a 45-degree chamfered top-right corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1298,6 +2403,18 @@
     },
     {
         "id": 90,
+        "name": "Chamfered Rectangle (Bottom-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "chamfered",
+            "切角",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a 45-degree chamfered bottom-right corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1306,6 +2423,18 @@
     },
     {
         "id": 91,
+        "name": "Chamfered Rectangle (Top-Right) 2",
+        "tags": [
+            "shape",
+            "clip-path",
+            "chamfered",
+            "切角",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a 45-degree chamfered top-right corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1314,6 +2443,18 @@
     },
     {
         "id": 92,
+        "name": "Triangle (Up)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Classic upward-pointing triangle via clip-path.",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
@@ -1321,6 +2462,18 @@
     },
     {
         "id": 93,
+        "name": "Triangle (Down)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Classic downward-pointing triangle via clip-path.",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
@@ -1328,6 +2481,18 @@
     },
     {
         "id": 94,
+        "name": "Triangle (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Classic left-pointing triangle via clip-path.",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
@@ -1335,6 +2500,18 @@
     },
     {
         "id": 95,
+        "name": "Triangle (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Classic right-pointing triangle via clip-path.",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
@@ -1342,6 +2519,18 @@
     },
     {
         "id": 96,
+        "name": "Rounded Triangle (Up)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "peach",
+            "浅橙"
+        ],
+        "description": "Rounded upward triangle via mask and clip-path.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1352,6 +2541,18 @@
     },
     {
         "id": 97,
+        "name": "Rounded Triangle (Down)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "peach",
+            "浅橙"
+        ],
+        "description": "Rounded downward triangle via mask and clip-path.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -1362,6 +2563,18 @@
     },
     {
         "id": 98,
+        "name": "Rounded Triangle (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "peach",
+            "浅橙"
+        ],
+        "description": "Rounded left triangle via mask and clip-path.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1372,6 +2585,18 @@
     },
     {
         "id": 99,
+        "name": "Rounded Triangle (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "peach",
+            "浅橙"
+        ],
+        "description": "Rounded right triangle via mask and clip-path.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -1382,6 +2607,18 @@
     },
     {
         "id": 100,
+        "name": "Right Triangle (Bottom-Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "corner",
+            "直角",
+            "purple",
+            "紫色"
+        ],
+        "description": "Right triangle in the bottom-left corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,0 100%)",
@@ -1389,6 +2626,18 @@
     },
     {
         "id": 101,
+        "name": "Right Triangle (Bottom-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "corner",
+            "直角",
+            "purple",
+            "紫色"
+        ],
+        "description": "Right triangle in the bottom-right corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 0,100% 0,100% 100%)",
@@ -1396,6 +2645,18 @@
     },
     {
         "id": 102,
+        "name": "Right Triangle (Top-Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "corner",
+            "直角",
+            "purple",
+            "紫色"
+        ],
+        "description": "Right triangle in the top-right corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,100% 0,100% 100%)",
@@ -1403,6 +2664,18 @@
     },
     {
         "id": 103,
+        "name": "Right Triangle (Top-Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "corner",
+            "直角",
+            "purple",
+            "紫色"
+        ],
+        "description": "Right triangle in the top-left corner via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "clip-path": "polygon(0 100%,0 0,100% 100%)",
@@ -1410,6 +2683,20 @@
     },
     {
         "id": 104,
+        "name": "Rounded Right Triangle (Bottom-Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变",
+            "orange",
+            "橙红"
+        ],
+        "description": "Rounded right triangle (bottom-left) with an orange-red gradient.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1422,6 +2709,20 @@
     },
     {
         "id": 105,
+        "name": "Rounded Right Triangle (Bottom-Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变",
+            "orange",
+            "橙红"
+        ],
+        "description": "Rounded right triangle (bottom-right) with an orange-red gradient.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1434,6 +2735,20 @@
     },
     {
         "id": 106,
+        "name": "Rounded Right Triangle (Top-Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变",
+            "orange",
+            "橙红"
+        ],
+        "description": "Rounded right triangle (top-right) with an orange-red gradient.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1446,6 +2761,20 @@
     },
     {
         "id": 107,
+        "name": "Rounded Right Triangle (Top-Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变",
+            "orange",
+            "橙红"
+        ],
+        "description": "Rounded right triangle (top-left) with an orange-red gradient.",
         "--r": "10px",
         "width": "100px",
         "aspect-ratio": "1",
@@ -1458,6 +2787,19 @@
     },
     {
         "id": 108,
+        "name": "Rounded Corner Triangle (Bottom-Left)",
+        "tags": [
+            "shape",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "corner",
+            "直角",
+            "orange",
+            "橙色"
+        ],
+        "description": "Right triangle with rounded edges in the bottom-left corner.",
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-left-radius": "25px",
@@ -1466,6 +2808,19 @@
     },
     {
         "id": 109,
+        "name": "Rounded Corner Triangle (Bottom-Right)",
+        "tags": [
+            "shape",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "corner",
+            "直角",
+            "orange",
+            "橙色"
+        ],
+        "description": "Right triangle with rounded edges in the bottom-right corner.",
         "width": "100px",
         "aspect-ratio": "1",
         "border-top-right-radius": "25px",
@@ -1474,6 +2829,19 @@
     },
     {
         "id": 110,
+        "name": "Rounded Corner Triangle (Top-Right)",
+        "tags": [
+            "shape",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "corner",
+            "直角",
+            "orange",
+            "橙色"
+        ],
+        "description": "Right triangle with rounded edges in the top-right corner.",
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-right-radius": "25px",
@@ -1482,6 +2850,19 @@
     },
     {
         "id": 111,
+        "name": "Rounded Corner Triangle (Top-Left)",
+        "tags": [
+            "shape",
+            "triangle",
+            "三角形",
+            "rounded",
+            "圆角",
+            "corner",
+            "直角",
+            "orange",
+            "橙色"
+        ],
+        "description": "Right triangle with rounded edges in the top-left corner.",
         "width": "100px",
         "aspect-ratio": "1",
         "border-bottom-left-radius": "25px",
@@ -1490,6 +2871,20 @@
     },
     {
         "id": 112,
+        "name": "Narrow Triangle (Up)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Narrow, elongated upward triangle via clip-path.",
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 0,100% 100%,0 100%)",
@@ -1497,6 +2892,20 @@
     },
     {
         "id": 113,
+        "name": "Narrow Triangle (Down)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Narrow, elongated downward triangle via clip-path.",
         "height": "80px",
         "aspect-ratio": "2",
         "clip-path": "polygon(50% 100%,100% 0,0 0)",
@@ -1504,6 +2913,20 @@
     },
     {
         "id": 114,
+        "name": "Narrow Triangle (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Narrow, elongated left triangle via clip-path.",
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(0 0,100% 50%,0 100%)",
@@ -1511,6 +2934,20 @@
     },
     {
         "id": 115,
+        "name": "Narrow Triangle (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "arrow",
+            "箭头",
+            "orange",
+            "橙色"
+        ],
+        "description": "Narrow, elongated right triangle via clip-path.",
         "width": "80px",
         "aspect-ratio": "1/2",
         "clip-path": "polygon(100% 0,0 50%,100% 100%)",
@@ -1518,6 +2955,20 @@
     },
     {
         "id": 116,
+        "name": "Rounded Narrow Triangle (Up)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变"
+        ],
+        "description": "Rounded narrow upward triangle with an orange-red gradient.",
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1528,6 +2979,20 @@
     },
     {
         "id": 117,
+        "name": "Rounded Narrow Triangle (Down)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变"
+        ],
+        "description": "Rounded narrow downward triangle with an orange-red gradient.",
         "--r": "18px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1538,6 +3003,20 @@
     },
     {
         "id": 118,
+        "name": "Rounded Narrow Triangle (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变"
+        ],
+        "description": "Rounded narrow left triangle with an orange-red gradient.",
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1548,6 +3027,20 @@
     },
     {
         "id": 119,
+        "name": "Rounded Narrow Triangle (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "gradient",
+            "渐变"
+        ],
+        "description": "Rounded narrow right triangle with an orange-red gradient.",
         "--r": "18px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1558,6 +3051,20 @@
     },
     {
         "id": 120,
+        "name": "Rounded Narrow Triangle Beige (Up)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "beige",
+            "米色"
+        ],
+        "description": "Rounded narrow upward triangle in beige via mask.",
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1567,6 +3074,20 @@
     },
     {
         "id": 121,
+        "name": "Rounded Narrow Triangle Beige (Down)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "beige",
+            "米色"
+        ],
+        "description": "Rounded narrow downward triangle in beige via mask.",
         "--r": "25px",
         "height": "100px",
         "aspect-ratio": "2",
@@ -1576,6 +3097,20 @@
     },
     {
         "id": 122,
+        "name": "Rounded Narrow Triangle Beige (Left)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "beige",
+            "米色"
+        ],
+        "description": "Rounded narrow left triangle in beige via mask.",
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1585,6 +3120,20 @@
     },
     {
         "id": 123,
+        "name": "Rounded Narrow Triangle Beige (Right)",
+        "tags": [
+            "shape",
+            "mask",
+            "triangle",
+            "三角形",
+            "narrow",
+            "细长",
+            "rounded",
+            "圆角",
+            "beige",
+            "米色"
+        ],
+        "description": "Rounded narrow right triangle in beige via mask.",
         "--r": "25px",
         "width": "100px",
         "aspect-ratio": "1/2",
@@ -1594,6 +3143,17 @@
     },
     {
         "id": 124,
+        "name": "Octagon (Small)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "octagon",
+            "八角形",
+            "polygon",
+            "green",
+            "浅绿"
+        ],
+        "description": "Small octagon shape with cut corners via clip-path.",
         "width": "100px",
         "aspect-ratio": "1",
         "background": "#a9f0bf",
@@ -1602,6 +3162,19 @@
     },
     {
         "id": 125,
+        "name": "Zigzag Edge Rectangle (Top & Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "zigzag",
+            "锯齿",
+            "serrated",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with zigzag serrated edges on top and bottom via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1612,6 +3185,19 @@
     },
     {
         "id": 126,
+        "name": "Zigzag Edge Rectangle (Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "zigzag",
+            "锯齿",
+            "serrated",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a zigzag serrated bottom edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1622,6 +3208,19 @@
     },
     {
         "id": 127,
+        "name": "Zigzag Edge Rectangle (Right)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "zigzag",
+            "锯齿",
+            "serrated",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a zigzag serrated right edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1632,6 +3231,19 @@
     },
     {
         "id": 128,
+        "name": "Zigzag Edge Rectangle (Bottom Narrow)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "zigzag",
+            "锯齿",
+            "serrated",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a narrow zigzag serrated bottom edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1642,6 +3254,19 @@
     },
     {
         "id": 129,
+        "name": "Zigzag Edge Rectangle (Left)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "zigzag",
+            "锯齿",
+            "serrated",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a zigzag serrated left edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1652,6 +3277,20 @@
     },
     {
         "id": 130,
+        "name": "Notch Cut Rectangle (Top)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notch",
+            "缺口",
+            "arrow",
+            "箭头",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with an arrow-like notch cut in the top edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1663,6 +3302,20 @@
     },
     {
         "id": 131,
+        "name": "Notch Cut Rectangle (Top Reverse)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notch",
+            "缺口",
+            "arrow",
+            "箭头",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a reversed arrow-like notch in the top edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1674,6 +3327,20 @@
     },
     {
         "id": 132,
+        "name": "Notch Cut Rectangle (Bottom)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notch",
+            "缺口",
+            "arrow",
+            "箭头",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with an arrow-like notch cut in the bottom edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",
@@ -1685,6 +3352,20 @@
     },
     {
         "id": 133,
+        "name": "Notch Cut Rectangle (Bottom Reverse)",
+        "tags": [
+            "shape",
+            "clip-path",
+            "notch",
+            "缺口",
+            "arrow",
+            "箭头",
+            "rectangle",
+            "矩形",
+            "green",
+            "浅绿"
+        ],
+        "description": "Rectangle with a reversed arrow-like notch in the bottom edge via clip-path.",
         "width": "150px",
         "height": "100px",
         "aspect-ratio": "1",

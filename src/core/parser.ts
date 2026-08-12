@@ -7,9 +7,11 @@
 function cssObjectParser(cssObj: Record<string, any>): string {
 	if (!cssObj || typeof cssObj !== "object") return "";
 
+		const META_KEYS = ["id", "name", "tags", "description"];
+
 	const generateProperty = (key: string, value: any) => {
 		if (value === null || value === undefined || value === "") return "";
-		if (key === "id") return "";
+		if (META_KEYS.includes(key)) return "";
 		const cssKey = key.replace(/([A-Z])/g, "-$1").toLowerCase();
 		return `  ${cssKey}: ${value};`;
 	};

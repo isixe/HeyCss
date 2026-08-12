@@ -1,31 +1,86 @@
 [
 	{
 		"id": 0,
+		"name": "Solid Gray Border",
+		"tags": [
+			"border",
+			"solid",
+			"实线",
+			"灰色边框",
+			"gray",
+			"basic"
+		],
+		"description": "A simple 2px solid light-gray border with 10px rounded corners.",
 		"border": "2px solid #e5e7eb",
 		"border-radius": "10px"
 	},
 	{
 		"id": 1,
+		"name": "Dashed Indigo Border",
+		"tags": [
+			"border",
+			"dashed",
+			"虚线",
+			"indigo",
+			"靛蓝"
+		],
+		"description": "A 2px dashed indigo border with 10px rounded corners.",
 		"border": "2px dashed #6366f1",
 		"border-radius": "10px"
 	},
 	{
 		"id": 2,
+		"name": "Dotted Amber Border",
+		"tags": [
+			"border",
+			"dotted",
+			"点线",
+			"amber",
+			"琥珀"
+		],
+		"description": "A 3px dotted amber border with 10px rounded corners.",
 		"border": "3px dotted #f59e0b",
 		"border-radius": "10px"
 	},
 	{
 		"id": 3,
+		"name": "Double Violet Border",
+		"tags": [
+			"border",
+			"double",
+			"双线",
+			"violet",
+			"紫罗兰"
+		],
+		"description": "A 4px double violet border with 10px rounded corners.",
 		"border": "4px double #8b5cf6",
 		"border-radius": "10px"
 	},
 	{
 		"id": 4,
+		"name": "Ridge Emerald Border",
+		"tags": [
+			"border",
+			"ridge",
+			"脊状",
+			"emerald",
+			"翡翠绿"
+		],
+		"description": "A 3px ridge emerald border with 10px rounded corners.",
 		"border": "3px ridge #10b981",
 		"border-radius": "10px"
 	},
 	{
 		"id": 5,
+		"name": "Multi-Color Sides Border",
+		"tags": [
+			"border",
+			"multi-color",
+			"多彩",
+			"rainbow",
+			"彩虹边框"
+		],
+		"description": "Each side has its own color: red top, amber right, emerald bottom, blue left.",
 		"border-top": "4px solid #ef4444",
 		"border-right": "2px solid #f59e0b",
 		"border-bottom": "4px solid #10b981",
@@ -34,12 +89,30 @@
 	},
 	{
 		"id": 6,
+		"name": "Gradient Border Image",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变",
+			"border-image"
+		],
+		"description": "A 2px gradient border (rose to blue) via border-image.",
 		"border-image": "linear-gradient(45deg, #f43f5e, #3b82f6) 1",
 		"border-width": "2px",
 		"border-radius": "10px"
 	},
 	{
 		"id": 7,
+		"name": "Rose-Blue Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"rose",
+			"blue",
+			"红蓝"
+		],
+		"description": "A 2px rose-to-blue gradient border built with a masked pseudo-element.",
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -63,6 +136,16 @@
 	},
 	{
 		"id": 8,
+		"name": "Emerald-Amber Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"emerald",
+			"amber",
+			"绿黄"
+		],
+		"description": "A 2px emerald-to-amber gradient border built with a masked pseudo-element.",
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -86,6 +169,15 @@
 	},
 	{
 		"id": 9,
+		"name": "Four-Color Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"rainbow",
+			"多彩"
+		],
+		"description": "A 2px rose-blue-emerald-amber gradient border built with a masked pseudo-element.",
 		"background": "transparent",
 		"position": "relative",
 		"&": {
@@ -109,6 +201,16 @@
 	},
 	{
 		"id": 10,
+		"name": "Blue-Amber Vertical Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"blue",
+			"amber",
+			"蓝黄"
+		],
+		"description": "A vertical blue-to-amber gradient border built with a masked pseudo-element.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -133,6 +235,15 @@
 	},
 	{
 		"id": 11,
+		"name": "Peach Fade Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"peach",
+			"桃色"
+		],
+		"description": "A soft peach gradient border that fades to transparent.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -157,6 +268,15 @@
 	},
 	{
 		"id": 12,
+		"name": "Mint Green Gradient Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"mint",
+			"薄荷"
+		],
+		"description": "A mint-to-lime gradient border built with a masked pseudo-element.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -181,6 +301,16 @@
 	},
 	{
 		"id": 13,
+		"name": "Amber Center Glow Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"amber",
+			"琥珀",
+			"glow"
+		],
+		"description": "An amber glow border that fades out on both sides.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -205,6 +335,16 @@
 	},
 	{
 		"id": 14,
+		"name": "Green Diagonal Glow Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"green",
+			"绿色",
+			"glow"
+		],
+		"description": "A green diagonal glow border that fades to transparent.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -229,6 +369,16 @@
 	},
 	{
 		"id": 15,
+		"name": "Rose Diagonal Glow Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"rose",
+			"红色",
+			"glow"
+		],
+		"description": "A rose diagonal glow border that fades to transparent.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -253,6 +403,16 @@
 	},
 	{
 		"id": 16,
+		"name": "Rose Vertical Glow Border",
+		"tags": [
+			"border",
+			"gradient",
+			"渐变描边",
+			"rose",
+			"红色",
+			"glow"
+		],
+		"description": "A rose vertical glow border that fades to transparent.",
 		"background": "transparent",
 		"border-radius": "10px",
 		"position": "relative",
@@ -277,6 +437,16 @@
 	},
 	{
 		"id": 17,
+		"name": "Green Corner Accents (TL-BR)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"accent"
+		],
+		"description": "Green corner accents on the top-left and bottom-right corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -291,6 +461,16 @@
 	},
 	{
 		"id": 18,
+		"name": "Green Corner Accents (TR-BL)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"accent"
+		],
+		"description": "Green corner accents on the top-right and bottom-left corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -305,6 +485,16 @@
 	},
 	{
 		"id": 19,
+		"name": "Green Corner Accents (All)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"accent"
+		],
+		"description": "Green corner accents on all four corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -319,6 +509,17 @@
 	},
 	{
 		"id": 20,
+		"name": "Green Corner Accents Inset (TL-BR)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"inset",
+			"accent"
+		],
+		"description": "Inset green corner accents on the top-left and bottom-right corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -332,6 +533,17 @@
 	},
 	{
 		"id": 21,
+		"name": "Green Corner Accents Inset (TR-BL)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"inset",
+			"accent"
+		],
+		"description": "Inset green corner accents on the top-right and bottom-left corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -345,6 +557,17 @@
 	},
 	{
 		"id": 22,
+		"name": "Green Corner Accents Inset (All)",
+		"tags": [
+			"border",
+			"corner",
+			"角标",
+			"green",
+			"绿色",
+			"inset",
+			"accent"
+		],
+		"description": "Inset green corner accents on all four corners.",
 		"position": "relative",
 		"background": "transparent",
 		"&": {
@@ -359,6 +582,18 @@
 	},
 	{
 		"id": 23,
+		"name": "Red-Orange Gradient Ring",
+		"tags": [
+			"border",
+			"ring",
+			"圆环",
+			"gradient",
+			"渐变",
+			"red",
+			"红色",
+			"orange"
+		],
+		"description": "A red-to-orange gradient ring shape drawn with a masked pseudo-element.",
 		"position": "relative",
 		"background": "transparent",
 		"border": "none",
