@@ -1,0 +1,59 @@
+{
+	"common": {
+		"loading": "正在加载样式...",
+		"retry": "重试",
+		"copy": "复制",
+		"copied": "已复制！",
+		"clear": "清除搜索",
+		"loadFailed": "数据加载失败",
+		"loadFailedDescription": "搜索数据无法加载"
+	},
+	"header": {
+		"menu": "菜单",
+		"closeMenu": "关闭菜单",
+		"backgroundColor": "背景颜色",
+		"placeholder": "#RRGGBB",
+		"reset": "重置",
+		"done": "完成",
+		"search": "搜索样式",
+		"viewOnGitHub": "在 GitHub 上查看",
+		"languageSwitch": "语言",
+		"languageEN": "English",
+		"languageZH": "中文"
+	},
+	"tabs": {
+		"boxShadow": "阴影",
+		"border": "边框",
+		"text": "文字",
+		"shape": "形状"
+	},
+	"search": {
+		"title": "搜索样式",
+		"subtitle": "按名称、标签或描述搜索所有预设",
+		"placeholder": "试试: 渐变 gradient, 气泡 bubble, 内阴影 inset...",
+		"resultsCount": "{count, plural, =0 {无结果} other {# 条结果}}",
+		"emptyHint": "输入关键词搜索 {total} 个 CSS 预设样式。",
+		"noResults": "没有匹配 \"{query}\" 的预设，试试其它关键词。",
+		"noResultsHint": "例如：渐变、气泡、三角形、阴影",
+		"tabBoxShadow": "阴影",
+		"tabBorder": "边框",
+		"tabText": "文字",
+		"tabShape": "形状"
+	},
+	"footer": {
+		"description": "精心挑选的开箱即用 CSS 样式，直接复制即可使用。节省时间，用我们的 CSS 效果合集创造惊艳的设计。",
+		"madeWith": "用",
+		"forDevelopers": "为开发者打造",
+		"quickLinks": "快速链接",
+		"about": "关于",
+		"contact": "联系我们",
+		"feedback": "反馈",
+		"aboutLab": "关于实验室",
+		"copyright": "© 2024 HeyCSS. 保留所有权利。"
+	},
+	"metadata": {
+		"title": "HeyCSS",
+		"description": "发现并复制 CSS 样式，包括阴影、边框、文字和形状效果，助力你的 Web 项目。",
+		"keywords": "CSS 阴影, CSS 边框, CSS 文字样式, CSS 形状, 网页设计, 前端开发"
+	}
+}

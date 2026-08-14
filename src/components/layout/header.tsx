@@ -1,10 +1,10 @@
 "use client";
 
-import { Github, Menu, X, Palette, Box, Type, Square, Hexagon, Search } from "lucide-react";
+import { Github, Menu, X, Palette, Box, Type, Square, Hexagon, Search, Globe } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import Color from "color";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { TABS } from "@/data/enum";
 
 const TAB_COLOR_MAP: Record<string, { bg: string; text: string }> = {
@@ -24,26 +24,31 @@ const TAB_ICONS: Record<string, React.ReactNode> = {
 export function Header() {
 	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	const [isColorOpen, setIsColorOpen] = useState(false);
+	const [isLangOpen, setIsLangOpen] = useState(false);
 	const [color, setColor] = useState<string>("#ffffff");
-	const [mounted, setMounted] = useState(false);
 	const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 	const lastScrollY = useRef(0);
 	const colorPickerRef = useRef<HTMLDivElement>(null);
+	const langPickerMobileRef = useRef<HTMLDivElement>(null);
+	const langPickerDesktopRef = useRef<HTMLDivElement>(null);
 
 	const pathname = usePathname();
+	const locale = useLocale();
+	const router = useRouter();
+	const t = useTranslations();
 	const activeTab = pathname.split("/")[1] || "boxShadow";
 
 	useEffect(() => {
-		setMounted(true);
-		if (typeof window !== "undefined") {
-			document.body.style.backgroundColor = "#ffffff";
-			setColor("#ffffff");
-		}
+		document.body.style.backgroundColor = "#ffffff";
 	}, []);
 
 	useEffect(() => {
+		lastScrollY.current = window.scrollY;
+
 		const handleScroll = () => {
 			const currentScrollY = window.scrollY;
+			const delta = Math.abs(currentScrollY - lastScrollY.current);
+			if (delta < 8) return;
 
 			if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
 				setIsHeaderVisible(false);
@@ -63,6 +68,12 @@ export function Header() {
 			if (colorPickerRef.current && !colorPickerRef.current.contains(event.target as Node)) {
 				setIsColorOpen(false);
 			}
+			if (langPickerMobileRef.current && !langPickerMobileRef.current.contains(event.target as Node)) {
+				setIsLangOpen(false);
+			}
+			if (langPickerDesktopRef.current && !langPickerDesktopRef.current.contains(event.target as Node)) {
+				setIsLangOpen(false);
+			}
 		};
 		document.addEventListener("mousedown", handleClickOutside);
 		return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -70,6 +81,12 @@ export function Header() {
 
 	const toggleSidebar = () => setIsSidebarOpen((v) => !v);
 	const toggleColor = () => setIsColorOpen((v) => !v);
+	const toggleLang = () => setIsLangOpen((v) => !v);
+
+	const switchLocale = (nextLocale: string) => {
+		router.replace(pathname, { locale: nextLocale });
+		setIsLangOpen(false);
+	};
 
 	const parseToHex = (v: string): string | null => {
 		try {
@@ -108,43 +125,6 @@ export function Header() {
 		setIsSidebarOpen(false);
 	};
 
-	if (!mounted) {
-		return (
-			<>
-				<div className="md:hidden bg-white border-b border-gray-200 h-14 flex items-center px-4">
-					<div className="flex items-center gap-2">
-						<img src="/favicon.ico" alt="HeyCSS" className="w-7 h-7" />
-						<span className="text-base font-bold text-gray-900">HeyCSS</span>
-					</div>
-				</div>
-				<header
-					className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
-						isHeaderVisible ? "translate-y-0" : "-translate-y-[calc(100%+40px)]"
-					}`}>
-					<div className="max-w-7xl mx-auto">
-						<div className="h-14 bg-white/80 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-lg" />
-					</div>
-				</header>
-				<footer className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/80 backdrop-blur-xl border-t border-gray-200">
-					<nav className="flex items-center justify-around h-14">
-						{TABS.map((tab) => (
-							<Link
-								key={tab.value}
-								href={`/${tab.value}`}
-								onClick={() => tabClick(tab.value)}
-								className={`flex flex-col items-center justify-center flex-1 h-full transition-colors cursor-pointer ${
-									activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
-								}`}>
-								{TAB_ICONS[tab.value]}
-								<span className="text-[10px] mt-0.5">{tab.label}</span>
-							</Link>
-						))}
-					</nav>
-				</footer>
-			</>
-		);
-	}
-
 	return (
 		<>
 			<div className="md:hidden bg-white border-b border-gray-200 h-14 flex items-center justify-between px-4">
@@ -152,12 +132,40 @@ export function Header() {
 					<img src="/favicon.ico" alt="HeyCSS" className="w-7 h-7" />
 					<span className="text-base font-bold text-gray-900">HeyCSS</span>
 				</div>
-				<Link
-					href="/search"
-					className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
-					aria-label="Search styles">
-					<Search className="w-5 h-5" />
-				</Link>
+				<div className="flex items-center gap-1">
+					<div className="relative" ref={langPickerMobileRef}>
+						<button
+							onClick={toggleLang}
+							className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+							aria-label={t("header.languageSwitch")}>
+							<Globe className="w-5 h-5" />
+						</button>
+						{isLangOpen && (
+							<div className="absolute right-0 top-full mt-2 w-36 bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-200">
+								<button
+									onClick={() => switchLocale("en")}
+									className={`w-full text-left px-3 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer ${
+										locale === "en" ? "bg-emerald-500/10 text-emerald-600" : "text-gray-600 hover:bg-gray-100"
+									}`}>
+									English
+								</button>
+								<button
+									onClick={() => switchLocale("zh")}
+									className={`w-full text-left px-3 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer ${
+										locale === "zh" ? "bg-emerald-500/10 text-emerald-600" : "text-gray-600 hover:bg-gray-100"
+									}`}>
+									中文
+								</button>
+							</div>
+						)}
+					</div>
+					<Link
+						href="/search"
+						className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+						aria-label={t("header.search")}>
+						<Search className="w-5 h-5" />
+					</Link>
+				</div>
 			</div>
 			<header
 				className={`fixed top-4 left-4 right-4 z-50 hidden md:block transition-transform duration-300 ease-in-out ${
@@ -184,17 +192,44 @@ export function Header() {
 													: "text-gray-500 hover:text-gray-700 hover:bg-gray-100"
 											}`}>
 											{TAB_ICONS[tab.value]}
-											<span>{tab.label}</span>
+											<span>{t(`tabs.${tab.value}`)}</span>
 										</Link>
 									))}
 								</nav>
 							</div>
 
 							<div className="flex items-center gap-2">
+								<div className="relative" ref={langPickerDesktopRef}>
+									<button
+										onClick={toggleLang}
+										className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+										aria-label={t("header.languageSwitch")}>
+										<Globe className="w-5 h-5" />
+									</button>
+									{isLangOpen && (
+										<div className="absolute right-0 top-full mt-2 w-36 bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-200">
+											<button
+												onClick={() => switchLocale("en")}
+												className={`w-full text-left px-3 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer ${
+													locale === "en" ? "bg-emerald-500/10 text-emerald-600" : "text-gray-600 hover:bg-gray-100"
+												}`}>
+												English
+											</button>
+											<button
+												onClick={() => switchLocale("zh")}
+												className={`w-full text-left px-3 py-2 rounded-xl text-sm font-medium transition-colors cursor-pointer ${
+													locale === "zh" ? "bg-emerald-500/10 text-emerald-600" : "text-gray-600 hover:bg-gray-100"
+												}`}>
+												中文
+											</button>
+										</div>
+									)}
+								</div>
+
 								<Link
 									href="/search"
 									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
-									aria-label="Search styles">
+									aria-label={t("header.search")}>
 									<Search className="w-5 h-5" />
 								</Link>
 
@@ -202,7 +237,8 @@ export function Header() {
 									href="https://github.com/isixe/HeyCss"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer">
+									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+									aria-label={t("header.viewOnGitHub")}>
 									<Github className="w-5 h-5" />
 								</a>
 
@@ -210,14 +246,14 @@ export function Header() {
 									<button
 										onClick={toggleColor}
 										className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer flex items-center gap-2"
-										aria-label="Toggle color picker">
+										aria-label={t("header.backgroundColor")}>
 										<Palette className="w-5 h-5" />
 									</button>
 
 									{isColorOpen && (
 										<div className="absolute right-0 top-full mt-2 w-64 bg-white/95 backdrop-blur-xl rounded-2xl border border-gray-200 shadow-xl p-4 z-50 animate-in fade-in zoom-in-95 duration-200">
 											<div className="flex flex-col gap-3">
-												<label className="text-sm text-gray-700 font-medium">Background Color</label>
+												<label className="text-sm text-gray-700 font-medium">{t("header.backgroundColor")}</label>
 												<div className="flex items-center gap-3 min-w-0 overflow-hidden">
 													<input
 														type="color"
@@ -229,7 +265,7 @@ export function Header() {
 														type="text"
 														value={color}
 														onChange={(e) => handleTextChange(e.target.value)}
-														placeholder="#RRGGBB"
+														placeholder={t("header.placeholder")}
 														className={`flex-1 box-border h-12 px-4 rounded-xm border min-w-0 ${
 															parseToHex(color)
 																? "border-gray-200 bg-gray-50 text-gray-700"
@@ -241,12 +277,12 @@ export function Header() {
 													<button
 														onClick={handleReset}
 														className="flex-1 h-9 rounded-xl bg-gray-100 text-gray-700 text-sm font-medium hover:bg-gray-200 transition-colors cursor-pointer">
-														Reset
+														{t("header.reset")}
 													</button>
 													<button
 														onClick={() => setIsColorOpen(false)}
 														className="flex-1 h-9 rounded-xl bg-emerald-500 text-white text-sm font-medium hover:bg-emerald-600 transition-colors cursor-pointer">
-														Done
+														{t("header.done")}
 													</button>
 												</div>
 											</div>
@@ -257,7 +293,7 @@ export function Header() {
 								<button
 									onClick={toggleSidebar}
 									className="md:hidden p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
-									aria-label="Toggle menu">
+									aria-label={t("header.menu")}>
 									<Menu className="w-5 h-5" />
 								</button>
 							</div>
@@ -277,7 +313,7 @@ export function Header() {
 								activeTab === tab.value ? TAB_COLOR_MAP[tab.colorClass]?.text || "text-gray-400" : "text-gray-400"
 							}`}>
 							{TAB_ICONS[tab.value]}
-							<span className="text-[10px] mt-0.5">{tab.label}</span>
+							<span className="text-[10px] mt-0.5">{t(`tabs.${tab.value}`)}</span>
 						</Link>
 					))}
 				</nav>
@@ -295,11 +331,11 @@ export function Header() {
 					isSidebarOpen ? "translate-x-0" : "translate-x-full"
 				}`}>
 				<div className="flex items-center justify-between p-4 border-b border-gray-200">
-					<span className="text-lg font-semibold text-gray-900">Menu</span>
+					<span className="text-lg font-semibold text-gray-900">{t("header.menu")}</span>
 					<button
 						onClick={toggleSidebar}
 						className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
-						aria-label="Close menu">
+						aria-label={t("header.closeMenu")}>
 						<X className="w-5 h-5" />
 					</button>
 				</div>
@@ -317,7 +353,7 @@ export function Header() {
 										: "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
 								}`}>
 								{TAB_ICONS[tab.value]}
-								<span className="font-medium">{tab.label}</span>
+								<span className="font-medium">{t(`tabs.${tab.value}`)}</span>
 							</Link>
 						))}
 					</div>
@@ -330,7 +366,7 @@ export function Header() {
 						rel="noopener noreferrer"
 						className="flex items-center gap-3 px-4 py-3 rounded-xl text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors cursor-pointer">
 						<Github className="w-5 h-5" />
-						<span className="font-medium">View on GitHub</span>
+						<span className="font-medium">{t("header.viewOnGitHub")}</span>
 					</a>
 				</div>
 			</div>

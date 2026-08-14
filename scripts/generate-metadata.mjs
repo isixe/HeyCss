@@ -1,5 +1,5 @@
 /**
- * Generate metadata (name / tags / description) for all CSS presets.
+ * Generate bilingual metadata (name / tags / description) for all CSS presets.
  *
  * Usage: node scripts/generate-metadata.mjs
  *
@@ -9,6 +9,7 @@
  *  - text.json       : hand-mapped (12 items)
  *  - shape.json      : hand-mapped by id (134 items)
  *
+ * Output format: { id, name: {en, zh}, tags: {en: [...], zh: [...]}, description: {en, zh}, ...css }
  * Output keeps the original file indentation (shape = 4 spaces, others = tabs).
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -25,6 +26,172 @@ const writeJson = (file, data, indent) =>
 	writeFileSync(join(dataDir, file), JSON.stringify(data, null, indent) + "\n", "utf8");
 
 /* ------------------------------------------------------------------ */
+/* helpers                                                             */
+/* ------------------------------------------------------------------ */
+
+const isCJK = (s) => /[\u4e00-\u9fff]/.test(s);
+
+// Split a mixed (en+zh) tag array into { en, zh }
+function splitTags(tags) {
+	const en = [];
+	const zh = [];
+	for (const t of tags) {
+		if (isCJK(t)) zh.push(t);
+		else en.push(t);
+	}
+	return { en, zh };
+}
+
+// Direction words shared by name/description translation
+const DIR_ZH = {
+	"Top-Left": "左上",
+	"Top-Right": "右上",
+	"Bottom-Left": "左下",
+	"Bottom-Right": "右下",
+	"Top & Bottom": "上下",
+	"Top & Left": "上左",
+	"Bottom": "底部",
+	"Top": "顶部",
+	"Left": "左侧",
+	"Right": "右侧",
+	"Up": "向上",
+	"Down": "向下",
+	"All": "四角",
+	"Both": "双向",
+	"Double": "双向",
+	"Small": "小",
+	"Reverse": "反向",
+	"Left Half": "左半",
+	"All Sides": "四周",
+};
+
+// name-level translation rules: [regex, zh template, capture index for dir]
+const NAME_RULES = [
+	[/^Bubble Arrow \((.+)\)$/, "气泡箭头（$1）", 1],
+	[/^Check Badge \((.+)\)$/, "对勾徽章（$1）", 1],
+	[/^Corner Badge \((.+)\)$/, "三角角标（$1）", 1],
+	[/^HOT Ribbon Badge$/, "HOT 丝带徽章"],
+	[/^Status Dot Badge$/, "状态圆点徽章"],
+	[/^Count Badge 99$/, "数字徽章 99"],
+	[/^Waiting Label Badge$/, "等待标签徽章"],
+	[/^NEW Badge$/, "NEW 徽章"],
+	[/^Diamond Cut Shape$/, "菱形切角形状"],
+	[/^Slanted Trapezoid \((.+)\)$/, "斜边梯形（$1）", 1],
+	[/^Slanted Trapezoid Variant (\d+)$/, "斜边梯形变体 $1"],
+	[/^Diagonal Cut Shape (\d+)$/, "对角切角形状 $1"],
+	[/^Clover Leaf$/, "三叶草"],
+	[/^Four-Leaf Clover$/, "四叶草"],
+	[/^Five-Petal Flower$/, "五瓣花"],
+	[/^Star Flower Ring$/, "星花圆环"],
+	[/^Squircle$/, "圆角方形"],
+	[/^Rounded Square$/, "圆角方形"],
+	[/^Notched Rectangle \((.+)\)$/, "缺角矩形（$1）", 1],
+	[/^Notched Rectangle Variant (\d+)$/, "缺角矩形变体 $1"],
+	[/^Semicircle \((.+)\)$/, "半圆（$1）", 1],
+	[/^Semicircle Variant (\d+)$/, "半圆变体 $1"],
+	[/^Half Ellipse \((.+)\)$/, "半椭圆（$1）", 1],
+	[/^Flat Ellipse$/, "扁平椭圆"],
+	[/^Narrow Ellipse$/, "细长椭圆"],
+	[/^Rounded Ticket$/, "圆角票据"],
+	[/^Rounded Ticket Variant (\d+)$/, "圆角票据变体 $1"],
+	[/^Arrow Pill \((.+)\)$/, "箭头胶囊（$1）", 1],
+	[/^Arrow Pill Variant (\d+)$/, "箭头胶囊变体 $1"],
+	[/^Ring \(Donut\)$/, "圆环（甜甜圈）"],
+	[/^Square Ring$/, "方形圆环"],
+	[/^Arrow Button \((.+)\)$/, "箭头按钮（$1）", 1],
+	[/^Arrow Button Double$/, "双向箭头按钮"],
+	[/^Arch \((.+)\)$/, "拱形（$1）", 1],
+	[/^Dotted Border Square$/, "点状边框方块"],
+	[/^Dotted Border Square Variant$/, "点状边框方块变体"],
+	[/^Gear Shape \((.+)\)$/, "齿轮形状（$1）", 1],
+	[/^Rounded Rect Notch \((.+)\)$/, "圆角缺口矩形（$1）", 1],
+	[/^Dotted Border Rounded Square$/, "点状圆角方块"],
+	[/^Octagon$/, "八角形"],
+	[/^Octagon \(Small\)$/, "八角形（小）"],
+	[/^Chamfered Rectangle \((.+)\)$/, "切角矩形（$1）", 1],
+	[/^Chamfered Rectangle \((.+)\) 2$/, "切角矩形（$1）2", 1],
+	[/^Triangle \((.+)\)$/, "三角形（$1）", 1],
+	[/^Rounded Triangle \((.+)\)$/, "圆角三角形（$1）", 1],
+	[/^Right Triangle \((.+)\)$/, "直角三角形（$1）", 1],
+	[/^Rounded Right Triangle \((.+)\)$/, "圆角直角三角形（$1）", 1],
+	[/^Rounded Corner Triangle \((.+)\)$/, "圆角直角三角（$1）", 1],
+	[/^Narrow Triangle \((.+)\)$/, "细长三角（$1）", 1],
+	[/^Rounded Narrow Triangle \((.+)\)$/, "圆角细长三角（$1）", 1],
+	[/^Rounded Narrow Triangle Beige \((.+)\)$/, "圆角细长三角米色（$1）", 1],
+	[/^Zigzag Edge Rectangle \((.+)\)$/, "锯齿边矩形（$1）", 1],
+	[/^Notch Cut Rectangle \((.+)\)$/, "缺口矩形（$1）", 1],
+	// border
+	[/^Solid Gray Border$/, "灰色实线边框"],
+	[/^Dashed Indigo Border$/, "靛蓝虚线边框"],
+	[/^Dotted Amber Border$/, "琥珀点线边框"],
+	[/^Double Violet Border$/, "紫罗兰双线边框"],
+	[/^Ridge Emerald Border$/, "翡翠绿脊状边框"],
+	[/^Multi-Color Sides Border$/, "多彩四边边框"],
+	[/^Gradient Border Image$/, "渐变边框图像"],
+	[/^Rose-Blue Gradient Border$/, "红蓝渐变边框"],
+	[/^Emerald-Amber Gradient Border$/, "翠绿琥珀渐变边框"],
+	[/^Four-Color Gradient Border$/, "四色渐变边框"],
+	[/^Blue-Amber Vertical Gradient Border$/, "蓝黄垂直渐变边框"],
+	[/^Peach Fade Gradient Border$/, "桃色渐隐边框"],
+	[/^Mint Green Gradient Border$/, "薄荷绿渐变边框"],
+	[/^Amber Center Glow Border$/, "琥珀中心发光边框"],
+	[/^Green Diagonal Glow Border$/, "绿色对角发光边框"],
+	[/^Rose Diagonal Glow Border$/, "玫红对角发光边框"],
+	[/^Rose Vertical Glow Border$/, "玫红垂直发光边框"],
+	[/^Green Corner Accents \(TL-BR\)$/, "绿色角标（左上-右下）"],
+	[/^Green Corner Accents \(TR-BL\)$/, "绿色角标（右上-左下）"],
+	[/^Green Corner Accents \(All\)$/, "绿色角标（四角）"],
+	[/^Green Corner Accents Inset \(TL-BR\)$/, "内嵌绿色角标（左上-右下）"],
+	[/^Green Corner Accents Inset \(TR-BL\)$/, "内嵌绿色角标（右上-左下）"],
+	[/^Green Corner Accents Inset \(All\)$/, "内嵌绿色角标（四角）"],
+	[/^Red-Orange Gradient Ring$/, "红橙渐变圆环"],
+	// text
+	[/^Peach-Pink Gradient Text$/, "桃粉渐变文字"],
+	[/^Cyan-Magenta Gradient Text$/, "青品红渐变文字"],
+	[/^Sunset Red Gradient Text$/, "落日红渐变文字"],
+	[/^Purple-Orange Gradient Text$/, "紫橙渐变文字"],
+	[/^Mint-Cyan Gradient Text$/, "薄荷青渐变文字"],
+	[/^Lavender-Pink Gradient Text$/, "薰衣草粉渐变文字"],
+	[/^Peach-Gold Gradient Text$/, "桃金渐变文字"],
+	[/^Sky Blue-Indigo Gradient Text$/, "天蓝靛渐变文字"],
+	[/^Blue-Purple Gradient Text$/, "蓝紫渐变文字"],
+	[/^Neon Outline Text \(Blue\)$/, "霓虹描边文字（蓝）"],
+	[/^Neon Outline Text$/, "霓虹描边文字"],
+	[/^Golden Text with Red Glow$/, "金色文字红色光晕"],
+];
+
+function translateDir(dir) {
+	if (!dir) return "";
+	return (DIR_ZH[dir] || dir).replace(/[-&]/g, " ");
+}
+
+function zhName(enName) {
+	for (const [re, tpl, dirIdx] of NAME_RULES) {
+		const m = enName.match(re);
+		if (m) {
+			if (dirIdx !== undefined) {
+				return tpl.replace("$1", translateDir(m[dirIdx]));
+			}
+			return tpl;
+		}
+	}
+	// fallback: keep English
+	return enName;
+}
+
+// generic zh description template based on zh name + technical keywords
+function zhDescription(enName, zh, enDesc) {
+	const tech = enDesc.includes("via mask")
+		? "使用 mask 遮罩实现"
+		: enDesc.includes("clip-path")
+			? "使用 clip-path 裁剪实现"
+			: enDesc.includes("border-image")
+				? "通过 border-image 实现"
+				: "通过 CSS 实现";
+	return `${zh}，${tech}。`;
+}
+
+/* ------------------------------------------------------------------ */
 /* boxShadow: rule-based                                               */
 /* ------------------------------------------------------------------ */
 
@@ -34,6 +201,13 @@ const GRAY_RGB = new Set([
 	"38, 57, 77", "99, 99, 99", "60, 64, 67", "67, 71, 85", "90, 125, 188",
 	"209, 213, 219", "204, 219, 232", "0, 0, 0", "0", "0, 0",
 ]);
+
+const COLOR_NAME_ZH = {
+	blue: "蓝色",
+	green: "绿色",
+	red: "红色",
+	colored: "彩色",
+};
 
 function parseShadowLayers(v) {
 	// split on commas that are OUTSIDE parentheses (rgba(...) contains commas)
@@ -96,6 +270,7 @@ function boxShadowMeta(item) {
 	const crisp = maxBlur <= 2;
 	const glow = maxBlur >= 24 && colorName;
 
+	// --- EN name ---
 	const parts = [];
 	if (isInset) parts.push("Inset");
 	if (hasRing) parts.push("Ring");
@@ -104,28 +279,58 @@ function boxShadowMeta(item) {
 	else if (crisp) parts.push("Crisp");
 	if (isMulti) parts.push("Layered");
 	parts.push("Shadow");
-	const name = parts.join(" ");
+	const nameEn = parts.join(" ");
 
-	const tags = ["box-shadow", "shadow", "阴影", "阴影效果"];
-	if (isInset) tags.push("inset", "内阴影", "inner");
-	else tags.push("outer", "外阴影");
-	if (soft) tags.push("soft", "柔和", "blurred", "blur");
-	if (crisp) tags.push("crisp", "锐利", "sharp");
-	if (hasRing) tags.push("ring", "描边", "outline", "border-shadow");
-	if (isMulti) tags.push("layered", "多层", "multi-layer", "stacked");
-	if (colorName) tags.push("colored", "彩色", colorName);
+	// --- ZH name ---
+	const zParts = [];
+	if (isInset) zParts.push("内嵌");
+	if (hasRing) zParts.push("圆环");
+	if (glow) zParts.push(`${COLOR_NAME_ZH[colorName]}光晕`);
+	else if (soft) zParts.push("柔和");
+	else if (crisp) zParts.push("清晰");
+	if (isMulti) zParts.push("多层");
+	zParts.push("阴影");
+	const nameZh = zParts.join("");
 
+	// --- tags ---
+	const tagsEn = ["box-shadow", "shadow"];
+	const tagsZh = ["阴影", "阴影效果"];
+	if (isInset) { tagsEn.push("inset", "inner"); tagsZh.push("内阴影"); }
+	else { tagsEn.push("outer"); tagsZh.push("外阴影"); }
+	if (soft) { tagsEn.push("soft", "blurred", "blur"); tagsZh.push("柔和"); }
+	if (crisp) { tagsEn.push("crisp", "sharp"); tagsZh.push("锐利"); }
+	if (hasRing) { tagsEn.push("ring", "outline", "border-shadow"); tagsZh.push("描边", "圆环"); }
+	if (isMulti) { tagsEn.push("layered", "multi-layer", "stacked"); tagsZh.push("多层"); }
+	if (colorName) { tagsEn.push("colored", colorName); tagsZh.push("彩色", COLOR_NAME_ZH[colorName]); }
+
+	// --- description ---
 	const depth = isInset ? "inner depth" : "outer depth";
 	const ringTxt = hasRing ? " with a ring outline" : "";
 	const softTxt = glow ? ` with a ${colorName} glow` : soft ? " with a soft, diffuse blur" : crisp ? " with a crisp, tight blur" : "";
 	const layerTxt = isMulti ? ` across ${layers.length} layers` : "";
-	const desc = `A ${isInset ? "inset" : "drop"} box shadow${ringTxt}${softTxt} for ${depth}${layerTxt}.`;
+	const descEn = `A ${isInset ? "inset" : "drop"} box shadow${ringTxt}${softTxt} for ${depth}${layerTxt}.`;
 
-	return { name, tags, description: desc };
+	const depthZh = isInset ? "内嵌" : "外投影";
+	const ringZh = hasRing ? "，带圆环描边" : "";
+	const softZh = glow
+		? `，带${COLOR_NAME_ZH[colorName]}光晕`
+		: soft
+			? "，柔和扩散模糊"
+			: crisp
+				? "，清晰锐利模糊"
+				: "";
+	const layerZh = isMulti ? `，共 ${layers.length} 层` : "";
+	const descZh = `一个${isInset ? "内嵌" : "外投影"}盒阴影${ringZh}${softZh}，用于${depthZh}效果${layerZh}。`;
+
+	return {
+		name: { en: nameEn, zh: nameZh },
+		tags: { en: tagsEn, zh: tagsZh },
+		description: { en: descEn, zh: descZh },
+	};
 }
 
 /* ------------------------------------------------------------------ */
-/* border: hand-mapped (24 items)                                      */
+/* border / text / shape: hand-mapped (EN only, ZH auto-generated)     */
 /* ------------------------------------------------------------------ */
 
 const BORDER_META = [
@@ -155,10 +360,6 @@ const BORDER_META = [
 	{ name: "Red-Orange Gradient Ring", tags: ["border", "ring", "圆环", "gradient", "渐变", "red", "红色", "orange"], d: "A red-to-orange gradient ring shape drawn with a masked pseudo-element." },
 ];
 
-/* ------------------------------------------------------------------ */
-/* text: hand-mapped (12 items)                                        */
-/* ------------------------------------------------------------------ */
-
 const TEXT_META = [
 	{ name: "Peach-Pink Gradient Text", tags: ["text", "gradient", "渐变文字", "peach", "pink", "桃粉"], d: "Gradient text from peach to pink to orange (45deg)." },
 	{ name: "Cyan-Magenta Gradient Text", tags: ["text", "gradient", "渐变文字", "cyan", "magenta", "青紫"], d: "Gradient text from cyan to magenta (120deg)." },
@@ -173,10 +374,6 @@ const TEXT_META = [
 	{ name: "Neon Outline Text (Blue)", tags: ["text", "text-shadow", "文字阴影", "neon", "霓虹", "outline", "blue"], d: "Light-blue text with a layered neon pink/orange outline and soft glow." },
 	{ name: "Golden Text with Red Glow", tags: ["text", "gradient", "渐变文字", "gold", "金色", "glow", "drop-shadow"], d: "Golden gradient text with a red drop-shadow glow." },
 ];
-
-/* ------------------------------------------------------------------ */
-/* shape: hand-mapped by id (134 items)                                */
-/* ------------------------------------------------------------------ */
 
 const SHAPE_META = [
 	// 0-7 bubble arrows
@@ -347,6 +544,15 @@ const SHAPE_META = [
 /* main                                                                */
 /* ------------------------------------------------------------------ */
 
+function toBilingual(meta) {
+	const zh = zhName(meta.name);
+	return {
+		name: { en: meta.name, zh },
+		tags: splitTags(meta.tags),
+		description: { en: meta.d, zh: zhDescription(meta.name, zh, meta.d) },
+	};
+}
+
 // boxShadow
 {
 	const data = readJson("boxShadow.json");
@@ -363,10 +569,10 @@ const SHAPE_META = [
 {
 	const data = readJson("border.json");
 	const out = data.map((item) => {
-		const meta = BORDER_META[item.id];
+		const meta = toBilingual(BORDER_META[item.id]);
 		if (!meta) throw new Error(`Missing border meta for id ${item.id}`);
 		const { name, tags, description, ...rest } = item;
-		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.d, ...rest };
+		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.description, ...rest };
 	});
 	writeJson("border.json", out, "\t");
 	console.log(`border.json: ${out.length} items (hand-mapped)`);
@@ -376,10 +582,10 @@ const SHAPE_META = [
 {
 	const data = readJson("text.json");
 	const out = data.map((item) => {
-		const meta = TEXT_META[item.id];
+		const meta = toBilingual(TEXT_META[item.id]);
 		if (!meta) throw new Error(`Missing text meta for id ${item.id}`);
 		const { name, tags, description, ...rest } = item;
-		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.d, ...rest };
+		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.description, ...rest };
 	});
 	writeJson("text.json", out, "\t");
 	console.log(`text.json: ${out.length} items (hand-mapped)`);
@@ -392,15 +598,13 @@ const SHAPE_META = [
 		throw new Error(`shape meta count ${SHAPE_META.length} != data count ${data.length}`);
 	}
 	const out = data.map((item, i) => {
-		const meta = SHAPE_META[i];
-		if (meta.id !== undefined && meta.id !== item.id) {
-			throw new Error(`shape meta id mismatch at index ${i}`);
-		}
+		const meta = toBilingual(SHAPE_META[i]);
+		if (!meta) throw new Error(`Missing shape meta at index ${i}`);
 		const { name, tags, description, ...rest } = item;
-		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.d, ...rest };
+		return { id: item.id, name: meta.name, tags: meta.tags, description: meta.description, ...rest };
 	});
 	writeJson("shape.json", out, 4);
 	console.log(`shape.json: ${out.length} items (hand-mapped)`);
 }
 
-console.log("\nDone. All presets now carry name/tags/description metadata.");
+console.log("\nDone. All presets now carry bilingual (en/zh) name/tags/description metadata.");

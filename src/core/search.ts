@@ -19,8 +19,8 @@ function tokenize(query: string): string[] {
  * 展开一个搜索词为候选词集合：
  * 1. 直接命中：term 是同义词表键 → 取键 + 全部值
  * 2. 反向命中：term 是某键的值 → 取该键 + 全部值
- * 3. 子串命中：键或值包含 term（或 term 包含键/值）→ 取键 + 全部值
- * 最后并入 term 本身。
+ * 3. 子串命中：仅保留 term 本身，交由 scoreItem 的 includes 判断处理，
+ *    不做整体展开，避免过度泛化（如"内阴影"不应展开出"阴影"）
  */
 function expandTerm(term: string, synonyms: SynonymsMap): Set<string> {
 	const candidates = new Set<string>([term]);
@@ -30,12 +30,8 @@ function expandTerm(term: string, synonyms: SynonymsMap): Set<string> {
 		const valuesLower = values.map((v) => v.toLowerCase());
 
 		const direct = keyLower === term || valuesLower.includes(term);
-		const substring =
-			keyLower.includes(term) ||
-			term.includes(keyLower) ||
-			valuesLower.some((v) => v.includes(term) || term.includes(v));
 
-		if (direct || substring) {
+		if (direct) {
 			candidates.add(keyLower);
 			valuesLower.forEach((v) => candidates.add(v));
 		}
@@ -45,14 +41,22 @@ function expandTerm(term: string, synonyms: SynonymsMap): Set<string> {
 }
 
 /** 对单条预设打分：返回该 term 能获得的最佳分数 */
-function scoreItem(item: any, candidates: Set<string>): number {
+function scoreItem(item: any, candidates: Set<string>, locale: string): number {
 	let best = 0;
 
-	const tags: string[] = Array.isArray(item.tags)
-		? item.tags.map((t: string) => t.toLowerCase())
-		: [];
-	const name: string = (item.name ?? "").toLowerCase();
-	const description: string = (item.description ?? "").toLowerCase();
+	const rawTags = item.tags ?? [];
+	const tags: string[] = (Array.isArray(rawTags)
+		? rawTags
+		: Array.isArray(rawTags[locale])
+			? rawTags[locale]
+			: []
+	).map((t: string) => t.toLowerCase());
+	const rawName = item.name ?? "";
+	const name: string = (typeof rawName === "string" ? rawName : rawName[locale] ?? "").toLowerCase();
+	const rawDescription = item.description ?? "";
+	const description: string = (
+		typeof rawDescription === "string" ? rawDescription : rawDescription[locale] ?? ""
+	).toLowerCase();
 
 	// CSS 值字符串（排除元数据字段）
 	const cssValue = JSON.stringify(
@@ -84,7 +88,8 @@ function scoreItem(item: any, candidates: Set<string>): number {
 export function searchStyles(
 	query: string,
 	stylesData: Record<StyleType, any[]>,
-	synonyms: SynonymsMap
+	synonyms: SynonymsMap,
+	locale: string = "en"
 ): SearchResult[] {
 	const terms = tokenize(query);
 	if (terms.length === 0) return [];
@@ -97,7 +102,7 @@ export function searchStyles(
 			let score = 0;
 			for (const term of terms) {
 				const candidates = expandTerm(term, synonyms);
-				score += scoreItem(item, candidates);
+				score += scoreItem(item, candidates, locale);
 			}
 			if (score > 0) {
 				results.push({ tab, item, id: item.id ?? 0, score });

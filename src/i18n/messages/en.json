@@ -1,0 +1,59 @@
+{
+	"common": {
+		"loading": "Loading styles...",
+		"retry": "Retry",
+		"copy": "Copy",
+		"copied": "Copied!",
+		"clear": "Clear search",
+		"loadFailed": "Failed to load data",
+		"loadFailedDescription": "Search data could not be loaded"
+	},
+	"header": {
+		"menu": "Menu",
+		"closeMenu": "Close menu",
+		"backgroundColor": "Background Color",
+		"placeholder": "#RRGGBB",
+		"reset": "Reset",
+		"done": "Done",
+		"search": "Search styles",
+		"viewOnGitHub": "View on GitHub",
+		"languageSwitch": "Language",
+		"languageEN": "English",
+		"languageZH": "中文"
+	},
+	"tabs": {
+		"boxShadow": "Box Shadows",
+		"border": "Borders",
+		"text": "Text",
+		"shape": "Shapes"
+	},
+	"search": {
+		"title": "Search Styles",
+		"subtitle": "Search across all presets by name, tag or description",
+		"placeholder": "Try: 渐变 gradient, 气泡 bubble, 内阴影 inset...",
+		"resultsCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}}",
+		"emptyHint": "Start typing to search across {total} CSS style presets.",
+		"noResults": "No presets match \"{query}\". Try different keywords.",
+		"noResultsHint": "e.g. gradient, bubble, triangle, shadow",
+		"tabBoxShadow": "Box Shadow",
+		"tabBorder": "Border",
+		"tabText": "Text",
+		"tabShape": "Shape"
+	},
+	"footer": {
+		"description": "Beautiful predefined CSS styles ready to copy. Save time and create stunning designs with our curated collection of CSS effects.",
+		"madeWith": "Made with",
+		"forDevelopers": "for developers",
+		"quickLinks": "Quick Links",
+		"about": "About",
+		"contact": "Contact",
+		"feedback": "Feedback",
+		"aboutLab": "About Lab",
+		"copyright": "© 2024 HeyCSS. All rights reserved."
+	},
+	"metadata": {
+		"title": "HeyCSS",
+		"description": "Discover and copy CSS styles including box-shadows, borders, text styles, and shapes for your web projects.",
+		"keywords": "CSS box-shadow, CSS border, CSS text styles, CSS shapes, web design, front-end development"
+	}
+}

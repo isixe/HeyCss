@@ -1,8 +1,8 @@
 "use client";
 
 import { Heart, Github, Twitter, Mail } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { Link, usePathname } from "@/i18n/routing";
 import { TABS } from "@/data/enum";
 
 const TAB_COLOR_MAP: Record<string, { text: string }> = {
@@ -14,6 +14,7 @@ const TAB_COLOR_MAP: Record<string, { text: string }> = {
 
 export function Footer() {
 	const pathname = usePathname();
+	const t = useTranslations();
 	const currentTab = pathname.split("/")[1] || "boxShadow";
 
 	return (
@@ -24,20 +25,19 @@ export function Footer() {
 						<div className="flex items-center mb-4">
 							<h2 className="text-2xl font-bold ">HeyCSS</h2>
 						</div>
-						<p className="text-gray-600 text-sm mb-4 max-w-md">
-							Beautiful predefined CSS styles ready to copy. Save time and create stunning designs with our curated
-							collection of CSS effects.
-						</p>
+						<p className="text-gray-600 text-sm mb-4 max-w-md">{t("footer.description")}</p>
 						<div className="flex items-center text-sm text-gray-500">
-							<span>Made with</span>
+							<span>{t("footer.madeWith")}</span>
 							<Heart className="h-4 w-4 text-red-500 mx-1" />
-							<span>for developers</span>
+							<span>{t("footer.forDevelopers")}</span>
 						</div>
 					</div>
 
 					{/* Quick Links */}
 					<div>
-						<h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">Quick Links</h3>
+						<h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+							{t("footer.quickLinks")}
+						</h3>
 						<ul className="space-y-2">
 							{TABS.map((tab) => (
 								<li key={tab.value}>
@@ -50,7 +50,7 @@ export function Footer() {
 												? `${TAB_COLOR_MAP[tab.colorClass]?.text} font-semibold`
 												: "text-gray-600 hover:text-gray-900")
 										}>
-										{tab.label}
+										{t(`tabs.${tab.value}`)}
 									</Link>
 								</li>
 							))}
@@ -59,13 +59,13 @@ export function Footer() {
 
 					{/* About */}
 					<div>
-						<h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">About</h3>
+						<h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">{t("footer.about")}</h3>
 						<ul className="space-y-2">
 							<li>
 								<a
 									href="mailto:isixe@outlook.com"
 									className="text-gray-600 hover:text-gray-900 text-sm transition-colors">
-									Contact
+									{t("footer.contact")}
 								</a>
 							</li>
 							<li>
@@ -73,7 +73,7 @@ export function Footer() {
 									href="https://github.com/isixe/HeyCss"
 									className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
 									target="_blank">
-									Feedback
+									{t("footer.feedback")}
 								</a>
 							</li>
 							<li>
@@ -81,7 +81,7 @@ export function Footer() {
 									href="https://itea.dev"
 									className="text-gray-600 hover:text-gray-900 text-sm transition-colors"
 									target="_blank">
-									About Lab
+									{t("footer.aboutLab")}
 								</a>
 							</li>
 						</ul>
@@ -91,7 +91,7 @@ export function Footer() {
 				{/* Bottom Section */}
 				<div className="mt-8 pt-8 border-t border-gray-200">
 					<div className="flex flex-col md:flex-row justify-between items-center">
-						<div className="text-sm text-gray-500 mb-4 md:mb-0">© 2024 HeyCSS. All rights reserved.</div>
+						<div className="text-sm text-gray-500 mb-4 md:mb-0">{t("footer.copyright")}</div>
 						<div className="flex space-x-4">
 							<a
 								href="https://github.com/isixe/HeyCss"

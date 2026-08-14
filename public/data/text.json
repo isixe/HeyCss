@@ -1,16 +1,26 @@
 [
 	{
 		"id": 0,
-		"name": "Peach-Pink Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"peach",
-			"pink",
-			"桃粉"
-		],
-		"description": "Gradient text from peach to pink to orange (45deg).",
+		"name": {
+			"en": "Peach-Pink Gradient Text",
+			"zh": "桃粉渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"peach",
+				"pink"
+			],
+			"zh": [
+				"渐变文字",
+				"桃粉"
+			]
+		},
+		"description": {
+			"en": "Gradient text from peach to pink to orange (45deg).",
+			"zh": "桃粉渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(45deg, #FF9A8B 0%, #FF6B95 50%, #FF8E53 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -19,16 +29,26 @@
 	},
 	{
 		"id": 1,
-		"name": "Cyan-Magenta Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"cyan",
-			"magenta",
-			"青紫"
-		],
-		"description": "Gradient text from cyan to magenta (120deg).",
+		"name": {
+			"en": "Cyan-Magenta Gradient Text",
+			"zh": "青品红渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"cyan",
+				"magenta"
+			],
+			"zh": [
+				"渐变文字",
+				"青紫"
+			]
+		},
+		"description": {
+			"en": "Gradient text from cyan to magenta (120deg).",
+			"zh": "青品红渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(120deg, #00DBDE 0%, #FC00FF 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -37,16 +57,26 @@
 	},
 	{
 		"id": 2,
-		"name": "Sunset Red Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"yellow",
-			"red",
-			"黄红"
-		],
-		"description": "Gradient text from golden yellow to red (210deg).",
+		"name": {
+			"en": "Sunset Red Gradient Text",
+			"zh": "落日红渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"yellow",
+				"red"
+			],
+			"zh": [
+				"渐变文字",
+				"黄红"
+			]
+		},
+		"description": {
+			"en": "Gradient text from golden yellow to red (210deg).",
+			"zh": "落日红渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(210deg, #FCCF31 0%, #F55555 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -55,16 +85,26 @@
 	},
 	{
 		"id": 3,
-		"name": "Purple-Orange Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"purple",
-			"orange",
-			"紫橙"
-		],
-		"description": "Gradient text from purple through red to orange (315deg).",
+		"name": {
+			"en": "Purple-Orange Gradient Text",
+			"zh": "紫橙渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"purple",
+				"orange"
+			],
+			"zh": [
+				"渐变文字",
+				"紫橙"
+			]
+		},
+		"description": {
+			"en": "Gradient text from purple through red to orange (315deg).",
+			"zh": "紫橙渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(315deg, #8A2387 0%, #E94057 50%, #F27121 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -73,16 +113,26 @@
 	},
 	{
 		"id": 4,
-		"name": "Mint-Cyan Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"mint",
-			"cyan",
-			"青绿"
-		],
-		"description": "Gradient text from mint green to cyan (75deg).",
+		"name": {
+			"en": "Mint-Cyan Gradient Text",
+			"zh": "薄荷青渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"mint",
+				"cyan"
+			],
+			"zh": [
+				"渐变文字",
+				"青绿"
+			]
+		},
+		"description": {
+			"en": "Gradient text from mint green to cyan (75deg).",
+			"zh": "薄荷青渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(75deg, #00F5A0 0%, #00D9F5 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -91,16 +141,26 @@
 	},
 	{
 		"id": 5,
-		"name": "Lavender-Pink Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"lavender",
-			"pink",
-			"薰衣草粉"
-		],
-		"description": "Gradient text from lavender to pink (160deg).",
+		"name": {
+			"en": "Lavender-Pink Gradient Text",
+			"zh": "薰衣草粉渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"lavender",
+				"pink"
+			],
+			"zh": [
+				"渐变文字",
+				"薰衣草粉"
+			]
+		},
+		"description": {
+			"en": "Gradient text from lavender to pink (160deg).",
+			"zh": "薰衣草粉渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(160deg, #A18CD1 0%, #FBC2EB 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -109,16 +169,26 @@
 	},
 	{
 		"id": 6,
-		"name": "Peach-Gold Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"peach",
-			"gold",
-			"桃金"
-		],
-		"description": "Gradient text from peach to gold (280deg).",
+		"name": {
+			"en": "Peach-Gold Gradient Text",
+			"zh": "桃金渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"peach",
+				"gold"
+			],
+			"zh": [
+				"渐变文字",
+				"桃金"
+			]
+		},
+		"description": {
+			"en": "Gradient text from peach to gold (280deg).",
+			"zh": "桃金渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(280deg, #FBAB7E 0%, #F7CE68 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -127,16 +197,26 @@
 	},
 	{
 		"id": 7,
-		"name": "Sky Blue-Indigo Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"blue",
-			"indigo",
-			"蓝靛"
-		],
-		"description": "Gradient text from sky blue to indigo (20deg).",
+		"name": {
+			"en": "Sky Blue-Indigo Gradient Text",
+			"zh": "天蓝靛渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"blue",
+				"indigo"
+			],
+			"zh": [
+				"渐变文字",
+				"蓝靛"
+			]
+		},
+		"description": {
+			"en": "Gradient text from sky blue to indigo (20deg).",
+			"zh": "天蓝靛渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(20deg, #3ECBF0 0%, #5B69E2 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -145,16 +225,26 @@
 	},
 	{
 		"id": 8,
-		"name": "Blue-Purple Gradient Text",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"blue",
-			"purple",
-			"蓝紫"
-		],
-		"description": "Gradient text from cyan blue to deep purple (190deg).",
+		"name": {
+			"en": "Blue-Purple Gradient Text",
+			"zh": "蓝紫渐变文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"blue",
+				"purple"
+			],
+			"zh": [
+				"渐变文字",
+				"蓝紫"
+			]
+		},
+		"description": {
+			"en": "Gradient text from cyan blue to deep purple (190deg).",
+			"zh": "蓝紫渐变文字，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(190deg, #43CBFF 0%, #9708CC 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "transparent",
@@ -163,49 +253,79 @@
 	},
 	{
 		"id": 9,
-		"name": "Neon Outline Text",
-		"tags": [
-			"text",
-			"text-shadow",
-			"文字阴影",
-			"neon",
-			"霓虹",
-			"outline",
-			"white"
-		],
-		"description": "White text with a layered neon pink/orange outline and soft glow.",
+		"name": {
+			"en": "Neon Outline Text",
+			"zh": "霓虹描边文字"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"text-shadow",
+				"neon",
+				"outline",
+				"white"
+			],
+			"zh": [
+				"文字阴影",
+				"霓虹"
+			]
+		},
+		"description": {
+			"en": "White text with a layered neon pink/orange outline and soft glow.",
+			"zh": "霓虹描边文字，通过 CSS 实现。"
+		},
 		"color": "#ffffff",
 		"text-shadow": "1px 1px 1px #FF6B95, 2px 2px 1px #FF8E53, 3px 3px 1px #FF6B95, 0 0 10px rgba(170, 221, 255, 0.7)"
 	},
 	{
 		"id": 10,
-		"name": "Neon Outline Text (Blue)",
-		"tags": [
-			"text",
-			"text-shadow",
-			"文字阴影",
-			"neon",
-			"霓虹",
-			"outline",
-			"blue"
-		],
-		"description": "Light-blue text with a layered neon pink/orange outline and soft glow.",
+		"name": {
+			"en": "Neon Outline Text (Blue)",
+			"zh": "霓虹描边文字（蓝）"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"text-shadow",
+				"neon",
+				"outline",
+				"blue"
+			],
+			"zh": [
+				"文字阴影",
+				"霓虹"
+			]
+		},
+		"description": {
+			"en": "Light-blue text with a layered neon pink/orange outline and soft glow.",
+			"zh": "霓虹描边文字（蓝），通过 CSS 实现。"
+		},
 		"color": "#aaddff",
 		"text-shadow": "1px 1px 1px #FF6B95, 2px 2px 1px #FF8E53, 3px 3px 1px #FF6B95, 0 0 10px rgba(170, 221, 255, 0.7)"
 	},
 	{
 		"id": 11,
-		"name": "Golden Text with Red Glow",
-		"tags": [
-			"text",
-			"gradient",
-			"渐变文字",
-			"gold",
-			"金色",
-			"glow",
-			"drop-shadow"
-		],
-		"description": "Golden gradient text with a red drop-shadow glow.",
+		"name": {
+			"en": "Golden Text with Red Glow",
+			"zh": "金色文字红色光晕"
+		},
+		"tags": {
+			"en": [
+				"text",
+				"gradient",
+				"gold",
+				"glow",
+				"drop-shadow"
+			],
+			"zh": [
+				"渐变文字",
+				"金色"
+			]
+		},
+		"description": {
+			"en": "Golden gradient text with a red drop-shadow glow.",
+			"zh": "金色文字红色光晕，通过 CSS 实现。"
+		},
 		"background": "linear-gradient(180deg, #fff 15%, #fedf78 100%)",
 		"-webkit-background-clip": "text",
 		"-webkit-text-fill-color": "#ffffff",

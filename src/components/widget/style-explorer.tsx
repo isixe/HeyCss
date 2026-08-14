@@ -5,6 +5,7 @@ import type { StyleItem, StylesData, StyleType } from "@/types/style";
 
 import { useState, useEffect } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { getCachedStylesData, loadStylesData } from "@/core/styles-cache";
 import Loading from "@/components/widget/loading";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -17,8 +18,9 @@ interface StyleExplorerProps {
 }
 
 export function StyleExplorer({ tab }: StyleExplorerProps) {
-	const [stylesData, setStylesData] = useState<StylesData | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
+	const cachedData = getCachedStylesData();
+	const [stylesData, setStylesData] = useState<StylesData | null>(cachedData);
+	const [isLoading, setIsLoading] = useState(cachedData === null);
 	const { toast } = useToast();
 
 	const stylesMap: Record<StyleType, StyleItem[]> = {
@@ -29,27 +31,27 @@ export function StyleExplorer({ tab }: StyleExplorerProps) {
 	};
 
 	useEffect(() => {
+		let cancelled = false;
 		const loadStyles = async () => {
 			try {
-				const [boxShadow, border, text, shape] = await Promise.all([
-					fetch("/data/boxShadow.json").then((res) => res.json()),
-					fetch("/data/border.json").then((res) => res.json()),
-					fetch("/data/text.json").then((res) => res.json()),
-					fetch("/data/shape.json").then((res) => res.json()),
-				]);
-				const normalizedShape = Array.isArray(shape) ? shape : [shape];
-				setStylesData({ boxShadow, border, text, shape: normalizedShape });
+				const data = await loadStylesData();
+				if (!cancelled) setStylesData(data);
 				console.log("Styles loaded from split JSON files successfully");
 			} catch (error) {
-				toast({
-					title: "Using Fallback Data",
-					description: "Styles loaded from fallback data",
-				});
+				if (!cancelled) {
+					toast({
+						title: "Using Fallback Data",
+						description: "Styles loaded from fallback data",
+					});
+				}
 			} finally {
-				setIsLoading(false);
+				if (!cancelled) setIsLoading(false);
 			}
 		};
 		loadStyles();
+		return () => {
+			cancelled = true;
+		};
 	}, [toast]);
 
 	if (isLoading) {
