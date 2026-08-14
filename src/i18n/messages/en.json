@@ -30,7 +30,7 @@
 	"search": {
 		"title": "Search Styles",
 		"subtitle": "Search across all presets by name, tag or description",
-		"placeholder": "Try: 渐变 gradient, 气泡 bubble, 内阴影 inset...",
+		"placeholder": "Try: gradient, bubble, inset shadow...",
 		"resultsCount": "{count, plural, =0 {No results} =1 {1 result} other {# results}}",
 		"emptyHint": "Start typing to search across {total} CSS style presets.",
 		"noResults": "No presets match \"{query}\". Try different keywords.",

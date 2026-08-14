@@ -30,7 +30,7 @@
 	"search": {
 		"title": "搜索样式",
 		"subtitle": "按名称、标签或描述搜索所有预设",
-		"placeholder": "试试: 渐变 gradient, 气泡 bubble, 内阴影 inset...",
+		"placeholder": "试试：渐变、气泡、内阴影...",
 		"resultsCount": "{count, plural, =0 {无结果} other {# 条结果}}",
 		"emptyHint": "输入关键词搜索 {total} 个 CSS 预设样式。",
 		"noResults": "没有匹配 \"{query}\" 的预设，试试其它关键词。",
