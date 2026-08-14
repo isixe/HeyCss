@@ -68,10 +68,10 @@ export function Header() {
 			if (colorPickerRef.current && !colorPickerRef.current.contains(event.target as Node)) {
 				setIsColorOpen(false);
 			}
-			if (langPickerMobileRef.current && !langPickerMobileRef.current.contains(event.target as Node)) {
-				setIsLangOpen(false);
-			}
-			if (langPickerDesktopRef.current && !langPickerDesktopRef.current.contains(event.target as Node)) {
+			const isInsideLangPicker =
+				(langPickerMobileRef.current?.contains(event.target as Node) ?? false) ||
+				(langPickerDesktopRef.current?.contains(event.target as Node) ?? false);
+			if (!isInsideLangPicker) {
 				setIsLangOpen(false);
 			}
 		};
