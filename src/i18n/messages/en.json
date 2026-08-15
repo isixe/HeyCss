@@ -62,7 +62,7 @@
 		"subtitle": "Give your AI agents access to the HeyCSS styles catalog via the Model Context Protocol.",
 		"endpoint": "Endpoint",
 		"endpointDesc": "Connect any MCP client (Claude, Copilot, Cursor, etc.) to this Streamable HTTP endpoint.",
-		"streamableHttp": "Streamable HTTP (no SSE)",
+		"streamableHttp": "Streamable HTTP",
 		"copy": "Copy",
 		"copied": "Copied",
 		"whatIsMcp": "What is MCP?",
