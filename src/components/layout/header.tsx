@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Menu, X, Palette, Box, Type, Square, Hexagon, Search, Globe } from "lucide-react";
+import { Github, Menu, X, Palette, Box, Type, Square, Hexagon, Search, Globe, Plug } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import Color from "color";
@@ -160,6 +160,12 @@ export function Header() {
 						)}
 					</div>
 					<Link
+						href="/mcp"
+						className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+						aria-label={t("header.mcp")}>
+						<Plug className="w-5 h-5" />
+					</Link>
+					<Link
 						href="/search"
 						className="p-2 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
 						aria-label={t("header.search")}>
@@ -231,6 +237,13 @@ export function Header() {
 									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
 									aria-label={t("header.search")}>
 									<Search className="w-5 h-5" />
+								</Link>
+
+								<Link
+									href="/mcp"
+									className="p-2.5 rounded-xl text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all duration-200 cursor-pointer"
+									aria-label={t("header.mcp")}>
+									<Plug className="w-5 h-5" />
 								</Link>
 
 								<a

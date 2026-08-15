@@ -19,7 +19,8 @@
 		"viewOnGitHub": "在 GitHub 上查看",
 		"languageSwitch": "语言",
 		"languageEN": "English",
-		"languageZH": "中文"
+		"languageZH": "中文",
+		"mcp": "MCP"
 	},
 	"tabs": {
 		"boxShadow": "阴影",
@@ -55,5 +56,23 @@
 		"title": "HeyCSS",
 		"description": "发现并复制 CSS 样式，包括阴影、边框、文字和形状效果，助力你的 Web 项目。",
 		"keywords": "CSS 阴影, CSS 边框, CSS 文字样式, CSS 形状, 网页设计, 前端开发"
+	},
+	"mcp": {
+		"title": "MCP 服务器",
+		"subtitle": "通过 Model Context Protocol 让你的 AI 智能体访问 HeyCSS 样式清单。",
+		"endpoint": "端点地址",
+		"endpointDesc": "将该 Streamable HTTP 端点接入任意 MCP 客户端（Claude、Copilot、Cursor 等）。",
+		"streamableHttp": "Streamable HTTP（无 SSE）",
+		"copy": "复制",
+		"copied": "已复制",
+		"whatIsMcp": "什么是 MCP？",
+		"mcpDesc": "模型上下文协议（MCP）让 AI 助手能够调用外部服务器上托管的工具。此服务器将 HeyCSS 样式预设以可搜索工具的形式开放，智能体可以直接在工作流中浏览、搜索并取用开箱即用的 CSS——阴影、边框、文字效果与形状。",
+		"availableTools": "可用工具",
+		"toolList": "列出样式",
+		"toolListDesc": "按分类（boxShadow、border、text、shape）分页浏览样式清单。",
+		"toolSearch": "搜索样式",
+		"toolSearchDesc": "按名称、标签或描述搜索预设，支持中英文。",
+		"toolGet": "获取单个样式",
+		"toolGetDesc": "按分类和 id 获取单个预设的完整 CSS。"
 	}
 }

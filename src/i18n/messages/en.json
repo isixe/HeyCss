@@ -19,7 +19,8 @@
 		"viewOnGitHub": "View on GitHub",
 		"languageSwitch": "Language",
 		"languageEN": "English",
-		"languageZH": "中文"
+		"languageZH": "中文",
+		"mcp": "MCP"
 	},
 	"tabs": {
 		"boxShadow": "Box Shadows",
@@ -55,5 +56,23 @@
 		"title": "HeyCSS",
 		"description": "Discover and copy CSS styles including box-shadows, borders, text styles, and shapes for your web projects.",
 		"keywords": "CSS box-shadow, CSS border, CSS text styles, CSS shapes, web design, front-end development"
+	},
+	"mcp": {
+		"title": "MCP Server",
+		"subtitle": "Give your AI agents access to the HeyCSS styles catalog via the Model Context Protocol.",
+		"endpoint": "Endpoint",
+		"endpointDesc": "Connect any MCP client (Claude, Copilot, Cursor, etc.) to this Streamable HTTP endpoint.",
+		"streamableHttp": "Streamable HTTP (no SSE)",
+		"copy": "Copy",
+		"copied": "Copied",
+		"whatIsMcp": "What is MCP?",
+		"mcpDesc": "The Model Context Protocol (MCP) lets AI assistants call tools hosted in external servers. This server exposes the HeyCSS style presets as searchable tools, so an agent can browse, search and retrieve ready-to-use CSS — box-shadows, borders, text effects and shapes — directly in your workflow.",
+		"availableTools": "Available tools",
+		"toolList": "List styles",
+		"toolListDesc": "Browse the catalog by category (boxShadow, border, text, shape) with pagination.",
+		"toolSearch": "Search styles",
+		"toolSearchDesc": "Search presets by name, tag or description in English or Chinese.",
+		"toolGet": "Get one style",
+		"toolGetDesc": "Fetch a single preset's full CSS by tab and id."
 	}
 }
