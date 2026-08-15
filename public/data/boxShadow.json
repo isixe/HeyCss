@@ -21,8 +21,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果。"
+			"en": "A crisp 1px hairline shadow hugging the bottom edge at 10% black opacity.",
+			"zh": "沿底边 1px 的锐利细线阴影，黑色 10% 透明度，贴合底部形成极轻的层次。"
 		},
 		"box-shadow": "0 1px 0 rgba(17, 17, 26, 0.1)"
 	},
@@ -53,8 +53,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a crisp, tight blur for outer depth.",
-			"zh": "一个外投影盒阴影，带圆环描边，清晰锐利模糊，用于外投影效果。"
+			"en": "A 1px ring outline around the element at 5% black opacity, no blur.",
+			"zh": "1px 外描边圆环，黑色 5% 透明度，无模糊，勾勒发丝般细的轮廓。"
 		},
 		"box-shadow": "0 0 0 1px rgba(0, 0, 0, 0.05)"
 	},
@@ -80,8 +80,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果。"
+			"en": "A crisp 1px drop shadow with 2px blur at 10% black opacity.",
+			"zh": "向下偏移 1px、模糊 2px 的清晰投影，黑色 10% 透明度，轻巧的边缘浮起。"
 		},
 		"box-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.1)"
 	},
@@ -108,8 +108,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Two soft layers at 5px and 1px blur, each 10% black, creating a gentle halo.",
+			"zh": "双层柔和光晕：5px 与 1px 模糊叠加，黑色 10% 透明度，均匀包裹的柔光。"
 		},
 		"box-shadow": "0 0 5px 0 rgba(0, 0, 0, 0.1), 0 0 1px 0 rgba(0, 0, 0, 0.1)"
 	},
@@ -136,8 +136,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Two stacked crisp layers: 3px and 2px blur drops at 10% and 6% black opacity.",
+			"zh": "双层清晰投影：3px 与 2px 模糊叠加，黑色 10%/6% 透明度，紧凑的层次。"
 		},
 		"box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
 	},
@@ -161,8 +161,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow for inner depth.",
-			"zh": "一个内嵌盒阴影，用于内嵌效果。"
+			"en": "An inset shadow pressing 2px downward with 4px blur at 6% black — a subtle inner depression.",
+			"zh": "内嵌阴影：向内偏下 2px、模糊 4px，黑色 6% 透明度，形成轻微的内凹感。"
 		},
 		"box-shadow": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)"
 	},
@@ -188,8 +188,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果。"
+			"en": "A faint 1px drop with 2px blur at 5% black opacity — barely-there elevation.",
+			"zh": "向下 1px、模糊 2px 的淡投影，黑色 5% 透明度，近乎不可察觉的浮起。"
 		},
 		"box-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
 	},
@@ -216,8 +216,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A downward 10px offset with 10px blur compressed by -10px spread, 10% black — a soft under-glow.",
+			"zh": "向下偏移 10px、模糊 10px 且扩散 -10px，黑色 10% 透明度，底部收敛的柔和光晕。"
 		},
 		"box-shadow": "0 10px 10px -10px rgba(33, 35, 38, 0.1)"
 	},
@@ -240,8 +240,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A gentle 3px drop, 5px blur at 4% black — an almost invisible lift.",
+			"zh": "向下 3px、模糊 5px，黑色 4% 透明度，几乎无形的轻盈浮起。"
 		},
 		"box-shadow": "0 3px 5px rgba(0, 0, 0, 0.04)"
 	},
@@ -264,8 +264,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A 4px drop with 12px blur at 8% black — soft, standard card elevation.",
+			"zh": "向下 4px、模糊 12px，黑色 8% 透明度，柔和标准的卡片浮起。"
 		},
 		"box-shadow": "0 4px 12px rgba(0, 0, 0, 0.08)"
 	},
@@ -288,8 +288,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A 3px drop with 12px blur at 9% black — soft elevation with a wider falloff.",
+			"zh": "向下 3px、模糊 12px，黑色 9% 透明度，扩散较宽的柔和浮起。"
 		},
 		"box-shadow": "0 3px 12px rgba(0, 0, 0, 0.09)"
 	},
@@ -316,8 +316,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A symmetric 16px halo at 10% black-navy opacity — a uniform soft glow around all edges.",
+			"zh": "四周 16px 均匀光晕，深蓝黑 10% 透明度，边缘全方位柔光。"
 		},
 		"box-shadow": "0 0 16px rgba(17, 17, 26, 0.1)"
 	},
@@ -344,8 +344,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A cool gray 8px drop, 24px blur at 20% opacity — airy, medium-elevation soft shadow.",
+			"zh": "灰调向下 8px、模糊 24px，20% 透明度，透气的中等浮起柔影。"
 		},
 		"box-shadow": "0 8px 24px rgba(149, 157, 165, 0.2)"
 	},
@@ -372,8 +372,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A directional shadow: -4px left, 9px down, 25px blur, -6px spread at 10% black.",
+			"zh": "斜向投影：向左 4px、向下 9px、模糊 25px、扩散 -6px，黑色 10% 透明度，定向柔影。"
 		},
 		"box-shadow": "-4px 9px 25px -6px rgba(0, 0, 0, 0.1)"
 	},
@@ -409,8 +409,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two layers: a soft 6px/24px drop at 5% plus a crisp 1px ring outline at 8%.",
+			"zh": "双层组合：6px/24px 柔和投影（5%）叠加 1px 清晰描边圆环（8%），柔和与锐利并存。"
 		},
 		"box-shadow": "0 6px 24px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.08)"
 	},
@@ -446,8 +446,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a soft, diffuse blur for outer depth across 7 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，柔和扩散模糊，用于外投影效果，共 7 层。"
+			"en": "A 1px ring outline layered with six progressively blurring drops (1px to 24px) — polished, deep elevation.",
+			"zh": "1px 描边圆环叠加六层逐级扩大模糊的投影（1px 到 24px），层次丰富的高质感浮起。"
 		},
 		"box-shadow": "0 0 0 1px rgba(14, 63, 126, 0.06), 0 1px 1px -0.5px rgba(42, 51, 70, 0.03), 0 2px 2px -1px rgba(42, 51, 70, 0.04), 0 3px 3px -1.5px rgba(42, 51, 70, 0.04), 0 5px 5px -2.5px rgba(42, 51, 70, 0.03), 0 10px 10px -5px rgba(42, 51, 70, 0.03), 0 24px 24px -8px rgba(42, 51, 70, 0.03)"
 	},
@@ -483,8 +483,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a soft, diffuse blur for outer depth across 6 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，柔和扩散模糊，用于外投影效果，共 6 层。"
+			"en": "A 1px ring outline plus five soft layers (1px to 24px blur) with a blue tint — refined floating depth.",
+			"zh": "1px 描边圆环叠加五层由近及远柔焦（1px 到 24px），带蓝调，细腻的悬浮深度。"
 		},
 		"box-shadow": "0 0 0 1px rgba(14, 63, 126, 0.04), 0 1px 1px -0.5px rgba(42, 51, 69, 0.04), 0 3px 3px -1.5px rgba(42, 51, 70, 0.04), 0 6px 6px -3px rgba(42, 51, 70, 0.04), 0 12px 12px -6px rgba(14, 63, 126, 0.04), 0 24px 24px -12px rgba(14, 63, 126, 0.04)"
 	},
@@ -514,8 +514,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果，共 2 层。"
+			"en": "Two crisp navy layers: a 1px drop at 25% and a tight 1px ring at 13%.",
+			"zh": "双层清晰海军蓝调：1px 投影（25%）叠加 1px 紧致圆环（13%），干脆利落。"
 		},
 		"box-shadow": "0 1px 1px rgba(9, 30, 66, 0.25), 0 0 1px 1px rgba(9, 30, 66, 0.13)"
 	},
@@ -538,8 +538,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A firm 2px drop with 4px blur at 18% black — solid, noticeable elevation.",
+			"zh": "向下 2px、模糊 4px，黑色 18% 透明度，明确可感的扎实浮起。"
 		},
 		"box-shadow": "0 2px 4px rgba(0, 0, 0, 0.18)"
 	},
@@ -566,8 +566,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Two crisp drops (4px/6px and 2px/4px) with negative spreads — clean layered depth.",
+			"zh": "双层清晰投影（4px/6px 与 2px/4px 负扩散），干净利落的叠加层次。"
 		},
 		"box-shadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
 	},
@@ -590,8 +590,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A tight 3px drop, 3px blur at 15% black — compact and crisp.",
+			"zh": "向下 3px、模糊 3px，黑色 15% 透明度，紧凑而清晰。"
 		},
 		"box-shadow": "0 3px 3px 0 rgba(0, 0, 0, 0.15)"
 	},
@@ -614,8 +614,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A diagonal micro drop: 1.95px down-right, 2.6px blur at 15% — a dainty, soft lift.",
+			"zh": "向右下 1.95px 的微型投影，模糊 2.6px，黑色 15% 透明度，细腻轻柔。"
 		},
 		"box-shadow": "1.95px 1.95px 2.6px rgba(0, 0, 0, 0.15)"
 	},
@@ -638,8 +638,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A diagonal 2.4px down-right drop, 3.2px blur at 15% — soft plump elevation.",
+			"zh": "向右下 2.4px 斜投影，模糊 3.2px，黑色 15% 透明度，圆润柔和的浮起。"
 		},
 		"box-shadow": "2.4px 2.4px 3.2px rgba(0, 0, 0, 0.15)"
 	},
@@ -665,8 +665,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果。"
+			"en": "A hard offset-only shadow: 1px right, 4px down, no blur, at 16% black.",
+			"zh": "无模糊硬边投影：向右 1px、向下 4px，黑色 16% 透明度，利落干脆的偏移动感。"
 		},
 		"box-shadow": "1px 4px rgba(0, 0, 0, 0.16)"
 	},
@@ -702,8 +702,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow with a ring outline with a crisp, tight blur for inner depth across 2 layers.",
-			"zh": "一个内嵌盒阴影，带圆环描边，清晰锐利模糊，用于内嵌效果，共 2 层。"
+			"en": "An outer 1px hairline ring (5%) paired with an inset 1px gray ring — a double crisped frame.",
+			"zh": "外层 1px 发丝圆环（5%）配内层 1px 灰色描边，双重细锐框线。"
 		},
 		"box-shadow": "0 0 0 1px rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgb(209, 213, 219)"
 	},
@@ -739,8 +739,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，用于外投影效果，共 2 层。"
+			"en": "A faint 1px/3px drop at 2% plus a 1px slate ring at 15% — outline-first shadow.",
+			"zh": "微弱的 1px/3px 投影（2%）叠加 1px 石板灰圆环（15%），以描边为主的阴影。"
 		},
 		"box-shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 0 0 1px rgba(27, 31, 35, 0.15)"
 	},
@@ -771,8 +771,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "An indigo-tinted 2px/5px layer at 15% plus a crisp 1px bottom line at 5%.",
+			"zh": "靛蓝调 2px/5px 柔和层（15%）叠加 1px 清晰底边线（5%），层次分明。"
 		},
 		"box-shadow": "0 2px 5px 0 rgba(50, 50, 105, 0.15), 0 1px 1px 0 rgba(0, 0, 0, 0.05)"
 	},
@@ -799,8 +799,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Two crisp layers (4px/6px and 2px/4px) with negative spread — clean, modern depth.",
+			"zh": "双层清晰投影（4px/6px 与 2px/4px 负扩散），干净现代的纵深感。"
 		},
 		"box-shadow": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
 	},
@@ -827,8 +827,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Two tight layers: 1px/3px at 12% and 1px/2px at 24% — a standard UI elevation.",
+			"zh": "双层紧凑投影：1px/3px（12%）与 1px/2px（24%），标准界面浮起。"
 		},
 		"box-shadow": "0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)"
 	},
@@ -855,8 +855,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Indigo-tinted two-layer shadow with negative spread — a moderately raised surface.",
+			"zh": "靛蓝调双层投影（负扩散），中等高度的表面浮起。"
 		},
 		"box-shadow": "0 2px 5px -1px rgba(50, 50, 93, 0.25), 0 1px 3px -1px rgba(0, 0, 0, 0.3)"
 	},
@@ -883,8 +883,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "A neutral-gray two-layer shadow — clean material-style elevation.",
+			"zh": "中性灰双层投影，干净的材料质感浮起。"
 		},
 		"box-shadow": "0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15)"
 	},
@@ -911,8 +911,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "A crisp 1px bottom edge (5%) plus a symmetric 8px halo (10%) — edge and glow combined.",
+			"zh": "1px 清晰底边（5%）叠加 8px 均匀光晕（10%），描边与柔光结合。"
 		},
 		"box-shadow": "0 1px 0 rgba(17, 17, 26, 0.05), 0 0 8px rgba(17, 17, 26, 0.1)"
 	},
@@ -942,8 +942,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果，共 2 层。"
+			"en": "An em-based shadow: a tight 0.25em ring at 27% plus a 1em blue-tinted soft drop — scales with font size.",
+			"zh": "基于 em 的投影：0.25em 紧致环（27%）加 1em 蓝调柔影，随字号缩放。"
 		},
 		"box-shadow": "0 0 0.25em rgba(67, 71, 85, 0.27), 0 0.25em 1em rgba(90, 125, 188, 0.05)"
 	},
@@ -966,8 +966,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A mid-gray 2px/8px shadow at 20% — plain, slightly diffuse elevation.",
+			"zh": "中灰 2px/8px 投影，20% 透明度，朴素而略带扩散的浮起。"
 		},
 		"box-shadow": "0 2px 8px 0 rgba(99, 99, 99, 0.2)"
 	},
@@ -990,8 +990,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A simple 2px/8px black shadow at 15% — a standard soft drop.",
+			"zh": "简洁的 2px/8px 黑色投影（15%），常规柔和下落影。"
 		},
 		"box-shadow": "0 2px 8px rgba(0, 0, 0, 0.15)"
 	},
@@ -1014,8 +1014,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A 4px/12px black shadow at 10% — soft, gentle floating elevation.",
+			"zh": "4px/12px 黑色投影（10% 透明度），柔和轻柔的漂浮感。"
 		},
 		"box-shadow": "0 4px 12px rgba(0, 0, 0, 0.1)"
 	},
@@ -1046,8 +1046,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two whisper-light navy layers: 4px/16px and 8px/32px at 5% each.",
+			"zh": "双层淡蓝影：4px/16px 与 8px/32px，各 5% 透明度，极其轻盈。"
 		},
 		"box-shadow": "0 4px 16px rgba(17, 17, 26, 0.05), 0 8px 32px rgba(17, 17, 26, 0.05)"
 	},
@@ -1074,8 +1074,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A gray 7px/29px shadow at 20% — long, diffuse, medium elevation.",
+			"zh": "灰色 7px/29px 投影（20% 透明度），长而发散的中等浮起。"
 		},
 		"box-shadow": "0 7px 29px 0 rgba(100, 100, 111, 0.2)"
 	},
@@ -1106,8 +1106,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two navy layers: 4px/16px at 10% and 8px/32px at 5% — a soft two-depth float.",
+			"zh": "双层蓝调：4px/16px（10%）与 8px/32px（5%），双层软浮起。"
 		},
 		"box-shadow": "0 4px 16px rgba(17, 17, 26, 0.1), 0 8px 32px rgba(17, 17, 26, 0.05)"
 	},
@@ -1139,8 +1139,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，用于外投影效果，共 2 层。"
+			"en": "A navy 4px/8px drop at 25% plus a 1px ring at 8% — elevation with outline.",
+			"zh": "海军蓝 4px/8px 投影（25%）叠加 1px 圆环（8%），浮起带描边。"
 		},
 		"box-shadow": "0 4px 8px -2px rgba(9, 30, 66, 0.25), 0 0 0 1px rgba(9, 30, 66, 0.08)"
 	},
@@ -1163,8 +1163,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A firm 3px/8px shadow at 24% — clearly visible elevation.",
+			"zh": "3px/8px 投影，黑色 24% 透明度，清晰可见的浮起。"
 		},
 		"box-shadow": "0 3px 8px rgba(0, 0, 0, 0.24)"
 	},
@@ -1200,8 +1200,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow with a ring outline with a crisp, tight blur for inner depth across 3 layers.",
-			"zh": "一个内嵌盒阴影，带圆环描边，清晰锐利模糊，用于内嵌效果，共 3 层。"
+			"en": "An em-based shadow: two black drops (0.0625em/0.125em) plus a 1px inset white highlight — a glossy pressed key.",
+			"zh": "em 单位双层黑色投影加 1px 内嵌白色高光，光泽的按键按压感。"
 		},
 		"box-shadow": "0 0.0625em 0.0625em rgba(0, 0, 0, 0.25), 0 0.125em 0.5em  rgba(0, 0, 0, 0.25), inset 0 0 0 1px rgba(255, 255, 255, 0.1)"
 	},
@@ -1228,8 +1228,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "An indigo two-layer drop (6px/12px and 3px/7px, negative spread) — a medium raised card.",
+			"zh": "靛蓝双层投影（6px/12px 与 3px/7px 负扩散），中等浮起的卡片。"
 		},
 		"box-shadow": "0 6px 12px -2px rgba(50, 50, 93, 0.25), 0 3px 7px -3px rgba(0, 0, 0, 0.3)"
 	},
@@ -1260,8 +1260,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 5 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 5 层。"
+			"en": "Five cascading layers doubling from 1px to 16px blur at 7% — silky smooth depth.",
+			"zh": "五层递进投影（1px 到 16px 模糊翻倍，各 7%），丝滑的柔化深度。"
 		},
 		"box-shadow": "0 1px 1px rgba(0, 0, 0, 0.07), 0 2px 2px rgba(0, 0, 0, 0.07), 0 4px 4px rgba(0, 0, 0, 0.07), 0 8px 8px rgba(0, 0, 0, 0.07), 0 16px 16px rgba(0, 0, 0, 0.07)"
 	},
@@ -1288,8 +1288,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "Twin 3px/6px layers at 16% and 23% — doubled crispness for stronger definition.",
+			"zh": "双层 3px/6px 投影（16%+23%），双重叠加更清晰利落。"
 		},
 		"box-shadow": "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)"
 	},
@@ -1324,8 +1324,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "A tight 2px/4px layer at 12% plus a wide 2px/16px at 32% — deep cool-toned shadow.",
+			"zh": "紧致 2px/4px（12%）加宽泛 2px/16px（32%），冷调深沉的投影。"
 		},
 		"box-shadow": "0 2px 4px 0 rgba(14, 30, 37, 0.12), 0 2px 16px 0 rgba(14, 30, 37, 0.32)"
 	},
@@ -1353,8 +1353,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow for inner depth across 3 layers.",
-			"zh": "一个内嵌盒阴影，用于内嵌效果，共 3 层。"
+			"en": "Two strong drops (2px/4px at 40%, 7px/13px at 30%) plus an inset 3px bottom bar — a firm button press.",
+			"zh": "两层强力投影（2px/4px 40%、7px/13px 30%）加内嵌 3px 底部条，结实有力的按钮按压感。"
 		},
 		"box-shadow": "0 2px 4px rgba(0, 0, 0, 0.4), 0 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0 -3px 0 rgba(0, 0, 0, 0.2)"
 	},
@@ -1381,8 +1381,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，用于外投影效果，共 2 层。"
+			"en": "A tall 10px/15px layer at 10% over a tight 4px/6px at 5% — roomy, layered elevation.",
+			"zh": "高挑 10px/15px（10%）叠加紧致 4px/6px（5%），开阔的分层浮起。"
 		},
 		"box-shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
 	},
@@ -1405,8 +1405,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A 5px/15px drop at 15% — a classic medium soft shadow.",
+			"zh": "5px/15px 投影（15% 透明度），经典中等柔影。"
 		},
 		"box-shadow": "0 5px 15px 0 rgba(0, 0, 0, 0.15)"
 	},
@@ -1433,8 +1433,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A very wide 10px/50px shadow at 10% — expansive, billowing softness.",
+			"zh": "超宽 10px/50px 投影（10% 透明度），大面积蓬松柔光。"
 		},
 		"box-shadow": "0 10px 50px rgba(0, 0, 0, 0.1)"
 	},
@@ -1469,8 +1469,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Dual-direction light: blue-tinted +6px/2px at 48% and white -6px/-2px at 80% — a neomorphic glow.",
+			"zh": "双向光影：蓝调右下（48%）与白色左上（80%）叠加，新拟物发光。"
 		},
 		"box-shadow": "6px 2px 16px 0 rgba(136, 165, 191, 0.48), -6px -2px 16px 0 rgba(255, 255, 255, 0.8)"
 	},
@@ -1501,8 +1501,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two soft layers: 20px/25px at 10% and 10px/10px at 4% — a graceful long float.",
+			"zh": "双层柔影：20px/25px（10%）与 10px/10px（4%），优雅的纵向悬浮。"
 		},
 		"box-shadow": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
 	},
@@ -1538,8 +1538,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "A wide 10px/36px drop at 16% plus a 1px hairline ring at 6% — soft elevation with a crisp edge.",
+			"zh": "宽柔 10px/36px（16%）加 1px 发丝圆环（6%），柔和浮起带锐利边缘。"
 		},
 		"box-shadow": "0 10px 36px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.06)"
 	},
@@ -1570,8 +1570,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "A strong 15px/25px drop at 15% over a soft 5px/10px at 5% — a balanced card shadow.",
+			"zh": "强力 15px/25px（15%）叠柔和 5px/10px（5%），均衡的卡片阴影。"
 		},
 		"box-shadow": "0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05)"
 	},
@@ -1602,8 +1602,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 3 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 3 层。"
+			"en": "Three navy layers: a crisp 1px edge, an 8px/24px and a 16px/48px soft drop — multi-ring float.",
+			"zh": "三层蓝调：1px 清晰边缘、8px/24px 与 16px/48px 柔影，多环悬浮。"
 		},
 		"box-shadow": "0 1px 0 rgba(17, 17, 26, 0.1), 0 8px 24px rgba(17, 17, 26, 0.1), 0 16px 48px rgba(17, 17, 26, 0.1)"
 	},
@@ -1630,8 +1630,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A long 18px/50px shadow with -10px spread at 20% — a spacious under-card glow.",
+			"zh": "18px/50px 长影（-10px 扩散，20%），卡片下方开阔的辉光。"
 		},
 		"box-shadow": "0 18px 50px -10px rgba(0, 0, 0, 0.2)"
 	},
@@ -1658,8 +1658,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A tall 25px/50px shadow with -12px spread at 25% — dramatic, high elevation.",
+			"zh": "25px/50px 高影（-12px 扩散，25%），戏剧性的高位浮起。"
 		},
 		"box-shadow": "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
 	},
@@ -1690,8 +1690,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 3 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 3 层。"
+			"en": "Three progressive navy layers (4px/16px, 8px/24px, 16px/56px) — a smooth deep float.",
+			"zh": "三层递进蓝调（4px/16px、8px/24px、16px/56px），平滑的深层悬浮。"
 		},
 		"box-shadow": "0 4px 16px rgba(17, 17, 26, 0.1), 0 8px 24px rgba(17, 17, 26, 0.1), 0 16px 56px rgba(17, 17, 26, 0.1)"
 	},
@@ -1727,8 +1727,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline with a soft, diffuse blur for outer depth across 3 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，柔和扩散模糊，用于外投影效果，共 3 层。"
+			"en": "Two black drops (12px/28px at 20%, 2px/4px at 10%) plus a 1px inset white ring — glossy elevation.",
+			"zh": "两层黑色投影（12px/28px 20%、2px/4px 10%）加 1px 内嵌白环，光泽浮起。"
 		},
 		"box-shadow": "0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 0 0 1px inset rgba(255, 255, 255, 0.05)"
 	},
@@ -1759,8 +1759,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 3 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 3 层。"
+			"en": "Three wide navy layers up to 24px/80px — expansive, ultra-soft floating.",
+			"zh": "三层宽泛蓝调（至 24px/80px），开阔的极致柔软悬浮。"
 		},
 		"box-shadow": "0 8px 24px rgba(17, 17, 26, 0.1), 0 16px 56px rgba(17, 17, 26, 0.1), 0 24px 80px rgba(17, 17, 26, 0.1)"
 	},
@@ -1791,8 +1791,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 6 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 6 层。"
+			"en": "Six cascading layers doubling from 1px to 64px at 7% — lavish silk-like depth.",
+			"zh": "六层递进（1px 到 64px 翻倍，各 7%），丝绸般丰盈的纵深感。"
 		},
 		"box-shadow": "0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07)"
 	},
@@ -1822,8 +1822,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a crisp, tight blur for outer depth across 6 layers.",
-			"zh": "一个外投影盒阴影，清晰锐利模糊，用于外投影效果，共 6 层。"
+			"en": "Six color-first layers (1px to 64px) at 7% — orderly cascading depth, alternate syntax.",
+			"zh": "六层 color-first 语法投影（1px 到 64px，各 7%），规整的层叠深度。"
 		},
 		"box-shadow": "rgba(0, 0, 0, 0.07) 0 1px 2px, rgba(0, 0, 0, 0.07) 0 2px 4px, rgba(0, 0, 0, 0.07) 0 4px 8px, rgba(0, 0, 0, 0.07) 0 8px 16px, rgba(0, 0, 0, 0.07) 0 16px 32px, rgba(0, 0, 0, 0.07) 0 32px 64px"
 	},
@@ -1854,8 +1854,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "An indigo two-layer drop (13px/27px at 25%, 8px/16px at 30%) — a prominent popped card.",
+			"zh": "靛蓝双层投影（13px/27px 25%、8px/16px 30%），突出的弹起卡片。"
 		},
 		"box-shadow": "0 13px 27px -5px rgba(50, 50, 93, 0.25), 0 8px 16px -8px rgba(0, 0, 0, 0.3)"
 	},
@@ -1882,8 +1882,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A deep 20px/30px shadow at 20% — heavy, pronounced elevation.",
+			"zh": "20px/30px 深影（20% 透明度），厚重明显的浮起。"
 		},
 		"box-shadow": "0 20px 30px rgba(0, 0, 0, 0.2)"
 	},
@@ -1906,8 +1906,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow for outer depth.",
-			"zh": "一个外投影盒阴影，用于外投影效果。"
+			"en": "A dark 5px/15px shadow at 35% — a bold, contrast-rich drop.",
+			"zh": "5px/15px 深影（35% 透明度），大胆高对比的投影。"
 		},
 		"box-shadow": "0 5px 15px rgba(0, 0, 0, 0.35)"
 	},
@@ -1938,8 +1938,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two strong layers (10px/20px at 19%, 6px/6px at 23%) — firm, well-defined depth.",
+			"zh": "双层强力投影（10px/20px 19%、6px/6px 23%），扎实分明的纵深感。"
 		},
 		"box-shadow": "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)"
 	},
@@ -1970,8 +1970,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 5 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 5 层。"
+			"en": "Five cascading layers from 2px to 32px offset at 9% — a growing concertina of shadow.",
+			"zh": "五层递进（2px 到 32px 偏移，各 9%），手风琴般展开的层叠影。"
 		},
 		"box-shadow": "0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09), 0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09), 0 32px 16px rgba(0, 0, 0, 0.09)"
 	},
@@ -2002,8 +2002,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two robust shadows (14px/28px at 25%, 10px/10px at 22%) — bold elevation with inner depth.",
+			"zh": "两层厚实投影（14px/28px 25%、10px/10px 22%），大胆且有内深。"
 		},
 		"box-shadow": "0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)"
 	},
@@ -2034,8 +2034,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two heavy shadows (19px/38px at 30%, 15px/12px at 22%) — dominant, strong presence.",
+			"zh": "两层重型投影（19px/38px 30%、15px/12px 22%），占据视觉的强烈存在感。"
 		},
 		"box-shadow": "0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22)"
 	},
@@ -2070,8 +2070,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a blue glow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带蓝色光晕，用于外投影效果，共 2 层。"
+			"en": "A blue (59,130,246) glow: 20px/25px at 40% plus a 10px/10px halo — a vibrant brand glow.",
+			"zh": "蓝色（59,130,246）光晕：20px/25px（40%）加 10px/10px（4%），鲜明的品牌辉光。"
 		},
 		"box-shadow": "0 20px 25px -5px rgba(59, 130, 246, 0.4), 0 10px 10px -5px rgba(59, 130, 246, 0.04)"
 	},
@@ -2106,8 +2106,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a green glow for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，带绿色光晕，用于外投影效果，共 2 层。"
+			"en": "A green (34,197,94) glow: 20px at 60% plus 40px at 40% — a double concentric bloom.",
+			"zh": "绿色（34,197,94）辉光：20px（60%）加 40px（40%），双层同心光晕。"
 		},
 		"box-shadow": "0 0 20px rgba(34, 197, 94, 0.6), 0 0 40px rgba(34, 197, 94, 0.4)"
 	},
@@ -2138,8 +2138,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Indigo tall layers (30px/60px at 25%, 18px/36px at 30%) — a long, airy float.",
+			"zh": "靛蓝高挑双层（30px/60px 25%、18px/36px 30%），修长通透的悬浮。"
 		},
 		"box-shadow": "0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3)"
 	},
@@ -2166,8 +2166,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A slate-blue 20px/30px shadow with -10px spread (opaque) — a solid colored cast.",
+			"zh": "石板蓝 20px/30px 投影（-10px 扩散、不透明），浓郁的彩色阴影。"
 		},
 		"box-shadow": "0 20px 30px -10px rgb(38, 57, 77)"
 	},
@@ -2198,8 +2198,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 5 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 5 层。"
+			"en": "Five directional layers (54px down, -12px up, 4px, 12px, -3px) — sculpted 3D depth.",
+			"zh": "五层多向投影（54px 下、-12px 上、4px、12px、-3px），雕塑般的 3D 纵深。"
 		},
 		"box-shadow": "0 54px 55px rgba(0, 0, 0, 0.25), 0 -12px 30px rgba(0, 0, 0, 0.12), 0 4px 6px rgba(0, 0, 0, 0.12), 0 12px 13px rgba(0, 0, 0, 0.17), 0 -3px 5px rgba(0, 0, 0, 0.09)"
 	},
@@ -2226,8 +2226,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "An extreme 60px/40px shadow with -7px spread at 20% — a long-distance dramatic cast.",
+			"zh": "超长 60px/40px 投影（-7px 扩散、20%），远距离戏剧性投影。"
 		},
 		"box-shadow": "0 60px 40px -7px rgba(0, 0, 0, 0.2)"
 	},
@@ -2254,8 +2254,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A massive 30px/90px shadow at 40% — enveloping, intense soft darkness.",
+			"zh": "巨大 30px/90px 投影（40% 透明度），包裹全身的浓郁柔暗。"
 		},
 		"box-shadow": "0 30px 90px rgba(0, 0, 0, 0.4)"
 	},
@@ -2282,8 +2282,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A heavy 22px/70px shadow with 4px spread at 56% — deep, full-bodied shade.",
+			"zh": "厚重 22px/70px 投影（4px 扩散、56% 透明度），深沉饱满的阴影。"
 		},
 		"box-shadow": "0 22px 70px 4px rgba(0, 0, 0, 0.56)"
 	},
@@ -2319,8 +2319,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow with a ring outline with a crisp, tight blur for inner depth across 2 layers.",
-			"zh": "一个内嵌盒阴影，带圆环描边，清晰锐利模糊，用于内嵌效果，共 2 层。"
+			"en": "A 1px near-black outer ring (90%) plus a 1px inset white ring (20%) — a high-contrast double frame.",
+			"zh": "1px 近黑外环（90%）加 1px 内嵌白环（20%），高对比双层框。"
 		},
 		"box-shadow": "inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.9)"
 	},
@@ -2352,8 +2352,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a ring outline for outer depth across 3 layers.",
-			"zh": "一个外投影盒阴影，带圆环描边，用于外投影效果，共 3 层。"
+			"en": "A 2px navy ring (40%) + a 4px/6px drop (65%) + a 1px inset white highlight — a bordered glossy button.",
+			"zh": "2px 蓝环（40%）+ 4px/6px 投影（65%）+ 1px 内嵌白色高光，带边框的高光按钮。"
 		},
 		"box-shadow": "0 0 0 2px rgba(6, 24, 44, 0.4), 0 4px 6px -1px rgba(6, 24, 44, 0.65), 0 1px 0 inset rgba(255, 255, 255, 0.08)"
 	},
@@ -2381,8 +2381,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow for inner depth across 2 layers.",
-			"zh": "一个内嵌盒阴影，用于内嵌效果，共 2 层。"
+			"en": "Dual inset shadows: a dark 3px/6px (bottom-right) + a white -3px/-6px (top-left) — a neomorphic indentation.",
+			"zh": "双向内嵌阴影：右下暗影（3px/6px）与左上白影（-3px/-6px），新拟物内凹。"
 		},
 		"box-shadow": "inset 3px 3px 6px 0 rgb(204, 219, 232), inset -3px -3px 6px 1px rgba(255, 255, 255, 0.5)"
 	},
@@ -2410,8 +2410,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow with a soft, diffuse blur for inner depth.",
-			"zh": "一个内嵌盒阴影，柔和扩散模糊，用于内嵌效果。"
+			"en": "A wide inset shadow from the bottom: -50px offset, 36px blur at 35% — inner bottom shading.",
+			"zh": "底部内嵌宽影：-50px 偏移、36px 模糊（35%），内底部渐暗。"
 		},
 		"box-shadow": "inset 0 -50px 36px -28px rgba(0, 0, 0, 0.35)"
 	},
@@ -2442,8 +2442,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth across 2 layers.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果，共 2 层。"
+			"en": "Two inset indigo layers (30px/60px at 25%, 18px/36px at 30%) — recessed inner depth.",
+			"zh": "双层内嵌靛蓝（30px/60px 25%、18px/36px 30%），内凹的纵深光影。"
 		},
 		"box-shadow": "0 30px 60px -12px inset rgba(50, 50, 93, 0.25), 0 18px 36px -18px inset rgba(0, 0, 0, 0.3)"
 	},
@@ -2475,8 +2475,8 @@
 			]
 		},
 		"description": {
-			"en": "A inset box shadow with a soft, diffuse blur for inner depth across 8 layers.",
-			"zh": "一个内嵌盒阴影，柔和扩散模糊，用于内嵌效果，共 8 层。"
+			"en": "Three deep inset layers (to -79px) plus five tiny outer drops — richly carved depth.",
+			"zh": "三层深内嵌（至 -79px）加五层细微外投影，雕刻般丰富的层次。"
 		},
 		"box-shadow": "inset 0 -23px 25px 0 rgba(0, 0, 0, 0.17), inset 0 -36px 30px 0 rgba(0, 0, 0, 0.15), inset 0 -79px 40px 0  rgba(0, 0, 0, 0.1), 0 2px 1px rgba(0, 0, 0, 0.06), 0 4px 2px  rgba(0, 0, 0, 0.09), 0 8px 4px  rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09), 0 32px 16px rgba(0, 0, 0, 0.09)"
 	},
@@ -2503,8 +2503,8 @@
 			]
 		},
 		"description": {
-			"en": "A drop box shadow with a soft, diffuse blur for outer depth.",
-			"zh": "一个外投影盒阴影，柔和扩散模糊，用于外投影效果。"
+			"en": "A 25px/20px shadow with -20px spread at 45% — a concentrated contact shadow beneath.",
+			"zh": "25px/20px 投影（-20px 扩散、45% 透明度），紧贴底部的接触阴影。"
 		},
 		"box-shadow": "0 25px 20px -20px rgba(0, 0, 0, 0.45)"
 	}

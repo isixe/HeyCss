@@ -22,8 +22,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with a centered arrow pointing down.",
-            "zh": "气泡箭头（底部），通过 CSS 实现。"
+            "en": "A white rounded bubble (100×40, 10px radius) with a centered triangle arrow pointing down — a chat tooltip.",
+            "zh": "白色圆角气泡（100×40，10px 圆角），底部中央带向下三角箭头，聊天气泡提示。"
         },
         "width": "100px",
         "height": "40px",
@@ -69,8 +69,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with a centered arrow pointing up.",
-            "zh": "气泡箭头（顶部），通过 CSS 实现。"
+            "en": "A white rounded bubble with a centered triangle arrow pointing up.",
+            "zh": "白色圆角气泡，顶部中央带向上三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -116,8 +116,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with a centered arrow pointing left.",
-            "zh": "气泡箭头（左侧），通过 CSS 实现。"
+            "en": "A white rounded bubble with a centered triangle arrow pointing left.",
+            "zh": "白色圆角气泡，左侧中央带向左三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -163,8 +163,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with a centered arrow pointing right.",
-            "zh": "气泡箭头（右侧），通过 CSS 实现。"
+            "en": "A white rounded bubble with a centered triangle arrow pointing right.",
+            "zh": "白色圆角气泡，右侧中央带向右三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -211,8 +211,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with an arrow at the top-left.",
-            "zh": "气泡箭头（左上），通过 CSS 实现。"
+            "en": "A white rounded bubble with a triangle arrow positioned near the top-left corner (8px in).",
+            "zh": "白色圆角气泡，左上角内侧 8px 处带三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -258,8 +258,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with an arrow at the top-right.",
-            "zh": "气泡箭头（右上），通过 CSS 实现。"
+            "en": "A white rounded bubble with a triangle arrow positioned near the top-right corner (8px in).",
+            "zh": "白色圆角气泡，右上角内侧 8px 处带三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -305,8 +305,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with an arrow at the bottom-left.",
-            "zh": "气泡箭头（左下），通过 CSS 实现。"
+            "en": "A white rounded bubble with a triangle arrow positioned near the bottom-left corner (8px in).",
+            "zh": "白色圆角气泡，左下角内侧 8px 处带三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -352,8 +352,8 @@
             ]
         },
         "description": {
-            "en": "White rounded bubble with an arrow at the bottom-right.",
-            "zh": "气泡箭头（右下），通过 CSS 实现。"
+            "en": "A white rounded bubble with a triangle arrow positioned near the bottom-right corner (8px in).",
+            "zh": "白色圆角气泡，右下角内侧 8px 处带三角箭头。"
         },
         "width": "100px",
         "height": "40px",
@@ -396,8 +396,8 @@
             ]
         },
         "description": {
-            "en": "Orange corner badge with a white check mark at the top-right.",
-            "zh": "对勾徽章（右上），通过 CSS 实现。"
+            "en": "A white rounded badge with a colored triangle in the top-right corner containing a white checkmark cutout.",
+            "zh": "白色圆角徽标，右上角嵌彩色三角，三角内镂空白色对勾，右上勾选角标。"
         },
         "width": "100px",
         "height": "40px",
@@ -450,8 +450,8 @@
             ]
         },
         "description": {
-            "en": "Orange corner badge with a white check mark at the bottom-right.",
-            "zh": "对勾徽章（右下），通过 CSS 实现。"
+            "en": "A white rounded badge with a colored triangle in the bottom-right corner containing a white checkmark cutout.",
+            "zh": "白色圆角徽标，右下角嵌彩色三角并镂空白色对勾，右下勾选角标。"
         },
         "width": "100px",
         "height": "40px",
@@ -503,8 +503,8 @@
             ]
         },
         "description": {
-            "en": "Plain orange triangle badge at the top-left corner.",
-            "zh": "三角角标（左上），通过 CSS 实现。"
+            "en": "A plain square with a solid colored triangle covering the top-left corner — a corner ribbon.",
+            "zh": "素色方块左上角覆盖实心彩色三角，左上角折角标签。"
         },
         "width": "100px",
         "height": "40px",
@@ -546,8 +546,8 @@
             ]
         },
         "description": {
-            "en": "Plain orange triangle badge at the bottom-left corner.",
-            "zh": "三角角标（左下），通过 CSS 实现。"
+            "en": "A plain square with a solid colored triangle covering the bottom-left corner — a corner ribbon.",
+            "zh": "素色方块左下角覆盖实心彩色三角，左下角折角标签。"
         },
         "width": "100px",
         "height": "40px",
@@ -590,8 +590,8 @@
             ]
         },
         "description": {
-            "en": "Red ribbon badge labeled HOT rotated at the corner.",
-            "zh": "HOT 丝带徽章，通过 CSS 实现。"
+            "en": "A subtle gray square with a red ribbon rotated -45deg across the top-right corner reading \"HOT\".",
+            "zh": "微灰底方块，右上角横跨 -45 度红色\"HOT\"缎带标签，促销角标。"
         },
         "width": "100px",
         "height": "100px",
@@ -637,8 +637,8 @@
             ]
         },
         "description": {
-            "en": "Small green status dot at the top-right corner.",
-            "zh": "状态圆点徽章，通过 CSS 实现。"
+            "en": "A plain square with a small green dot (10px) in the top-right corner — an online status indicator.",
+            "zh": "素色方块右上角点缀 10px 绿色圆点，在线状态指示角标。"
         },
         "width": "100px",
         "height": "100px",
@@ -679,8 +679,8 @@
             ]
         },
         "description": {
-            "en": "Round blue badge labeled 99 for notification counts.",
-            "zh": "数字徽章 99，通过 CSS 实现。"
+            "en": "A square with a red rounded pill badge showing \"99\" pinned to the top-right corner — an unread counter.",
+            "zh": "方块右上角吸附红色圆角胶囊\"99\"徽标，未读消息计数角标。"
         },
         "width": "100px",
         "height": "100px",
@@ -729,8 +729,8 @@
             ]
         },
         "description": {
-            "en": "Gray label badge labeled waiting at the top-right corner.",
-            "zh": "等待标签徽章，通过 CSS 实现。"
+            "en": "A square with a red \"waiting\" label band across the top-right corner — a status tag.",
+            "zh": "方块右上角横跨红色\"waiting\"文字标签，状态标识角标。"
         },
         "width": "100px",
         "height": "100px",
@@ -773,8 +773,8 @@
             ]
         },
         "description": {
-            "en": "Green rounded badge labeled NEW.",
-            "zh": "NEW 徽章，通过 CSS 实现。"
+            "en": "A square with a bright green (#00d62b) \"NEW\" badge pinned to the top-right corner.",
+            "zh": "方块右上角吸附亮绿（#00d62b）\"NEW\"白字徽标，新品标记。"
         },
         "width": "100px",
         "height": "100px",
@@ -815,8 +815,8 @@
             ]
         },
         "description": {
-            "en": "Square with diamond-cut corners via clip-path.",
-            "zh": "菱形切角形状，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with all four corners cut at a ~22.5deg angle via clip-path — a faceted diamond-cut octagon.",
+            "zh": "clip-path 将四角按约 22.5 度斜切，形成宝石切割般的八角菱形。"
         },
         "width": "100px",
         "height": "100px",
@@ -854,8 +854,8 @@
             ]
         },
         "description": {
-            "en": "Trapezoid with a slanted edge on the left via clip-path.",
-            "zh": "斜边梯形（左侧），使用 clip-path 裁剪实现。"
+            "en": "A 3:2 rectangle whose top edge slopes right by 20px — a slanted trapezoid (parallelogram-like).",
+            "zh": "3:2 矩形顶边向右倾斜 20px（--p），裁出斜边梯形（平行四边形感）。"
         },
         "width": "100px",
         "height": "100px",
@@ -895,8 +895,8 @@
             ]
         },
         "description": {
-            "en": "Trapezoid variant with a slanted edge via clip-path.",
-            "zh": "斜边梯形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A 3:2 rectangle whose top edge slopes left by 20px — the mirrored slanted trapezoid.",
+            "zh": "3:2 矩形顶边向左倾斜 20px，镜像的斜边梯形。"
         },
         "width": "100px",
         "height": "100px",
@@ -936,8 +936,8 @@
             ]
         },
         "description": {
-            "en": "Trapezoid variant with a slanted edge via clip-path.",
-            "zh": "斜边梯形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A 3:2 rectangle with a vertical shear where the right side is offset 20px — a leaning block.",
+            "zh": "3:2 矩形右侧以 20px 垂直剪切偏移，倾斜的平行四边形方块。"
         },
         "width": "100px",
         "height": "100px",
@@ -977,8 +977,8 @@
             ]
         },
         "description": {
-            "en": "Trapezoid variant with a slanted edge via clip-path.",
-            "zh": "斜边梯形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A 3:2 rectangle with the opposite vertical shear (left side offset 20px) — a mirrored leaning block.",
+            "zh": "3:2 矩形左侧 20px 反向垂直剪切，镜像倾斜方块。"
         },
         "width": "100px",
         "height": "100px",
@@ -1016,8 +1016,8 @@
             ]
         },
         "description": {
-            "en": "Shape with a large diagonal cut via clip-path.",
-            "zh": "对角切角形状 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with two diagonal corner cuts (50px) along the horizontal axis — a parallelogram with beveled ends.",
+            "zh": "矩形沿水平轴两端各斜切 50px（--p），两端倒角的平行四边形。"
         },
         "width": "100px",
         "height": "100px",
@@ -1055,8 +1055,8 @@
             ]
         },
         "description": {
-            "en": "Shape with a large diagonal cut via clip-path.",
-            "zh": "对角切角形状 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the mirrored diagonal cut (50px) in the opposite direction — a reverse parallelogram cut.",
+            "zh": "矩形反向 50px 对角切角，镜像的倒角平行四边形。"
         },
         "width": "100px",
         "height": "100px",
@@ -1094,8 +1094,8 @@
             ]
         },
         "description": {
-            "en": "Shape with a large diagonal cut via clip-path.",
-            "zh": "对角切角形状 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with two steep diagonal cuts (30px) along the vertical axis — an angled chamfered bar.",
+            "zh": "矩形沿垂直轴两端 30px 陡峭斜切，斜角倒角的竖条。"
         },
         "width": "100px",
         "height": "100px",
@@ -1133,8 +1133,8 @@
             ]
         },
         "description": {
-            "en": "Shape with a large diagonal cut via clip-path.",
-            "zh": "对角切角形状 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the mirrored steep diagonal cut (30px) — a reverse vertical-bar chamfer.",
+            "zh": "矩形反向 30px 陡峭斜切，镜像的竖条倒角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1174,8 +1174,8 @@
             ]
         },
         "description": {
-            "en": "Four-lobed clover leaf created with radial-gradient masks.",
-            "zh": "三叶草，通过 CSS 实现。"
+            "en": "A beige (#eee6dd) square with its four corners masked into circles — a four-lobed clover leaf.",
+            "zh": "米色（#eee6dd）方块四角以遮罩处理成圆弧，形似四瓣三叶草叶片。"
         },
         "width": "100px",
         "height": "100px",
@@ -1212,8 +1212,8 @@
             ]
         },
         "description": {
-            "en": "Four-leaf clover created with radial-gradient masks.",
-            "zh": "四叶草，通过 CSS 实现。"
+            "en": "A pink (#fe7496) square masked into four side circles plus a center circle — a four-leaf clover.",
+            "zh": "粉色（#fe7496）方块以四圆（41.422%）遮罩出四瓣花瓣与中心圆，四叶草造型。"
         },
         "width": "200px",
         "height": "200px",
@@ -1242,8 +1242,8 @@
             ]
         },
         "description": {
-            "en": "Five-petal flower created with radial-gradient masks.",
-            "zh": "五瓣花，通过 CSS 实现。"
+            "en": "A coral (#f7694c) shape with five radial circles at pentagon vertices (37.02%) — a five-petal flower.",
+            "zh": "珊瑚色（#f7694c）五圆（37.02%）按五角顶点分布，五瓣花造型。"
         },
         "width": "200px",
         "height": "200px",
@@ -1273,8 +1273,8 @@
             ]
         },
         "description": {
-            "en": "Five-point star flower created with radial-gradient masks.",
-            "zh": "星花圆环，通过 CSS 实现。"
+            "en": "A red (#f25145) shape combining five radial flower petals with a center ring — a star-flower ring.",
+            "zh": "红（#f25145）五瓣放射花瓣中央叠一环孔，星花圆环造型。"
         },
         "width": "200px",
         "height": "200px",
@@ -1302,8 +1302,8 @@
             ]
         },
         "description": {
-            "en": "Squircle shape using corner-shape: squircle with a 50% border-radius.",
-            "zh": "圆角方形，通过 CSS 实现。"
+            "en": "A purple (#8458ff) squircle using the modern `corner-shape: squircle` with 50% radius — a true superellipse.",
+            "zh": "紫色（#8458ff）圆角方形，使用现代 corner-shape:squircle + 50% 圆角，完美超椭圆。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -1332,8 +1332,8 @@
             ]
         },
         "description": {
-            "en": "Rounded square created with a conic-gradient mask.",
-            "zh": "圆角方形，通过 CSS 实现。"
+            "en": "A light blue (#89daeb) rounded square with 40px corner rounding via a conic-gradient mask.",
+            "zh": "浅蓝（#89daeb）圆角方形，conic 遮罩实现 40px 圆角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1369,8 +1369,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a notched top-left corner via clip-path.",
-            "zh": "缺角矩形（左上），使用 clip-path 裁剪实现。"
+            "en": "A rectangle with its top-left corner cut out by 70px via clip-path — a notched corner.",
+            "zh": "clip-path 裁掉左上角 70px 的缺角矩形，标签页风格。"
         },
         "width": "100px",
         "height": "100px",
@@ -1410,8 +1410,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a notched top-right corner via clip-path.",
-            "zh": "缺角矩形（右上），使用 clip-path 裁剪实现。"
+            "en": "A rectangle with its top-right corner cut out by 70px via clip-path.",
+            "zh": "clip-path 裁掉右上角 70px 的缺角矩形。"
         },
         "width": "100px",
         "height": "100px",
@@ -1451,8 +1451,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a notched bottom-left corner via clip-path.",
-            "zh": "缺角矩形（左下），使用 clip-path 裁剪实现。"
+            "en": "A rectangle with its bottom-left corner cut out by 70px via clip-path.",
+            "zh": "clip-path 裁掉左下角 70px 的缺角矩形。"
         },
         "width": "100px",
         "height": "100px",
@@ -1492,8 +1492,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a notched bottom-right corner via clip-path.",
-            "zh": "缺角矩形（右下），使用 clip-path 裁剪实现。"
+            "en": "A rectangle with its bottom-right corner cut out by 70px via clip-path.",
+            "zh": "clip-path 裁掉右下角 70px 的缺角矩形。"
         },
         "width": "100px",
         "height": "100px",
@@ -1533,8 +1533,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with notched top and bottom corners via clip-path.",
-            "zh": "缺角矩形（上下），使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the bottom-left corner cut diagonally up to 70px — a slanted bottom-left notch.",
+            "zh": "矩形左下角沿 70px 斜切，右下角开口的斜切缺角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1574,8 +1574,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with multiple notched corners via clip-path.",
-            "zh": "缺角矩形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the bottom-right corner cut diagonally up to 70px — a slanted bottom-right notch.",
+            "zh": "矩形右下角沿 70px 斜切，左下开口的斜切缺角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1615,8 +1615,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with multiple notched corners via clip-path.",
-            "zh": "缺角矩形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the top-right corner cut down by 70px — a slanted top-right notch.",
+            "zh": "矩形右上角向下斜切 70px，右上开口的斜切缺角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1656,8 +1656,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with multiple notched corners via clip-path.",
-            "zh": "缺角矩形变体 $1，使用 clip-path 裁剪实现。"
+            "en": "A rectangle with the top-left corner cut down by 70px — a slanted top-left notch.",
+            "zh": "矩形左上角向下斜切 70px，左上开口的斜切缺角。"
         },
         "width": "100px",
         "height": "100px",
@@ -1696,8 +1696,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle with the arc at the bottom, created with a radial-gradient mask.",
-            "zh": "半圆（Bottom Arc），通过 CSS 实现。"
+            "en": "An orange (#ff6b35) semicircle: flat top, downward arc via radial mask — a bottom half-disc.",
+            "zh": "橙色（#ff6b35）半圆：上平下弧（radial 遮罩），下凸半圆。"
         },
         "width": "100px",
         "height": "100px",
@@ -1726,8 +1726,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle with the arc at the right, created with a radial-gradient mask.",
-            "zh": "半圆（Right Arc），通过 CSS 实现。"
+            "en": "An orange semicircle with flat left edge and arc bulging right — a right half-disc.",
+            "zh": "橙色半圆：左平右弧，向右凸出的竖半圆。"
         },
         "width": "100px",
         "height": "100px",
@@ -1756,8 +1756,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle variant created with a radial-gradient mask.",
-            "zh": "半圆变体 $1，通过 CSS 实现。"
+            "en": "An orange semicircle variant with the same axis — a mirrored right half-disc.",
+            "zh": "橙色半圆变体，同轴弧向镜像的竖半圆。"
         },
         "width": "100px",
         "height": "150px",
@@ -1786,8 +1786,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle with the arc at the top, created with a radial-gradient mask.",
-            "zh": "半圆（Top Arc），通过 CSS 实现。"
+            "en": "An orange semicircle with flat bottom and upward arc — a top half-disc.",
+            "zh": "橙色半圆：下平上弧，向上凸出的上半圆。"
         },
         "width": "100px",
         "height": "100px",
@@ -1816,8 +1816,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle with the arc at the left, created with a radial-gradient mask.",
-            "zh": "半圆（Left Arc），通过 CSS 实现。"
+            "en": "An orange semicircle with flat right edge and arc bulging left — a left half-disc.",
+            "zh": "橙色半圆：右平左弧，向左凸出的竖半圆。"
         },
         "width": "100px",
         "height": "100px",
@@ -1846,8 +1846,8 @@
             ]
         },
         "description": {
-            "en": "Semicircle variant created with a radial-gradient mask.",
-            "zh": "半圆变体 $1，通过 CSS 实现。"
+            "en": "An orange semicircle variant with the arc in the mirrored orientation — a left half-disc variant.",
+            "zh": "橙色半圆变体，弧向镜像的左向竖半圆。"
         },
         "width": "150px",
         "height": "100px",
@@ -1877,8 +1877,8 @@
             ]
         },
         "description": {
-            "en": "Half ellipse cut via clip-path, arc at the top.",
-            "zh": "半椭圆（顶部），使用 clip-path 裁剪实现。"
+            "en": "A pink (#fe7496) half-ellipse: the top half of an 85%-wide, 100%-tall ellipse via clip-path.",
+            "zh": "粉色（#fe7496）半椭圆：clip-path 取 85% 宽 × 100% 高椭圆的上半部。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -1906,8 +1906,8 @@
             ]
         },
         "description": {
-            "en": "Half ellipse cut via clip-path, arc at the right.",
-            "zh": "半椭圆（右侧），使用 clip-path 裁剪实现。"
+            "en": "A pink half-ellipse: the right half of a 100%-wide, 85%-tall ellipse via clip-path.",
+            "zh": "粉色半椭圆：clip-path 取 100% 宽 × 85% 高椭圆的右半部。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -1934,8 +1934,8 @@
             ]
         },
         "description": {
-            "en": "Wide flat ellipse cut via clip-path.",
-            "zh": "扁平椭圆，使用 clip-path 裁剪实现。"
+            "en": "A pink flat half-ellipse: 85% wide, 50% tall — a squashed dome shape.",
+            "zh": "粉色扁平半椭圆：85% 宽 × 50% 高，压扁的圆顶造型。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -1963,8 +1963,8 @@
             ]
         },
         "description": {
-            "en": "Half ellipse cut via clip-path, arc at the bottom.",
-            "zh": "半椭圆（底部），使用 clip-path 裁剪实现。"
+            "en": "A pink half-ellipse: the bottom half of an 85%-wide, 100%-tall ellipse via clip-path.",
+            "zh": "粉色半椭圆：clip-path 取 85% × 100% 椭圆的下半部。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -1992,8 +1992,8 @@
             ]
         },
         "description": {
-            "en": "Half ellipse cut via clip-path, arc at the left.",
-            "zh": "半椭圆（左侧），使用 clip-path 裁剪实现。"
+            "en": "A pink half-ellipse: the left half of a 100%-wide, 85%-tall ellipse via clip-path.",
+            "zh": "粉色半椭圆：clip-path 取 100% × 85% 椭圆的左半部。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -2021,8 +2021,8 @@
             ]
         },
         "description": {
-            "en": "Narrow tall ellipse cut via clip-path.",
-            "zh": "细长椭圆，使用 clip-path 裁剪实现。"
+            "en": "A pink narrow half-ellipse: 50% wide, 85% tall — a slim vertical dome.",
+            "zh": "粉色细长半椭圆：50% 宽 × 85% 高，纤细的纵向穹顶。"
         },
         "height": "100px",
         "aspect-ratio": "3/2",
@@ -2051,8 +2051,8 @@
             ]
         },
         "description": {
-            "en": "Rounded ticket/coupon shape with corner notches via mask.",
-            "zh": "圆角票据，使用 mask 遮罩实现。"
+            "en": "A mint (#97f4ed) rounded ticket (20px radius) with a semicircular notch cut on its right side.",
+            "zh": "薄荷绿（#97f4ed）圆角票据（20px 圆角），右侧带半圆缺口，电影票造型。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2090,8 +2090,8 @@
             ]
         },
         "description": {
-            "en": "Rounded ticket/coupon variant with corner notches via mask.",
-            "zh": "圆角票据变体 $1，使用 mask 遮罩实现。"
+            "en": "A mint rounded ticket with semicircular notches cut near both right corners — a perforated ticket.",
+            "zh": "薄荷绿圆角票据，右侧两角各带半圆缺口，穿孔票据造型。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2129,8 +2129,8 @@
             ]
         },
         "description": {
-            "en": "Rounded ticket/coupon variant with corner notches via mask.",
-            "zh": "圆角票据变体 $1，使用 mask 遮罩实现。"
+            "en": "A mint rounded ticket with a semicircular notch cut on its left side.",
+            "zh": "薄荷绿圆角票据，左侧带半圆缺口。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2168,8 +2168,8 @@
             ]
         },
         "description": {
-            "en": "Rounded ticket/coupon variant with corner notches via mask.",
-            "zh": "圆角票据变体 $1，使用 mask 遮罩实现。"
+            "en": "A mint rounded ticket with semicircular end notches on both sides — a perforated ticket.",
+            "zh": "薄荷绿圆角票据，左右两侧带半圆缺口，双穿孔票据。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2207,8 +2207,8 @@
             ]
         },
         "description": {
-            "en": "Pill/capsule shape with an arrow cut on the right via mask.",
-            "zh": "箭头胶囊（右侧），使用 mask 遮罩实现。"
+            "en": "A red (#ED303C) rounded pill (20px radius) with its right end carved into a triangle arrow (50%).",
+            "zh": "红色（#ED303C）圆角胶囊（20px 圆角），右侧遮罩削出 50% 三角箭头，右向箭头胶囊。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2244,8 +2244,8 @@
             ]
         },
         "description": {
-            "en": "Pill/capsule shape with an arrow cut on the left via mask.",
-            "zh": "箭头胶囊（左侧），使用 mask 遮罩实现。"
+            "en": "A red rounded pill with its left end carved into a triangle arrow — a left-pointing arrow pill.",
+            "zh": "红色圆角胶囊，左侧遮罩削出三角箭头，左向箭头胶囊。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2281,8 +2281,8 @@
             ]
         },
         "description": {
-            "en": "Pill/capsule variant with an arrow cut via mask.",
-            "zh": "箭头胶囊变体 $1，使用 mask 遮罩实现。"
+            "en": "A red rounded pill with its top carved into a triangle arrow (2/3 height) — an upward arrow pill.",
+            "zh": "红色圆角胶囊，顶部遮罩削出三角箭头（高度 2/3），上向箭头胶囊。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2318,8 +2318,8 @@
             ]
         },
         "description": {
-            "en": "Pill/capsule variant with an arrow cut via mask.",
-            "zh": "箭头胶囊变体 $1，使用 mask 遮罩实现。"
+            "en": "A red rounded pill with its bottom carved into a triangle arrow — a downward arrow pill.",
+            "zh": "红色圆角胶囊，底部遮罩削出三角箭头，下向箭头胶囊。"
         },
         "--r": "20px",
         "--s": "20px",
@@ -2355,8 +2355,8 @@
             ]
         },
         "description": {
-            "en": "Circular ring/donut shape via a radial-gradient mask.",
-            "zh": "圆环（甜甜圈），通过 CSS 实现。"
+            "en": "A bright yellow (#ffe600) ring: a 71%/72% radial mask punches a circular hole in the center — a donut.",
+            "zh": "明黄（#ffe600）圆环：radial 遮罩（71%/72%）打穿中心圆孔，甜甜圈造型。"
         },
         "height": "150px",
         "width": "100px",
@@ -2384,8 +2384,8 @@
             ]
         },
         "description": {
-            "en": "Square ring outline via a conic-gradient content-box mask.",
-            "zh": "方形圆环，通过 CSS 实现。"
+            "en": "A square ring: beige (#B38184) 8px border with a conic-gradient mask cutting a 30px inner square hole.",
+            "zh": "方形环：#B38184 色 8px 边框，conic 遮罩裁出 30px 内方孔，方形甜甜圈。"
         },
         "--s": "30px",
         "border": "8px solid #B38184",
@@ -2417,8 +2417,8 @@
             ]
         },
         "description": {
-            "en": "Button-shaped arrow pointing right via clip-path.",
-            "zh": "箭头按钮（右侧），使用 clip-path 裁剪实现。"
+            "en": "A blue (#17a2ff) button block (130×50) with a 5-point clip-path arrow pointing right (20px).",
+            "zh": "蓝色（#17a2ff）按钮块（130×50），clip-path 五角裁切右侧 20px 箭头尖，右向箭头按钮。"
         },
         "width": "130px",
         "height": "50px",
@@ -2449,8 +2449,8 @@
             ]
         },
         "description": {
-            "en": "Button-shaped double arrow (both sides) via clip-path.",
-            "zh": "箭头按钮（双向），使用 clip-path 裁剪实现。"
+            "en": "A blue arrow button with a left notch and right arrow point — a bidirectional 6-point shape.",
+            "zh": "蓝色双向箭头按钮：左侧内凹、右侧箭头尖（六角裁切），双向箭头。"
         },
         "width": "130px",
         "height": "50px",
@@ -2482,8 +2482,8 @@
             ]
         },
         "description": {
-            "en": "Button-shaped arrow pointing left via clip-path.",
-            "zh": "箭头按钮（左侧），使用 clip-path 裁剪实现。"
+            "en": "A blue arrow button with its left edge tapering to an arrow point while the right stays square — left-pointing.",
+            "zh": "蓝色按钮：左侧削成箭头尖、右侧平直（五角裁切），左向箭头按钮。"
         },
         "width": "130px",
         "height": "50px",
@@ -2514,8 +2514,8 @@
             ]
         },
         "description": {
-            "en": "Button-shaped double arrow via clip-path.",
-            "zh": "双向箭头按钮，使用 clip-path 裁剪实现。"
+            "en": "A blue button with arrow points carved on both ends via a 6-point clip-path — double-ended arrow.",
+            "zh": "蓝色双向箭头按钮：六角裁切两端均为箭头尖，双端箭头。"
         },
         "width": "130px",
         "height": "50px",
@@ -2546,8 +2546,8 @@
             ]
         },
         "description": {
-            "en": "Arch shape with a curved top via mask and clip-path.",
-            "zh": "拱形（顶部），使用 mask 遮罩实现。"
+            "en": "A pink (#ff7dd4) arch: top edge shaped as a dome via radial mask (85px radius) — a top arch.",
+            "zh": "粉色（#ff7dd4）拱形：顶部以 radial 遮罩呈 85px 圆顶，上拱门造型。"
         },
         "--c": "85",
         "width": "100px",
@@ -2577,8 +2577,8 @@
             ]
         },
         "description": {
-            "en": "Arch shape with a curved bottom via mask and clip-path.",
-            "zh": "拱形（底部），使用 mask 遮罩实现。"
+            "en": "A pink arch with the bottom shaped as a dome — an inverted arch.",
+            "zh": "粉色拱形：底部呈圆顶，倒置拱门造型。"
         },
         "--c": "85",
         "width": "100px",
@@ -2608,8 +2608,8 @@
             ]
         },
         "description": {
-            "en": "Arch shape with a curved left side via mask and clip-path.",
-            "zh": "拱形（左侧），使用 mask 遮罩实现。"
+            "en": "A pink arch with the left side shaped as a dome — a horizontal arch.",
+            "zh": "粉色拱形：左侧呈圆顶，横向拱门造型。"
         },
         "--c": "85",
         "height": "100px",
@@ -2639,8 +2639,8 @@
             ]
         },
         "description": {
-            "en": "Arch shape with a curved right side via mask and clip-path.",
-            "zh": "拱形（右侧），使用 mask 遮罩实现。"
+            "en": "A pink arch with the right side shaped as a dome — a mirrored horizontal arch.",
+            "zh": "粉色拱形：右侧呈圆顶，镜像横向拱门。"
         },
         "--c": "85",
         "height": "100px",
@@ -2670,8 +2670,8 @@
             ]
         },
         "description": {
-            "en": "Square with a dotted border pattern via mask.",
-            "zh": "点状边框方块，使用 mask 遮罩实现。"
+            "en": "A teal (#4ECDC4) square with a 2px transparent border and radial dot masks at the corners (5px) — a dotted outline.",
+            "zh": "青绿（#4ECDC4）方块：2px 透明边框 + 四角 radial 圆点遮罩（5px），点状虚线边框。"
         },
         "--s": "5px",
         "--w": "100px",
@@ -2704,8 +2704,8 @@
             ]
         },
         "description": {
-            "en": "Square with a dotted border variant via mask.",
-            "zh": "点状边框方块变体，使用 mask 遮罩实现。"
+            "en": "A teal square with a continuous ring of dots around the border via mask — an unbroken dotted frame.",
+            "zh": "青绿方块：遮罩沿边框生成连续圆点环，不间断的点状虚线框。"
         },
         "--s": "5px",
         "--w": "100px",
@@ -2740,8 +2740,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on the right via clip-path.",
-            "zh": "齿轮形状（右侧），使用 clip-path 裁剪实现。"
+            "en": "An orange (#ff9f00) rounded gear block with a single full tooth protruding on its right side (30px wide, 20px deep).",
+            "zh": "橙色（#ff9f00）圆角齿轮块，右侧凸出单个齿（宽 30px、深 20px），右齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2772,8 +2772,8 @@
             ]
         },
         "description": {
-            "en": "Half gear/cog shape with teeth on the left via clip-path.",
-            "zh": "齿轮形状（左半），使用 clip-path 裁剪实现。"
+            "en": "An orange gear block with a half-depth tooth on its left side — a left half-tooth gear.",
+            "zh": "橙色齿轮块，左侧凸出半个齿，左半齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2804,8 +2804,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on the bottom via clip-path.",
-            "zh": "齿轮形状（底部），使用 clip-path 裁剪实现。"
+            "en": "An orange gear block with a full tooth protruding on its bottom side — a bottom-tooth gear.",
+            "zh": "橙色齿轮块，底部凸出单个齿，底齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2836,8 +2836,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on all sides via clip-path.",
-            "zh": "齿轮形状（四周），使用 clip-path 裁剪实现。"
+            "en": "An orange gear with teeth on all four sides — a classic 8-tooth cog shape.",
+            "zh": "橙色齿轮四边均有齿，经典八齿齿轮造型。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2868,8 +2868,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on top and bottom via clip-path.",
-            "zh": "齿轮形状（上下），使用 clip-path 裁剪实现。"
+            "en": "An orange gear with teeth on its top and bottom sides only.",
+            "zh": "橙色齿轮仅上下两边带齿，上下齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2900,8 +2900,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on the left via clip-path.",
-            "zh": "齿轮形状（左侧），使用 clip-path 裁剪实现。"
+            "en": "An orange gear block with a full tooth protruding on its left side — a left-tooth gear.",
+            "zh": "橙色齿轮块，左侧凸出单个齿，左齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2932,8 +2932,8 @@
             ]
         },
         "description": {
-            "en": "Gear/cog shape with teeth on the top via clip-path.",
-            "zh": "齿轮形状（顶部），使用 clip-path 裁剪实现。"
+            "en": "An orange gear block with a full tooth protruding on its top side — a top-tooth gear.",
+            "zh": "橙色齿轮块，顶部凸出单个齿，顶齿齿轮。"
         },
         "--b": "30px",
         "--h": "20px",
@@ -2966,8 +2966,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a semicircular notch at the top via mask.",
-            "zh": "圆角缺口矩形（顶部），使用 mask 遮罩实现。"
+            "en": "An orange (#F07818) rounded rectangle (1.2:1) with a semicircular notch recessed into its top edge via mask.",
+            "zh": "橙色（#F07818）圆角矩形（1.2:1），顶部边缘以遮罩内凹半圆缺口。"
         },
         "--r": "20px",
         "height": "100px",
@@ -2999,8 +2999,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a notch at the top-left via mask.",
-            "zh": "圆角缺口矩形（左上），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with a semicircular notch recessed near its top-left edge.",
+            "zh": "橙色圆角矩形，左上边缘内凹半圆缺口。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3032,8 +3032,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a semicircular notch at the left via mask.",
-            "zh": "圆角缺口矩形（左侧），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with a semicircular notch recessed into its left edge.",
+            "zh": "橙色圆角矩形，左侧边缘内凹半圆缺口。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3065,8 +3065,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with notches at the top and left via mask.",
-            "zh": "圆角缺口矩形（上左），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with semicircular notches recessed at both the top and left edges.",
+            "zh": "橙色圆角矩形，顶部与左侧各内凹半圆缺口，相交缺角。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3098,8 +3098,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a corner notch at the top-left via mask.",
-            "zh": "圆角缺口矩形（Top Left Corner），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with a semicircular notch carved diagonally into its top-left corner.",
+            "zh": "橙色圆角矩形，左上角对角内凹半圆缺口，斜向切角。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3131,8 +3131,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a semicircular notch at the bottom via mask.",
-            "zh": "圆角缺口矩形（底部），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with a semicircular notch recessed into its bottom edge.",
+            "zh": "橙色圆角矩形，底部边缘内凹半圆缺口。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3164,8 +3164,8 @@
             ]
         },
         "description": {
-            "en": "Rounded rectangle with a semicircular notch at the right via mask.",
-            "zh": "圆角缺口矩形（右侧），使用 mask 遮罩实现。"
+            "en": "An orange rounded rectangle with a semicircular notch recessed into its right edge.",
+            "zh": "橙色圆角矩形，右侧边缘内凹半圆缺口。"
         },
         "--r": "20px",
         "height": "100px",
@@ -3197,8 +3197,8 @@
             ]
         },
         "description": {
-            "en": "Rounded square with a dotted border pattern via mask.",
-            "zh": "点状圆角方块，使用 mask 遮罩实现。"
+            "en": "A tan (#CD8C52) rounded square with a 3.5× border-radius and dot masks producing a dotted outline.",
+            "zh": "土褐（#CD8C52）圆角方块（圆角 3.5 倍），点状遮罩构成点线圆角边框。"
         },
         "--s": "10px",
         "--w": "100px",
@@ -3232,8 +3232,8 @@
             ]
         },
         "description": {
-            "en": "Octagon shape with cut corners via clip-path.",
-            "zh": "八角形，使用 clip-path 裁剪实现。"
+            "en": "A mint-green (#a9f0bf) regular octagon cut via an 8-point clip-path polygon (20px bevel).",
+            "zh": "薄荷绿（#a9f0bf）正八角形：八点 polygon 裁切（切角 20px），正八角造型。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3262,8 +3262,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a 45-degree chamfered bottom-left corner via clip-path.",
-            "zh": "切角矩形（左下），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with its bottom-left corner chamfered at 29.289% via clip-path.",
+            "zh": "薄荷绿矩形，clip-path 以 29.289% 削去左下角，左下斜切角矩形。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3292,8 +3292,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a 45-degree chamfered top-right corner via clip-path.",
-            "zh": "切角矩形（右上），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with its top-right corner chamfered at 29.289%.",
+            "zh": "薄荷绿矩形，右上角 29.289% 斜切，右上斜切角矩形。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3322,8 +3322,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a 45-degree chamfered bottom-right corner via clip-path.",
-            "zh": "切角矩形（右下），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with its bottom-right corner chamfered at 29.289%.",
+            "zh": "薄荷绿矩形，右下角 29.289% 斜切，右下斜切角矩形。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3352,8 +3352,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a 45-degree chamfered top-right corner via clip-path.",
-            "zh": "切角矩形（右上）2，使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with its top-left corner chamfered at 29.289%.",
+            "zh": "薄荷绿矩形，左上角 29.289% 斜切，左上斜切角矩形。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3382,8 +3382,8 @@
             ]
         },
         "description": {
-            "en": "Classic upward-pointing triangle via clip-path.",
-            "zh": "三角形（向上），使用 clip-path 裁剪实现。"
+            "en": "An orange (#FA6900) equilateral triangle pointing up (aspect 1/cos30°).",
+            "zh": "橙色（#FA6900）等边三角形，尖角朝上（宽高比 1/cos30°）。"
         },
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -3411,8 +3411,8 @@
             ]
         },
         "description": {
-            "en": "Classic downward-pointing triangle via clip-path.",
-            "zh": "三角形（向下），使用 clip-path 裁剪实现。"
+            "en": "An orange equilateral triangle pointing down.",
+            "zh": "橙色等边三角形，尖角朝下。"
         },
         "width": "100px",
         "aspect-ratio": "1/cos(30deg)",
@@ -3440,8 +3440,8 @@
             ]
         },
         "description": {
-            "en": "Classic left-pointing triangle via clip-path.",
-            "zh": "三角形（左侧），使用 clip-path 裁剪实现。"
+            "en": "An orange triangle pointing left (aspect cos30°).",
+            "zh": "橙色等边三角形旋转 90 度，尖角朝左。"
         },
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -3469,8 +3469,8 @@
             ]
         },
         "description": {
-            "en": "Classic right-pointing triangle via clip-path.",
-            "zh": "三角形（右侧），使用 clip-path 裁剪实现。"
+            "en": "An orange triangle pointing right.",
+            "zh": "橙色等边三角形旋转 90 度，尖角朝右。"
         },
         "width": "100px",
         "aspect-ratio": "cos(30deg)",
@@ -3498,8 +3498,8 @@
             ]
         },
         "description": {
-            "en": "Rounded upward triangle via mask and clip-path.",
-            "zh": "圆角三角形（向上），使用 mask 遮罩实现。"
+            "en": "An orange triangle pointing up with 10px rounded corners (conic + radial mask).",
+            "zh": "橙色圆角三角形（10px 圆角），尖角朝上，conic+radial 遮罩实现。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3530,8 +3530,8 @@
             ]
         },
         "description": {
-            "en": "Rounded downward triangle via mask and clip-path.",
-            "zh": "圆角三角形（向下），使用 mask 遮罩实现。"
+            "en": "An orange triangle pointing down with 10px rounded corners.",
+            "zh": "橙色圆角三角形，尖角朝下（10px 圆角）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3562,8 +3562,8 @@
             ]
         },
         "description": {
-            "en": "Rounded left triangle via mask and clip-path.",
-            "zh": "圆角三角形（左侧），使用 mask 遮罩实现。"
+            "en": "An orange triangle pointing left with 10px rounded corners.",
+            "zh": "橙色圆角三角形，尖角朝左（10px 圆角）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3594,8 +3594,8 @@
             ]
         },
         "description": {
-            "en": "Rounded right triangle via mask and clip-path.",
-            "zh": "圆角三角形（右侧），使用 mask 遮罩实现。"
+            "en": "An orange triangle pointing right with 10px rounded corners.",
+            "zh": "橙色圆角三角形，尖角朝右（10px 圆角）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3626,8 +3626,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle in the bottom-left corner via clip-path.",
-            "zh": "直角三角形（左下），使用 clip-path 裁剪实现。"
+            "en": "A light purple (#c496ff) right triangle with its right angle at the bottom-left (1:1 aspect).",
+            "zh": "淡紫（#c496ff）直角三角形（1:1），直角位于左下。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3655,8 +3655,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle in the bottom-right corner via clip-path.",
-            "zh": "直角三角形（右下），使用 clip-path 裁剪实现。"
+            "en": "A light purple right triangle with its right angle at the bottom-right.",
+            "zh": "淡紫直角三角形，直角位于右下。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3684,8 +3684,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle in the top-right corner via clip-path.",
-            "zh": "直角三角形（右上），使用 clip-path 裁剪实现。"
+            "en": "A light purple right triangle with its right angle at the top-right.",
+            "zh": "淡紫直角三角形，直角位于右上。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3713,8 +3713,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle in the top-left corner via clip-path.",
-            "zh": "直角三角形（左上），使用 clip-path 裁剪实现。"
+            "en": "A light purple right triangle with its right angle at the top-left.",
+            "zh": "淡紫直角三角形，直角位于左上。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3744,8 +3744,8 @@
             ]
         },
         "description": {
-            "en": "Rounded right triangle (bottom-left) with an orange-red gradient.",
-            "zh": "圆角直角三角形（左下），通过 CSS 实现。"
+            "en": "A light purple right triangle (right angle bottom-left) with the corner rounded 10px.",
+            "zh": "淡紫圆角直角三角形（直角左下），直角处 10px 圆角处理。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3780,8 +3780,8 @@
             ]
         },
         "description": {
-            "en": "Rounded right triangle (bottom-right) with an orange-red gradient.",
-            "zh": "圆角直角三角形（右下），通过 CSS 实现。"
+            "en": "A light purple right triangle (right angle bottom-right, rounded 10px).",
+            "zh": "淡紫圆角直角三角形（直角右下）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3816,8 +3816,8 @@
             ]
         },
         "description": {
-            "en": "Rounded right triangle (top-right) with an orange-red gradient.",
-            "zh": "圆角直角三角形（右上），通过 CSS 实现。"
+            "en": "A light purple right triangle (right angle top-right, rounded 10px).",
+            "zh": "淡紫圆角直角三角形（直角右上）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3852,8 +3852,8 @@
             ]
         },
         "description": {
-            "en": "Rounded right triangle (top-left) with an orange-red gradient.",
-            "zh": "圆角直角三角形（左上），通过 CSS 实现。"
+            "en": "A light purple right triangle (right angle top-left, rounded 10px).",
+            "zh": "淡紫圆角直角三角形（直角左上）。"
         },
         "--r": "10px",
         "width": "100px",
@@ -3887,8 +3887,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle with rounded edges in the bottom-left corner.",
-            "zh": "圆角直角三角（左下），通过 CSS 实现。"
+            "en": "A bright orange (#ffa241) right triangle with a 25px rounded corner at the bottom-left right angle.",
+            "zh": "亮橙（#ffa241）直角三角形，左下直角处 25px 大圆角。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3918,8 +3918,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle with rounded edges in the bottom-right corner.",
-            "zh": "圆角直角三角（右下），通过 CSS 实现。"
+            "en": "A bright orange right triangle with a 25px rounded corner at the bottom-right right angle.",
+            "zh": "亮橙直角三角形，右下直角处 25px 大圆角。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3949,8 +3949,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle with rounded edges in the top-right corner.",
-            "zh": "圆角直角三角（右上），通过 CSS 实现。"
+            "en": "A bright orange right triangle with a 25px rounded corner at the top-right right angle.",
+            "zh": "亮橙直角三角形，右上直角处 25px 大圆角。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -3980,8 +3980,8 @@
             ]
         },
         "description": {
-            "en": "Right triangle with rounded edges in the top-left corner.",
-            "zh": "圆角直角三角（左上），通过 CSS 实现。"
+            "en": "A bright orange right triangle with a 25px rounded corner at the top-left right angle.",
+            "zh": "亮橙直角三角形，左上直角处 25px 大圆角。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -4012,8 +4012,8 @@
             ]
         },
         "description": {
-            "en": "Narrow, elongated upward triangle via clip-path.",
-            "zh": "细长三角（向上），使用 clip-path 裁剪实现。"
+            "en": "A slender orange triangle pointing up at a 2:1 aspect ratio.",
+            "zh": "橙色细长三角（宽高比 2:1），尖角朝上。"
         },
         "height": "80px",
         "aspect-ratio": "2",
@@ -4043,8 +4043,8 @@
             ]
         },
         "description": {
-            "en": "Narrow, elongated downward triangle via clip-path.",
-            "zh": "细长三角（向下），使用 clip-path 裁剪实现。"
+            "en": "A slender orange triangle pointing down at a 2:1 aspect ratio.",
+            "zh": "橙色细长三角（宽高比 2:1），尖角朝下。"
         },
         "height": "80px",
         "aspect-ratio": "2",
@@ -4074,8 +4074,8 @@
             ]
         },
         "description": {
-            "en": "Narrow, elongated left triangle via clip-path.",
-            "zh": "细长三角（左侧），使用 clip-path 裁剪实现。"
+            "en": "A slender orange triangle pointing left at a 1:2 aspect ratio.",
+            "zh": "橙色细长三角（宽高比 1:2），尖角朝左。"
         },
         "width": "80px",
         "aspect-ratio": "1/2",
@@ -4105,8 +4105,8 @@
             ]
         },
         "description": {
-            "en": "Narrow, elongated right triangle via clip-path.",
-            "zh": "细长三角（右侧），使用 clip-path 裁剪实现。"
+            "en": "A slender orange triangle pointing right at a 1:2 aspect ratio.",
+            "zh": "橙色细长三角（宽高比 1:2），尖角朝右。"
         },
         "width": "80px",
         "aspect-ratio": "1/2",
@@ -4136,8 +4136,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow upward triangle with an orange-red gradient.",
-            "zh": "圆角细长三角（向上），通过 CSS 实现。"
+            "en": "A slender orange triangle pointing up with 18px rounded corners.",
+            "zh": "橙色圆角细长三角（18px 圆角），尖角朝上。"
         },
         "--r": "18px",
         "height": "100px",
@@ -4170,8 +4170,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow downward triangle with an orange-red gradient.",
-            "zh": "圆角细长三角（向下），通过 CSS 实现。"
+            "en": "A slender orange triangle pointing down with 18px rounded corners.",
+            "zh": "橙色圆角细长三角（18px 圆角），尖角朝下。"
         },
         "--r": "18px",
         "height": "100px",
@@ -4204,8 +4204,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow left triangle with an orange-red gradient.",
-            "zh": "圆角细长三角（左侧），通过 CSS 实现。"
+            "en": "A slender orange triangle pointing left with 18px rounded corners.",
+            "zh": "橙色圆角细长三角（18px 圆角），尖角朝左。"
         },
         "--r": "18px",
         "width": "100px",
@@ -4238,8 +4238,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow right triangle with an orange-red gradient.",
-            "zh": "圆角细长三角（右侧），通过 CSS 实现。"
+            "en": "A slender orange triangle pointing right with 18px rounded corners.",
+            "zh": "橙色圆角细长三角（18px 圆角），尖角朝右。"
         },
         "--r": "18px",
         "width": "100px",
@@ -4272,8 +4272,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow upward triangle in beige via mask.",
-            "zh": "圆角细长三角米色（向上），使用 mask 遮罩实现。"
+            "en": "A beige (#f0dabe) rounded narrow triangle pointing up with 25px rounded corners.",
+            "zh": "米色（#f0dabe）圆角细长三角（25px 圆角），尖角朝上。"
         },
         "--r": "25px",
         "height": "100px",
@@ -4305,8 +4305,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow downward triangle in beige via mask.",
-            "zh": "圆角细长三角米色（向下），使用 mask 遮罩实现。"
+            "en": "A beige rounded narrow triangle pointing down with 25px rounded corners.",
+            "zh": "米色圆角细长三角（25px 圆角），尖角朝下。"
         },
         "--r": "25px",
         "height": "100px",
@@ -4338,8 +4338,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow left triangle in beige via mask.",
-            "zh": "圆角细长三角米色（左侧），使用 mask 遮罩实现。"
+            "en": "A beige rounded narrow triangle pointing left with 25px rounded corners.",
+            "zh": "米色圆角细长三角（25px 圆角），尖角朝左。"
         },
         "--r": "25px",
         "width": "100px",
@@ -4371,8 +4371,8 @@
             ]
         },
         "description": {
-            "en": "Rounded narrow right triangle in beige via mask.",
-            "zh": "圆角细长三角米色（右侧），使用 mask 遮罩实现。"
+            "en": "A beige rounded narrow triangle pointing right with 25px rounded corners.",
+            "zh": "米色圆角细长三角（25px 圆角），尖角朝右。"
         },
         "--r": "25px",
         "width": "100px",
@@ -4401,8 +4401,8 @@
             ]
         },
         "description": {
-            "en": "Small octagon shape with cut corners via clip-path.",
-            "zh": "八角形（小），使用 clip-path 裁剪实现。"
+            "en": "A mint-green regular octagon (8-point clip-path, 20px bevel) — a compact version.",
+            "zh": "薄荷绿正八角形（八点裁切 20px），紧凑版本。"
         },
         "width": "100px",
         "aspect-ratio": "1",
@@ -4432,8 +4432,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with zigzag serrated edges on top and bottom via clip-path.",
-            "zh": "锯齿边矩形（上下），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with zigzag tooth edges on its top and bottom (15px teeth via clip-path).",
+            "zh": "薄荷绿矩形，上下边以 clip-path 裁出 15px 锯齿，上下锯齿边。"
         },
         "width": "150px",
         "height": "100px",
@@ -4465,8 +4465,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a zigzag serrated bottom edge via clip-path.",
-            "zh": "锯齿边矩形（底部），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with zigzag teeth along its bottom edge only.",
+            "zh": "薄荷绿矩形，仅底边锯齿（15px），下方锯齿边。"
         },
         "width": "150px",
         "height": "100px",
@@ -4498,8 +4498,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a zigzag serrated right edge via clip-path.",
-            "zh": "锯齿边矩形（右侧），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with zigzag teeth along its right edge only.",
+            "zh": "薄荷绿矩形，仅右边锯齿（15px），右方锯齿边。"
         },
         "width": "150px",
         "height": "100px",
@@ -4531,8 +4531,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a narrow zigzag serrated bottom edge via clip-path.",
-            "zh": "锯齿边矩形（Bottom Narrow），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with narrow zigzag teeth concentrated on the bottom (68%/64%/36% points).",
+            "zh": "薄荷绿矩形，底边收窄锯齿（68%/64%/36% 定位点），窄幅底部锯齿。"
         },
         "width": "150px",
         "height": "100px",
@@ -4564,8 +4564,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a zigzag serrated left edge via clip-path.",
-            "zh": "锯齿边矩形（左侧），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with zigzag teeth along its left edge only.",
+            "zh": "薄荷绿矩形，仅左边锯齿（15px），左方锯齿边。"
         },
         "width": "150px",
         "height": "100px",
@@ -4598,8 +4598,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with an arrow-like notch cut in the top edge via clip-path.",
-            "zh": "缺口矩形（顶部），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with a centered 60%-wide notch cut into its top edge (15px deep) — a recessed top tab.",
+            "zh": "薄荷绿矩形，顶部中央 60% 宽向内凹 15px 的缺口，顶部内凹缺口。"
         },
         "width": "150px",
         "height": "100px",
@@ -4633,8 +4633,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a reversed arrow-like notch in the top edge via clip-path.",
-            "zh": "缺口矩形（Top Reverse），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with a centered tab protruding upward from its top edge — a reverse notch.",
+            "zh": "薄荷绿矩形，顶部中央向外凸出 15px 的弧形凸块，顶部凸起。"
         },
         "width": "150px",
         "height": "100px",
@@ -4668,8 +4668,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with an arrow-like notch cut in the bottom edge via clip-path.",
-            "zh": "缺口矩形（底部），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with a centered 60%-wide notch cut into its bottom edge — a recessed bottom tab.",
+            "zh": "薄荷绿矩形，底部中央 60% 宽向内凹 15px 的缺口，底部内凹缺口。"
         },
         "width": "150px",
         "height": "100px",
@@ -4703,8 +4703,8 @@
             ]
         },
         "description": {
-            "en": "Rectangle with a reversed arrow-like notch in the bottom edge via clip-path.",
-            "zh": "缺口矩形（Bottom Reverse），使用 clip-path 裁剪实现。"
+            "en": "A mint-green rectangle with a centered tab protruding downward from its bottom edge — a reverse notch.",
+            "zh": "薄荷绿矩形，底部中央向外凸出 15px 的弧形凸块，底部凸起。"
         },
         "width": "150px",
         "height": "100px",

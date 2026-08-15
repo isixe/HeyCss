@@ -18,8 +18,8 @@
 			]
 		},
 		"description": {
-			"en": "A simple 2px solid light-gray border with 10px rounded corners.",
-			"zh": "灰色实线边框，通过 CSS 实现。"
+			"en": "A plain 2px solid light-gray (#e5e7eb) border with 10px rounded corners.",
+			"zh": "2px 浅灰（#e5e7eb）实线边框，10px 圆角，最基础的常规描边。"
 		},
 		"border": "2px solid #e5e7eb",
 		"border-radius": "10px"
@@ -42,8 +42,8 @@
 			]
 		},
 		"description": {
-			"en": "A 2px dashed indigo border with 10px rounded corners.",
-			"zh": "靛蓝虚线边框，通过 CSS 实现。"
+			"en": "A 2px dashed indigo (#6366f1) border with 10px rounded corners.",
+			"zh": "2px 靛蓝（#6366f1）虚线边框，10px 圆角，清新跳跃的虚线描边。"
 		},
 		"border": "2px dashed #6366f1",
 		"border-radius": "10px"
@@ -66,8 +66,8 @@
 			]
 		},
 		"description": {
-			"en": "A 3px dotted amber border with 10px rounded corners.",
-			"zh": "琥珀点线边框，通过 CSS 实现。"
+			"en": "A 3px dotted amber (#f59e0b) border with 10px rounded corners.",
+			"zh": "3px 琥珀色（#f59e0b）点线边框，10px 圆角，活泼的点状描边。"
 		},
 		"border": "3px dotted #f59e0b",
 		"border-radius": "10px"
@@ -90,8 +90,8 @@
 			]
 		},
 		"description": {
-			"en": "A 4px double violet border with 10px rounded corners.",
-			"zh": "紫罗兰双线边框，通过 CSS 实现。"
+			"en": "A 4px double violet (#8b5cf6) border with 10px rounded corners — two parallel lines.",
+			"zh": "4px 紫色（#8b5cf6）双线边框，10px 圆角，两条平行线构成的描边。"
 		},
 		"border": "4px double #8b5cf6",
 		"border-radius": "10px"
@@ -114,8 +114,8 @@
 			]
 		},
 		"description": {
-			"en": "A 3px ridge emerald border with 10px rounded corners.",
-			"zh": "翡翠绿脊状边框，通过 CSS 实现。"
+			"en": "A 3px ridge emerald (#10b981) border with 10px rounded corners — an embossed 3D edge.",
+			"zh": "3px 祖母绿（#10b981）脊状边框，10px 圆角，凸起的 3D 立体棱边。"
 		},
 		"border": "3px ridge #10b981",
 		"border-radius": "10px"
@@ -138,8 +138,8 @@
 			]
 		},
 		"description": {
-			"en": "Each side has its own color: red top, amber right, emerald bottom, blue left.",
-			"zh": "多彩四边边框，通过 CSS 实现。"
+			"en": "Per-side colors: 4px red top, 2px amber right, 4px emerald bottom, 2px blue left, 10px radius.",
+			"zh": "四边不同颜色：上 4px 红、右 2px 琥珀、下 4px 翠绿、左 2px 蓝，10px 圆角的多彩边框。"
 		},
 		"border-top": "4px solid #ef4444",
 		"border-right": "2px solid #f59e0b",
@@ -164,8 +164,8 @@
 			]
 		},
 		"description": {
-			"en": "A 2px gradient border (rose to blue) via border-image.",
-			"zh": "渐变边框图像，通过 border-image 实现。"
+			"en": "A 2px border filled with a 45deg rose-to-blue (#f43f5e → #3b82f6) gradient via border-image.",
+			"zh": "border-image 实现的 2px 渐变边框：45 度从玫红（#f43f5e）过渡到蓝（#3b82f6）。"
 		},
 		"border-image": "linear-gradient(45deg, #f43f5e, #3b82f6) 1",
 		"border-width": "2px",
@@ -190,8 +190,8 @@
 			]
 		},
 		"description": {
-			"en": "A 2px rose-to-blue gradient border built with a masked pseudo-element.",
-			"zh": "红蓝渐变边框，通过 CSS 实现。"
+			"en": "A 2px gradient ring border from rose to blue at 45deg, carved with a mask-composite trick.",
+			"zh": "遮罩镂空生成的 2px 渐变描边圆环：45 度玫红到蓝的渐变边框。"
 		},
 		"background": "transparent",
 		"position": "relative",
@@ -233,8 +233,8 @@
 			]
 		},
 		"description": {
-			"en": "A 2px emerald-to-amber gradient border built with a masked pseudo-element.",
-			"zh": "翠绿琥珀渐变边框，通过 CSS 实现。"
+			"en": "A 2px gradient ring border from emerald to amber at 45deg via mask-composite.",
+			"zh": "遮罩镂空生成的 2px 渐变描边圆环：45 度翠绿到琥珀的渐变边框。"
 		},
 		"background": "transparent",
 		"position": "relative",
@@ -275,8 +275,8 @@
 			]
 		},
 		"description": {
-			"en": "A 2px rose-blue-emerald-amber gradient border built with a masked pseudo-element.",
-			"zh": "四色渐变边框，通过 CSS 实现。"
+			"en": "A 2px ring border cycling rose, blue, emerald and amber at 45deg — a four-color gradient frame.",
+			"zh": "2px 渐变描边圆环：45 度依次玫红、蓝、翠绿、琥珀的四色渐变边框。"
 		},
 		"background": "transparent",
 		"position": "relative",
@@ -318,8 +318,8 @@
 			]
 		},
 		"description": {
-			"en": "A vertical blue-to-amber gradient border built with a masked pseudo-element.",
-			"zh": "蓝黄垂直渐变边框，通过 CSS 实现。"
+			"en": "A 2px ring border with a vertical 180deg blue-to-amber (#3b82f6 → #f59e0b) gradient.",
+			"zh": "2px 渐变描边圆环：180 度垂直方向从蓝（#3b82f6）过渡到琥珀（#f59e0b）。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -361,8 +361,8 @@
 			]
 		},
 		"description": {
-			"en": "A soft peach gradient border that fades to transparent.",
-			"zh": "桃色渐隐边框，通过 CSS 实现。"
+			"en": "A 2px ring border in a diagonal 312deg peach (#FFC4BC) fading to transparent.",
+			"zh": "2px 渐变描边圆环：312 度方向蜜桃色（#FFC4BC）渐隐至透明的温和描边。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -404,8 +404,8 @@
 			]
 		},
 		"description": {
-			"en": "A mint-to-lime gradient border built with a masked pseudo-element.",
-			"zh": "薄荷绿渐变边框，通过 CSS 实现。"
+			"en": "A 2px ring border with a 110deg mint-to-lime (#36d0ac → #84ec5f) gradient.",
+			"zh": "2px 渐变描边圆环：110 度薄荷绿（#36d0ac）到青柠（#84ec5f）的清新渐变。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -448,8 +448,8 @@
 			]
 		},
 		"description": {
-			"en": "An amber glow border that fades out on both sides.",
-			"zh": "琥珀中心发光边框，通过 CSS 实现。"
+			"en": "A 2px ring border glowing amber in the middle with transparent ends (90deg) — a horizon light bar.",
+			"zh": "2px 描边圆环：90 度水平方向中央琥珀色（#f59e0b）发光、两端透明的光带。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -492,8 +492,8 @@
 			]
 		},
 		"description": {
-			"en": "A green diagonal glow border that fades to transparent.",
-			"zh": "绿色对角发光边框，通过 CSS 实现。"
+			"en": "A 2px ring border with a 45deg diagonal green (#84ec5f) glow fading at both ends.",
+			"zh": "2px 描边圆环：45 度对角方向中央翠绿（#84ec5f）发光、两端透明的斜向光带。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -536,8 +536,8 @@
 			]
 		},
 		"description": {
-			"en": "A rose diagonal glow border that fades to transparent.",
-			"zh": "玫红对角发光边框，通过 CSS 实现。"
+			"en": "A 2px ring border with a 135deg diagonal rose (#f43f5e) glow fading at both ends.",
+			"zh": "2px 描边圆环：135 度对角方向中央玫红（#f43f5e）发光、两端透明的斜向光带。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -580,8 +580,8 @@
 			]
 		},
 		"description": {
-			"en": "A rose vertical glow border that fades to transparent.",
-			"zh": "玫红垂直发光边框，通过 CSS 实现。"
+			"en": "A 2px ring border with a vertical 180deg rose (#f43f5e) glow fading at both ends.",
+			"zh": "2px 描边圆环：180 度垂直方向中央玫红（#f43f5e）发光、上下透明的竖光带。"
 		},
 		"background": "transparent",
 		"border-radius": "10px",
@@ -624,8 +624,8 @@
 			]
 		},
 		"description": {
-			"en": "Green corner accents on the top-left and bottom-right corners.",
-			"zh": "绿色角标（左上-右下），通过 CSS 实现。"
+			"en": "Corner accents: green L-shaped marks at the top-left and bottom-right corners (12px × 2px bars).",
+			"zh": "四角点缀式边框：左上与右下角各一条 12px × 2px 的翠绿 L 形描边。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -658,8 +658,8 @@
 			]
 		},
 		"description": {
-			"en": "Green corner accents on the top-right and bottom-left corners.",
-			"zh": "绿色角标（右上-左下），通过 CSS 实现。"
+			"en": "Corner accents: green L-shaped marks at the top-right and bottom-left corners (12px × 2px bars).",
+			"zh": "四角点缀式边框：右上与左下角各一条 12px × 2px 的翠绿 L 形描边。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -692,8 +692,8 @@
 			]
 		},
 		"description": {
-			"en": "Green corner accents on all four corners.",
-			"zh": "绿色角标（四角），通过 CSS 实现。"
+			"en": "Corner accents: green L-shaped marks on all four corners (12px × 2px bars) — a focus frame.",
+			"zh": "四角点缀式边框：四个角各一条 12px × 2px 的翠绿 L 形描边，取景框效果。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -727,8 +727,8 @@
 			]
 		},
 		"description": {
-			"en": "Inset green corner accents on the top-left and bottom-right corners.",
-			"zh": "内嵌绿色角标（左上-右下），通过 CSS 实现。"
+			"en": "Inset corner accents: green L-shaped marks offset 6px inward at the top-left and bottom-right.",
+			"zh": "内嵌角标式边框：左上与右下角向内偏移 6px 的翠绿 L 形描边（14px × 2px）。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -761,8 +761,8 @@
 			]
 		},
 		"description": {
-			"en": "Inset green corner accents on the top-right and bottom-left corners.",
-			"zh": "内嵌绿色角标（右上-左下），通过 CSS 实现。"
+			"en": "Inset corner accents: green L-shaped marks offset 6px inward at the top-right and bottom-left.",
+			"zh": "内嵌角标式边框：右上与左下角向内偏移 6px 的翠绿 L 形描边（14px × 2px）。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -795,8 +795,8 @@
 			]
 		},
 		"description": {
-			"en": "Inset green corner accents on all four corners.",
-			"zh": "内嵌绿色角标（四角），通过 CSS 实现。"
+			"en": "Inset corner accents: green L-shaped marks offset 6px inward on all four corners.",
+			"zh": "内嵌角标式边框：四个角向内偏移 6px 的翠绿 L 形描边（14px × 2px），聚焦框效果。"
 		},
 		"position": "relative",
 		"background": "transparent",
@@ -831,8 +831,8 @@
 			]
 		},
 		"description": {
-			"en": "A red-to-orange gradient ring shape drawn with a masked pseudo-element.",
-			"zh": "红橙渐变圆环，通过 CSS 实现。"
+			"en": "A 4px gradient ring from red to orange (#ED303C → #FF9C5B, 60deg) with a five-petal flower mask.",
+			"zh": "5px 宽的红橙渐变圆环（60 度 #ED303C → #FF9C5B），配合五瓣花形遮罩镂空，花朵描边。"
 		},
 		"position": "relative",
 		"background": "transparent",
