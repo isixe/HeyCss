@@ -3,7 +3,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { Search, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { useToast } from "@/hooks/use-toast";
 import { getCachedStylesData, loadStylesData } from "@/core/styles-cache";
 import Loading from "@/components/widget/loading";
 import { Header } from "@/components/layout/header";
@@ -47,7 +46,6 @@ export function SearchView() {
 	);
 	const [synonyms, setSynonyms] = useState<SynonymsMap>({});
 	const [isLoading, setIsLoading] = useState(cachedData === null);
-	const { toast } = useToast();
 	const locale = useLocale();
 	const t = useTranslations();
 
@@ -65,10 +63,7 @@ export function SearchView() {
 				}
 			} catch (error) {
 				if (!cancelled) {
-					toast({
-						title: t("common.loadFailed"),
-						description: t("common.loadFailedDescription"),
-					});
+					console.error("Failed to load search data:", error);
 				}
 			} finally {
 				if (!cancelled) setIsLoading(false);
@@ -78,7 +73,7 @@ export function SearchView() {
 		return () => {
 			cancelled = true;
 		};
-	}, [toast, t]);
+	}, [t]);
 
 	const results = useMemo(() => {
 		if (!data || !query.trim()) return [];

@@ -4,7 +4,6 @@ import type React from "react";
 import type { StyleItem, StylesData, StyleType } from "@/types/style";
 
 import { useState, useEffect } from "react";
-import { useToast } from "@/hooks/use-toast";
 import { getCachedStylesData, loadStylesData } from "@/core/styles-cache";
 import Loading from "@/components/widget/loading";
 import { Header } from "@/components/layout/header";
@@ -21,7 +20,6 @@ export function StyleExplorer({ tab }: StyleExplorerProps) {
 	const cachedData = getCachedStylesData();
 	const [stylesData, setStylesData] = useState<StylesData | null>(cachedData);
 	const [isLoading, setIsLoading] = useState(cachedData === null);
-	const { toast } = useToast();
 
 	const stylesMap: Record<StyleType, StyleItem[]> = {
 		boxShadow: stylesData ? stylesData.boxShadow : [],
@@ -39,10 +37,7 @@ export function StyleExplorer({ tab }: StyleExplorerProps) {
 				console.log("Styles loaded from split JSON files successfully");
 			} catch (error) {
 				if (!cancelled) {
-					toast({
-						title: "Using Fallback Data",
-						description: "Styles loaded from fallback data",
-					});
+					console.error("Failed to load styles data:", error);
 				}
 			} finally {
 				if (!cancelled) setIsLoading(false);
@@ -52,7 +47,7 @@ export function StyleExplorer({ tab }: StyleExplorerProps) {
 		return () => {
 			cancelled = true;
 		};
-	}, [toast]);
+	}, []);
 
 	if (isLoading) {
 		return (

@@ -1,12 +1,7 @@
-import { toast } from "@/hooks/use-toast";
-
 export const copyToClipboard = async (text: string) => {
 	try {
 		await navigator.clipboard.writeText(text);
-		toast({
-			title: "Copied!",
-			description: "Success copied to clipboard",
-		});
+		console.log("Copied to clipboard");
 	} catch (error) {
 		console.error("Failed to copy:", error);
 		// Fallback for older browsers
@@ -16,16 +11,9 @@ export const copyToClipboard = async (text: string) => {
 		textArea.select();
 		try {
 			document.execCommand("copy");
-			toast({
-				title: "Copied!",
-				description: "Success copied to clipboard",
-			});
+			console.log("Copied to clipboard via fallback");
 		} catch (fallbackError) {
-			toast({
-				title: "Copy Failed",
-				description: "Please copy the text manually",
-				variant: "destructive",
-			});
+			console.error("Copy failed:", fallbackError);
 		}
 		document.body.removeChild(textArea);
 	}
